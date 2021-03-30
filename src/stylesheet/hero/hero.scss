@@ -1,0 +1,40 @@
+.question-span {
+  font-size: 21px;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.questionLength-span {
+  user-select: none;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.questionContainer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.question-button {
+  flex: 1;
+  text-transform: capitalize;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.h-70 {
+  height: 70px;
+}
+
+.back-component {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+
+.back-component span {
+  cursor: pointer;
+}
