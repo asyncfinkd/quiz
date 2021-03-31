@@ -10,12 +10,12 @@ const questions = [
       "When you are in a community (at a party with fellow workers or fellow practitioners), you usually prefer",
     answerOptions: [
       {
-        answerText: "Participate in a general conversation or",
-        isIntrovert: false,
+        answerText: "Talking with each separately",
+        isIntrovert: true,
       },
       {
-        answerText: "Talking with each separately",
-        isIntrovert: false,
+        answerText: "Participate in a general conversation or",
+        isExtravert: false,
       },
     ],
   },
@@ -24,12 +24,12 @@ const questions = [
     question: "You consider yourself more",
     answerOptions: [
       {
-        answerText: "realistic or",
-        isIntrovert: false,
+        answerText: "prone to theorizing",
+        isIntrovert: true,
       },
       {
-        answerText: "prone to theorizing",
-        isIntrovert: false,
+        answerText: "realistic or",
+        isExtravert: false,
       },
     ],
   },
@@ -38,11 +38,11 @@ const questions = [
     question: "In your opinion, which one is worse?",
     answerOptions: [
       {
-        answerText: "“living in a dream world”» or",
-        isIntrovert: false,
+        answerText: "«all goes according to the plan»",
+        isIntrovert: true,
       },
       {
-        answerText: "«all goes according to the plan»",
+        answerText: "“living in a dream world”» or",
         isIntrovert: false,
       },
     ],
@@ -57,7 +57,7 @@ const questions = [
       },
       {
         answerText: "strong emotions",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -71,7 +71,7 @@ const questions = [
       },
       {
         answerText: "sentimental",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -85,7 +85,7 @@ const questions = [
       },
       {
         answerText: "to find out what to do, already in the course of work",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -99,7 +99,7 @@ const questions = [
       },
       {
         answerText: "often spontaneously",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -113,7 +113,7 @@ const questions = [
       },
       {
         answerText: "leave early feeling tired",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -127,7 +127,7 @@ const questions = [
       },
       {
         answerText: "imaginative people",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -141,7 +141,7 @@ const questions = [
       },
       {
         answerText: "unrealized opportunities",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -155,7 +155,7 @@ const questions = [
       },
       {
         answerText: "condescending and subjective",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -169,7 +169,7 @@ const questions = [
       },
       {
         answerText: "slowly",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -183,7 +183,7 @@ const questions = [
       },
       {
         answerText: "doing everything last moment",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -197,7 +197,7 @@ const questions = [
       },
       {
         answerText: "the last to know what is happening",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -211,7 +211,7 @@ const questions = [
       },
       {
         answerText: "inventing your own way",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -225,7 +225,7 @@ const questions = [
       },
       {
         answerText: "sets out thoughts in an unusual, original form",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -239,7 +239,7 @@ const questions = [
       },
       {
         answerText: "the harmony of human relations",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -253,7 +253,7 @@ const questions = [
       },
       {
         answerText: "based on your values",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -267,7 +267,7 @@ const questions = [
       },
       {
         answerText: "which are full of unpredictability",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -281,7 +281,7 @@ const questions = [
       },
       {
         answerText: "not taking life too seriously",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -295,7 +295,7 @@ const questions = [
       },
       {
         answerText: "often think out in advance what you will say",
-        isIntrovert: false,
+        isIntrovert: true,
       },
     ],
   },
@@ -305,7 +305,7 @@ const questions = [
     answerOptions: [
       {
         answerText: '"speak for itself" or',
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "illustrates some patterns",
@@ -319,7 +319,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "annoy you or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "attract and fascinate you",
@@ -333,7 +333,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "calm and impartial or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "cordial and sympathetic",
@@ -347,7 +347,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "be unreasonable or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "be malevolent",
@@ -361,7 +361,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "try to control the course of events or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "rely on the natural course of events.",
@@ -375,7 +375,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "you have already made a purchase or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "you still have the opportunity to do it.",
@@ -389,7 +389,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "initiate a conversation or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "wait for someone to contact you",
@@ -403,7 +403,7 @@ const questions = [
     answerOptions: [
       {
         answerText: "rarely raise doubts or",
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "often raise doubts.",
@@ -417,7 +417,7 @@ const questions = [
     answerOptions: [
       {
         answerText: 'who "stands firmly on the ground" or',
-        isIntrovert: false,
+        isIntrovert: true,
       },
       {
         answerText: "who always has new ideas.",
@@ -449,29 +449,65 @@ class Hero extends React.Component {
   state = {
     round: 0,
     currentQuestion: 0,
-    activeTodoQuestion: [],
-    alreadyTodoQuestions: [],
-    classComponent: "",
-    text: 0,
-  };
-  componentDidMount = () => {
-    // this.props.alreadyTodoQuestions.map((item) => {
-    //   console.log(item);
-    // });
+    introvertCounter: 1,
+    extravertCounter: 1,
+    showResult: false,
   };
   nextQuestion = () => {
     const nextQuestion = this.state.currentQuestion + 1;
-    this.state.activeTodoQuestion.push(nextQuestion);
-    this.state.alreadyTodoQuestions.push(
-      questions[this.state.currentQuestion].question
-    );
     if (nextQuestion < questions.length) {
+      // console.log();
+      // if (questions[this.state.currentQuestion].answerOptions[0].isIntrovert) {
+      //   if (
+      //     !questions[this.state.currentQuestion].answerOptions[1].isIntrovert
+      //   ) {
+      //     console.log("intro");
+      //   } else {
+      //     this.setState((state) => ({
+      //       extravertCounter: (state.extravertCounter =
+      //         this.state.extravertCounter + 1),
+      //     }));
+      //     console.log(this.state.extravertCounter);
+      //   }
+      //   this.setState((state) => ({
+      //     introvertCounter: (state.introvertCounter =
+      //       this.state.introvertCounter + 1),
+      //   }));
+      //   console.log(this.state.introvertCounter);
+      // } else {
+      // }
+      // if (questions[this.state.currentQuestion].answerOptions[0].isIntrovert) {
+      //   if (
+      //     questions[this.state.currentQuestion].answerOptions[1].isIntrovert
+      //   ) {
+      //     console.log("introvert");
+      //   } else {
+      //     console.log("extravert");
+      //   }
+      // }
+      // if (questions[this.state.currentQuestion].answerOptions[0].isIntrovert) {
+      //   this.setState((state) => ({
+      //     introvertCounter: (state.introvertCounter =
+      //       this.state.introvertCounter + 1),
+      //   }));
+      //   console.log("introvert");
+      //   console.log(this.state.introvertCounter);
+      // } else if (
+      // ) {
+      //   this.setState((state) => ({
+      //     extravertCounter: (state.extravertCounter =
+      //       this.state.extravertCounter + 1),
+      //   }));
+      //   console.log("extravert");
+      //   console.log(this.state.extravertCounter);
+      // }
       this.setState((state) => ({
-        text: (state.text = state.text + 1),
         currentQuestion: (state.currentQuestion = nextQuestion),
       }));
     } else {
-      alert("Quiz end");
+      this.setState((state) => ({
+        showResult: (state.showResult = true),
+      }));
     }
   };
 
@@ -495,6 +531,23 @@ class Hero extends React.Component {
       }
     });
   };
+  renderShowResult = () => {
+    const introvert = this.state.introvertCounter;
+    const extravert = this.state.extravertCounter;
+    if (introvert >= extravert) {
+      return (
+        <>
+          <p>You're introvert</p>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <p>You're extravert</p>
+        </>
+      );
+    }
+  };
   rendeHero = () => {
     const username = localStorage.getItem("username");
     if (username == "" || !username) {
@@ -502,15 +555,11 @@ class Hero extends React.Component {
     } else {
       return (
         <>
-          {console.log(this.state.text)}
+          {this.state.showResult && <>{this.renderShowResult()}</>}
           <div className="flex">
             <List
               currentQuestion={this.state.currentQuestion}
               questions={questions}
-              activeTodoQuestion={this.state.activeTodoQuestion}
-              classComponent={this.state.classComponent}
-              alreadyTodoQuestions={this.state.alreadyTodoQuestions}
-              itemSecond={this.state.text}
             />
             <HeroQuiz
               currentQuestion={this.state.currentQuestion}
