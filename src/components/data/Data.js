@@ -617,4 +617,163 @@ export const Data = [
       },
     ],
   },
+  {
+    id: "51",
+    question: "Would you prefer to be considered as",
+    answerOptions: [
+      {
+        answerText: "a practical person or",
+      },
+      {
+        answerText: "an inventive person",
+      },
+    ],
+  },
+  {
+    id: "52",
+    question: "More praiseworthy is a man",
+    answerOptions: [
+      {
+        answerText: "who has “clear mind” or",
+      },
+      {
+        answerText: "capable of strong feelings",
+      },
+    ],
+  },
+  {
+    id: "53",
+    question: "You are more likely to be",
+    answerOptions: [
+      {
+        answerText: "fair and impartial or",
+      },
+      {
+        answerText: "sympathetic and empathizing",
+      },
+    ],
+  },
+  {
+    id: "54",
+    question: "If you act according to a plan",
+    answerOptions: [
+      {
+        answerText: "you feel comfortable or",
+      },
+      {
+        answerText: "it constrains and limits you",
+      },
+    ],
+  },
+  {
+    id: "55",
+    question: "You do things better when you are",
+    answerOptions: [
+      {
+        answerText: "following a well-thought-out plan or",
+      },
+      {
+        answerText: "coping with surprises",
+      },
+    ],
+  },
+  {
+    id: "56",
+    question:
+      "Do you think that people close to you have your opinion on certain issues?",
+    answerOptions: [
+      {
+        answerText: "know your opinion on certain issues, or",
+      },
+      {
+        answerText: "will find out only when you tell them",
+      },
+    ],
+  },
+  {
+    id: "57",
+    question: "In yourself you value",
+    answerOptions: [
+      {
+        answerText: "a strong sense of reality or",
+      },
+      {
+        answerText: "a vivid imagination",
+      },
+    ],
+  },
+  {
+    id: "58",
+    question: "If you were a teacher, you would prefer to teach",
+    answerOptions: [
+      {
+        answerText: "practical subjects or",
+      },
+      {
+        answerText: "theoretical subjects",
+      },
+    ],
+  },
+  {
+    id: "59",
+    question: "What do you think is worse - to be",
+    answerOptions: [
+      {
+        answerText: "too quick-tempered or",
+      },
+      {
+        answerText: "too objective",
+      },
+    ],
+  },
+  {
+    id: "60",
+    question: "You consider yourself as",
+    answerOptions: [
+      {
+        answerText: "sober-minded or",
+      },
+      {
+        answerText: "loyal and responsive",
+      },
+    ],
+  },
+  {
+    id: "61",
+    question: "You are more attracted to situations",
+    answerOptions: [
+      {
+        answerText: "ordered and planned",
+      },
+      {
+        answerText: "unordered and unplanned",
+      },
+    ],
+  },
+  {
+    id: "62",
+    question: "You are acting",
+    answerOptions: [
+      {
+        answerText:
+          "more often in accordance to the rules rather than the way you actually want or",
+      },
+      {
+        answerText:
+          "more often the way you actually want rather than in accordance to the rules",
+      },
+    ],
+  },
+  {
+    id: "63",
+    question: "Usually you are",
+    answerOptions: [
+      {
+        answerText: "a sociable person or",
+      },
+      {
+        answerText: "calm and discreet",
+      },
+    ],
+  },
 ];
