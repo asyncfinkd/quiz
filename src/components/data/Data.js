@@ -7,11 +7,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "participate in a general conversation or",
-        isIntrovert: true,
       },
       {
         answerText: "talking with each separately",
-        isIntrovert: false,
       },
     ],
   },
@@ -21,11 +19,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "realistic or",
-        isIntrovert: true,
       },
       {
         answerText: "prone to theorizing",
-        isIntrovert: false,
       },
     ],
   },
@@ -35,11 +31,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "“living in a dream world”» or",
-        isIntrovert: true,
       },
       {
         answerText: "«all goes according to the plan»",
-        isIntrovert: false,
       },
     ],
   },
@@ -49,11 +43,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "solid principles or",
-        isIntrovert: true,
       },
       {
         answerText: "strong emotions",
-        isIntrovert: false,
       },
     ],
   },
@@ -63,11 +55,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "persuasive or",
-        isIntrovert: true,
       },
       {
         answerText: "sentimental",
-        isIntrovert: false,
       },
     ],
   },
@@ -77,11 +67,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "to plan it in advance or",
-        isIntrovert: true,
       },
       {
         answerText: "to find out what to do, already in the course of work",
-        isIntrovert: false,
       },
     ],
   },
@@ -92,11 +80,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "mostly attentive and carefully or",
-        isIntrovert: true,
       },
       {
         answerText: "often spontaneously",
-        isIntrovert: false,
       },
     ],
   },
@@ -106,11 +92,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "stay up late",
-        isIntrovert: true,
       },
       {
         answerText: "leave early feeling tired",
-        isIntrovert: false,
       },
     ],
   },
@@ -120,11 +104,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "realists or",
-        isIntrovert: true,
       },
       {
         answerText: "imaginative people",
-        isIntrovert: false,
       },
     ],
   },
@@ -134,11 +116,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "what really exists or",
-        isIntrovert: true,
       },
       {
         answerText: "unrealized opportunities",
-        isIntrovert: false,
       },
     ],
   },
@@ -148,11 +128,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "on rules more often than on circumstances or",
-        isIntrovert: true,
       },
       {
         answerText: "on circumstances more often than on rules",
-        isIntrovert: false,
       },
     ],
   },
@@ -162,11 +140,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "firm and objective",
-        isIntrovert: true,
       },
       {
         answerText: "condescending and subjective",
-        isIntrovert: false,
       },
     ],
   },
@@ -176,11 +152,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "punctually or",
-        isIntrovert: true,
       },
       {
         answerText: "slowly",
-        isIntrovert: false,
       },
     ],
   },
@@ -190,11 +164,9 @@ export const Data = [
     answerOptions: [
       {
         answerText: "doing work in advance or",
-        isIntrovert: true,
       },
       {
         answerText: "doing everything last moment",
-        isIntrovert: false,
       },
     ],
   },
@@ -204,11 +176,57 @@ export const Data = [
     answerOptions: [
       {
         answerText: "you know everything about everyone or",
-        isIntrovert: true,
       },
       {
         answerText: "the last to know what is happening",
-        isIntrovert: false,
+      },
+    ],
+  },
+  {
+    id: "15",
+    question: "When doing your usual work you prefer",
+    answerOptions: [
+      {
+        answerText: "doing it the usual way or",
+      },
+      {
+        answerText: "inventing your own way",
+      },
+    ],
+  },
+  {
+    id: "16",
+    question: "When you read at your pleasure, you prefeer when a writer",
+    answerOptions: [
+      {
+        answerText: "clearly explains what he means or",
+      },
+      {
+        answerText: "sets out thoughts in an unusual, original form.",
+      },
+    ],
+  },
+  {
+    id: "17",
+    question: "What attracts you more",
+    answerOptions: [
+      {
+        answerText: "consistency and reasoning or",
+      },
+      {
+        answerText: "the harmony of human relations",
+      },
+    ],
+  },
+  {
+    id: "18",
+    question: "It is easier for you to make judgments.",
+    answerOptions: [
+      {
+        answerText: "based on logic and on facts or",
+      },
+      {
+        answerText: "based on your values",
       },
     ],
   },

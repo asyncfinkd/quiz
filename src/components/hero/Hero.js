@@ -32,6 +32,7 @@ class Hero extends React.Component {
     history: [],
     showButtons: true,
     questions: Data,
+    answeredQuestionAlready: [],
   };
 
   /*
