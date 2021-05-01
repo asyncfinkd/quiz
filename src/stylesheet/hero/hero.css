@@ -1,17 +1,17 @@
 .question-span {
   font-size: 21px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-transform: capitalize;
 }
 
 .questionLength-span {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-transform: capitalize;
   font-size: 17px;
 }
@@ -21,20 +21,20 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 600px;
 }
 
 .question-button {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-transform: capitalize;
   margin-right: 10px;
   margin-left: 10px;
@@ -58,13 +58,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
 
 .list-container {
   width: 550px;
-  height: 100vh;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  height: 515px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
   overflow-y: scroll;
   max-width: 100%;
   padding: 10px;
@@ -94,4 +97,23 @@
 .bg-ignore {
   background-color: gray;
 }
-/*# sourceMappingURL=hero.css.map */
+
+#modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+#modal::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+#modal::-webkit-scrollbar-thumb {
+  background: #3e4042b6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(62, 69, 69, 0.775);
+}
