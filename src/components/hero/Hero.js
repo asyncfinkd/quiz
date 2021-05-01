@@ -72,6 +72,7 @@ class Hero extends React.Component {
     });
   };
 
+  /* Here is a description of the list. Functional action when pressed. Planting, browning, disassembling array assignment operators are all here. */
   renderListItem = () => {
     return (
       <>
@@ -106,6 +107,7 @@ class Hero extends React.Component {
     );
   };
 
+  /* As we had the next question variable above we also have the previous question variable which provides the return. */
   prevQuestion = () => {
     const prevQuestion = this.state.currentQuestion - 1;
 
@@ -142,6 +144,7 @@ class Hero extends React.Component {
               nextQuestion={() => this.nextQuestion()}
               history={this.state.history}
               listItem={this.renderListItem()}
+              backHandle={() => this.prevQuestion()}
             />
           </div>
         </>
