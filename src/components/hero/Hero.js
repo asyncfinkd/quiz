@@ -1,3 +1,16 @@
+/* import:
+  React -> Framework
+  Data -> Component -> Location -> src/components/data
+  withRouter -> Package for Route, Pagination
+  HeroMain -> Component -> Location -> src/components/hero/main
+
+  Files:
+  HeroMain, Data
+
+  Package || Framework:
+  React, React-router-dom
+*/
+
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "../../stylesheet/hero/hero.css";
@@ -5,7 +18,14 @@ import { Data } from "../data/Data";
 import HeroMain from "./main/HeroMain";
 
 class Hero extends React.Component {
+  /* 
+    In this file we use the class component. To better do object-oriented programming.
+  */
+
   state = {
+    /* 
+      Variables that the program uses when quiz work
+    */
     round: 0,
     currentQuestion: 0,
     showResult: false,
@@ -13,9 +33,18 @@ class Hero extends React.Component {
     showButtons: true,
     questions: Data,
   };
+
+  /*
+    The next reading function that completes the quiz question transition.
+  */
+
   nextQuestion = () => {
     const nextQuestion = this.state.currentQuestion + 1;
+    /* 
+      Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
+    */
     if (nextQuestion < this.state.questions.length) {
+      /* Assignment Operator When I want to change something I write an essay with a particular variable. This is where the next question for the user as I said above happens */
       this.setState((state) => ({
         currentQuestion: (state.currentQuestion = nextQuestion),
       }));
@@ -25,9 +54,14 @@ class Hero extends React.Component {
       }));
     }
 
+    /* This is where the previous query ID is stored in the array, which we use later in rendering */
     this.state.history.push(
       this.state.questions[this.state.currentQuestion].id
     );
+
+    /* This is where the rendering of the answer memorized in the quiz takes place. If you have not seen it then I will tell you: if you choose one of the two answers the question to the left will be green. If you want to go down and see another question it will already be ignored or it will have a separate color brown. */
+
+    /* What is this.state? Or even questions, history. Questions and history are variables this.state - are even references to object-oriented programming. That is, I have access to the above in the variable with this.state. Simply put it is an indication */
     this.state.questions.map((item) => {
       this.state.history.map((item2) => {
         if (item.id == item2) {
