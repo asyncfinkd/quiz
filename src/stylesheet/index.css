@@ -409,6 +409,10 @@ h1 {
   cursor: pointer;
 }
 
+.act-show {
+  color: red;
+}
+
 .button-primary:hover {
   background-color: #0a58ca;
   border-color: #0a58ca;
@@ -463,4 +467,15 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
   color: #666;
+}
+
+.search-question-input {
+  border: 1px solid #dfe1e5;
+  height: 44px;
+  max-width: 100%;
+  width: 360px;
+  color: rgba(0, 0, 0, 0.87);
+  outline: none;
+  border-radius: 4px;
+  padding-left: 10px;
 }

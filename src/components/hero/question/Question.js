@@ -16,7 +16,7 @@ class Question extends React.Component {
   render() {
     /* I calculate the percentage using the formula x = (a / b) * 100 */
     const renderPercent = Math.round(
-      (this.props.currentQuestion / this.props.questions.length) * 100
+      ((this.props.currentQuestion + 1) / this.props.questions.length) * 100
     );
     return (
       <>
@@ -48,7 +48,9 @@ class Question extends React.Component {
                     <Progress percent={renderPercent} status="active" />
                     <div aria-label="Question Length" className="mt-3">
                       <span className="questionLength-span">
-                        {`Question ${this.props.currentQuestion}/${this.props.questions.length}`}
+                        {`Question ${this.props.currentQuestion + 1}/${
+                          this.props.questions.length
+                        }`}
                       </span>
                     </div>
                     <div aria-label="Question" className="mt-3">

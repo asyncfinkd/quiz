@@ -98,6 +98,7 @@ class Hero extends React.Component {
                   });
                 }}
                 id={item.id}
+                className={this.state.item && "act-show"}
               >
                 {item.question}
               </li>
@@ -111,6 +112,7 @@ class Hero extends React.Component {
             marginLeft: "0px",
             marginTop: "1rem",
             height: "44px",
+            maxWidth: "100%",
           }}
           disabled={renderBlocked}
           /* onClick function for show result */
