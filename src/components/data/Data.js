@@ -507,4 +507,53 @@ export const Data = [
       },
     ],
   },
+  {
+    id: "42",
+    question: "Do you prefer to have",
+    answerOptions: [
+      {
+        answerText:
+          "a wide circle of communication, consisting of many friends and acquaintances or",
+      },
+      {
+        answerText: "a narrow social circle consisting of several friends",
+      },
+    ],
+  },
+  {
+    id: "43",
+    question: "You are more guided by",
+    answerOptions: [
+      {
+        answerText: "facts or",
+      },
+      {
+        answerText: "regularities",
+      },
+    ],
+  },
+  {
+    id: "44",
+    question: "You are more interested or would be interested in",
+    answerOptions: [
+      {
+        answerText: "production and distribution of products or",
+      },
+      {
+        answerText: "research and design",
+      },
+    ],
+  },
+  {
+    id: "45",
+    question: "Do you consider it a compliment if you are called",
+    answerOptions: [
+      {
+        answerText: "a logical person or",
+      },
+      {
+        answerText: "the feeling person",
+      },
+    ],
+  },
 ];
