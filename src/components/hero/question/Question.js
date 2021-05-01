@@ -1,8 +1,20 @@
+/* import:
+  React -> Framework
+  Progress -> Package
+
+  Package || Framework:
+  React, Progress
+*/
+
 import React from "react";
 import { Progress } from "antd";
 
 class Question extends React.Component {
+  /* 
+    In this file we use the class component. To better do object-oriented programming.
+  */
   render() {
+    /* I calculate the percentage using the formula x = (a / b) * 100 */
     const renderPercent = Math.round(
       (this.props.currentQuestion / this.props.questions.length) * 100
     );
@@ -15,16 +27,19 @@ class Question extends React.Component {
               style={{ width: "700px", height: "362px" }}
             >
               {this.props.showResult ? (
+                /* What if there are no more questions */
                 <p>You Finish exam</p>
               ) : (
                 <>
                   {this.props.currentQuestion > 0 && (
+                    /* This component will appear if we select a single question. Or move on to any question from the first question */
                     <div className="back-component">
                       <span onClick={this.props.backHandle}>← Back</span>
                     </div>
                   )}
                   <div className="box-content max-w-full">
                     <div style={{ marginBottom: "1rem" }}></div>
+                    {/* We use the package as a percentage component. Which is automatically created for progress */}
                     <Progress percent={renderPercent} status="active" />
                     <div aria-label="Question Length" className="mt-3">
                       <span className="questionLength-span">
@@ -33,6 +48,7 @@ class Question extends React.Component {
                     </div>
                     <div aria-label="Question" className="mt-3">
                       <span className="question-span">
+                        {/* A question that is rendered with the program */}
                         {
                           this.props.questions[this.props.currentQuestion]
                             .question
@@ -43,6 +59,7 @@ class Question extends React.Component {
                       role="button"
                       className="mt-6 questionContainer-button"
                     >
+                      {/* answers. In its quantity */}
                       {this.props.showButtons && (
                         <>
                           {this.props.questions[
@@ -62,7 +79,6 @@ class Question extends React.Component {
                           })}
                         </>
                       )}
-                      {!this.props.showButtons && <p>gggg</p>}
                     </div>
                   </div>
                 </>
