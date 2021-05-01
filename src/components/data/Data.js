@@ -845,7 +845,7 @@ export const Data = [
         answerText: "to think and plan or",
       },
       {
-        answerrText: "to act according to circumstances",
+        answerText: "to act according to circumstances",
       },
     ],
   },
