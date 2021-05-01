@@ -28,7 +28,12 @@ class Question extends React.Component {
             >
               {this.props.showResult ? (
                 /* What if there are no more questions */
-                <p>You Finish exam</p>
+                <>
+                  <p>You Finish exam</p>
+                  <div className="back-component">
+                    <span onClick={this.props.returnQuestions}>← Back</span>
+                  </div>
+                </>
               ) : (
                 <>
                   {this.props.currentQuestion > 0 && (

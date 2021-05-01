@@ -165,6 +165,9 @@ class Hero extends React.Component {
               history={this.state.history}
               listItem={this.renderListItem()}
               backHandle={() => this.prevQuestion()}
+              returnQuestions={() => {
+                this.setState({ showResult: (this.state.showResult = false) });
+              }}
             />
           </div>
         </>

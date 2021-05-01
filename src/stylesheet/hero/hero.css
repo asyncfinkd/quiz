@@ -121,3 +121,8 @@
 .question-button:disabled {
   opacity: 0.5;
 }
+
+.question-button:disabled:hover,
+.question-button:disabled:focus {
+  background-color: #0d6efd !important;
+}

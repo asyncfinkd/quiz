@@ -35,6 +35,7 @@ class HeroMain extends React.Component {
           showButtons={this.props.showButtons}
           nextQuestion={this.props.nextQuestion}
           backHandle={this.props.backHandle}
+          returnQuestions={this.props.returnQuestions}
         />
       </>
     );
