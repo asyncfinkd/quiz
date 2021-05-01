@@ -556,4 +556,65 @@ export const Data = [
       },
     ],
   },
+  {
+    id: "46",
+    question: "In yourself you value more",
+    answerOptions: [
+      {
+        answerText: "decisiveness or",
+      },
+      {
+        answerText: "devotion",
+      },
+    ],
+  },
+  {
+    id: "47",
+    question:
+      "When you express your thoughts or judgments, you prefer them to be",
+    answerOptions: [
+      {
+        answerText: "completed or",
+      },
+      {
+        answerText: "preliminary with the possibility of improvement",
+      },
+    ],
+  },
+  {
+    id: "48",
+    question: "You feel better",
+    answerOptions: [
+      {
+        answerText: "after making an important decision or",
+      },
+      {
+        answerText: "before making an important decision",
+      },
+    ],
+  },
+  {
+    id: "49",
+    question: "When communicating with unfamiliar people, you",
+    answerOptions: [
+      {
+        answerText: "have long conversations or",
+      },
+      {
+        answerText: "hardly find topics for conversation",
+      },
+    ],
+  },
+  {
+    id: "50",
+    question: "You trust",
+    answerOptions: [
+      {
+        answerText: "your experience or",
+      },
+      {
+        answerText: "your intuition",
+      },
+    ],
+  },
 ];
