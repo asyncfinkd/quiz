@@ -49,9 +49,7 @@ class Hero extends React.Component {
         currentQuestion: (state.currentQuestion = nextQuestion),
       }));
     } else {
-      this.setState((state) => ({
-        showResult: (state.showResult = true),
-      }));
+      this.setState({ currentQuestion: this.state.currentQuestion });
     }
 
     /* This is where the previous query ID is stored in the array, which we use later in rendering */
@@ -74,6 +72,9 @@ class Hero extends React.Component {
 
   /* Here is a description of the list. Functional action when pressed. Planting, browning, disassembling array assignment operators are all here. */
   renderListItem = () => {
+    /* Disabled Button Logic */
+    const renderBlocked =
+      this.state.history.length < this.state.questions.length;
     return (
       <>
         {this.state.questions.map((item) => {
@@ -103,6 +104,22 @@ class Hero extends React.Component {
             </>
           );
         })}
+        <button
+          className="question-button button-primary"
+          style={{
+            width: "360px",
+            marginLeft: "0px",
+            marginTop: "1rem",
+            height: "44px",
+          }}
+          disabled={renderBlocked}
+          /* onClick function for show result */
+          onClick={() => {
+            this.setState({ showResult: (this.state.showResult = true) });
+          }}
+        >
+          Submit
+        </button>
       </>
     );
   };

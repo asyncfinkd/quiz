@@ -17,20 +17,7 @@ class HeroList extends React.Component {
       <>
         {/* Here I just have one props that will render the entire component at the receiver time */}
         <div className="list-container" id="modal">
-          <ul>
-            {this.props.listItem}
-            <button
-              className="question-button button-primary"
-              style={{
-                width: "360px",
-                marginLeft: "0px",
-                marginTop: "1rem",
-                height: "44px",
-              }}
-            >
-              Submit
-            </button>
-          </ul>
+          <ul>{this.props.listItem}</ul>
         </div>
       </>
     );

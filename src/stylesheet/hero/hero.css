@@ -117,3 +117,7 @@
 #modal::-webkit-scrollbar-thumb:hover {
   background: rgba(62, 69, 69, 0.775);
 }
+
+.question-button:disabled {
+  opacity: 0.5;
+}
