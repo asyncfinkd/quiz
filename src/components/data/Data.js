@@ -776,4 +776,77 @@ export const Data = [
       },
     ],
   },
+  {
+    id: "64",
+    question: "When you are writing, you prefer",
+    answerOptions: [
+      {
+        answerText: "writing word for word or",
+      },
+      {
+        answerText: "expressing figuratively",
+      },
+    ],
+  },
+  {
+    id: "65",
+    question: "You find it harder",
+    answerOptions: [
+      {
+        answerText: "to put yourself in the shoes of other people or",
+      },
+      {
+        answerText:
+          "to understand how to get the most benefit from other people",
+      },
+    ],
+  },
+  {
+    id: "66",
+    question: "Would you wish yourself",
+    answerOptions: [
+      {
+        answerText: "a greater mental clarity or",
+      },
+      {
+        answerText: "a greater compassion ability",
+      },
+    ],
+  },
+  {
+    id: "67",
+    question: "Would you prefer working with a manager who",
+    answerOptions: [
+      {
+        answerText: "is always fair or",
+      },
+      {
+        answerText: "is always benevolent",
+      },
+    ],
+  },
+  {
+    id: "68",
+    question: "Do you prefer",
+    answerOptions: [
+      {
+        answerText: "scheduled events or",
+      },
+      {
+        answerText: "spontaneous events",
+      },
+    ],
+  },
+  {
+    id: "69",
+    question: "You are more inclided",
+    answerOptions: [
+      {
+        answerText: "to think and plan or",
+      },
+      {
+        answerrText: "to act according to circumstances",
+      },
+    ],
+  },
 ];
