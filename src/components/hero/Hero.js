@@ -116,6 +116,7 @@ class Hero extends React.Component {
     }));
   };
 
+  /* Another interesting action. This is a keyboard that helps you operate the quiz without a mouse */
   componentWillMount = () => {
     document.addEventListener("keydown", (e) => {
       const keyName = e.keyCode;
@@ -128,6 +129,8 @@ class Hero extends React.Component {
       }
     });
   };
+
+  /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
   rendeHero = () => {
     const username = localStorage.getItem("username");
     if (username == "" || !username) {
