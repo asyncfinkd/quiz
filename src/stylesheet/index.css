@@ -254,6 +254,7 @@ h1 {
   background-color: #fff;
   border-color: #1a73e8;
   outline: 0;
+  box-shadow: 0 0 0 0.2rem #1a73e893;
 }
 
 .w-350 {
@@ -443,8 +444,9 @@ h1 {
   text-decoration-line: underline;
 }
 
-.input-error {
+.input-error:focus {
   border: 1px solid red !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.589) !important;
 }
 
 .label-error {
