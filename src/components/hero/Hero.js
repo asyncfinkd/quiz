@@ -99,6 +99,14 @@ class Hero extends React.Component {
                         `${item2.id}`
                       ).style.backgroundColor = "gray";
                     }
+                    if (
+                      item2.id ==
+                      this.state.questions[this.state.currentQuestion + 1].id
+                    ) {
+                      document.getElementById(
+                        `${item.id}`
+                      ).style.backgroundColor = "#0d6efd";
+                    }
                   });
                   this.state.history.map((item2) => {
                     document.getElementById(`${+item2}`).style.backgroundColor =
