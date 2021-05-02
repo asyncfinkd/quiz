@@ -76,14 +76,6 @@ class Hero extends React.Component {
         document.getElementById(`${item.id}`).style.backgroundColor = "#0d6efd";
       }
     });
-
-    // console.log(this.state.questions[this.state.currentQuestion].id);
-    // console.log(this.state.history[this.state.currentQuestion]);
-    // if (
-    //                 this.state.questions[this.state.currentQuestion].id ==
-    //                 this.state.history[this.state.currentQuestion]
-    //               ) {
-    //               }
   };
 
   /* Here is a description of the list. Functional action when pressed. Planting, browning, disassembling array assignment operators are all here. */
@@ -106,14 +98,6 @@ class Hero extends React.Component {
                       document.getElementById(
                         `${item2.id}`
                       ).style.backgroundColor = "gray";
-                    }
-                    if (
-                      item2.id ==
-                      this.state.questions[this.state.currentQuestion + 1].id
-                    ) {
-                      document.getElementById(
-                        `${item.id}`
-                      ).style.backgroundColor = "#0d6efd";
                     }
                   });
                   this.state.history.map((item2) => {
