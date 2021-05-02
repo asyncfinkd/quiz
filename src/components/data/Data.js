@@ -7,9 +7,11 @@ export const Data = [
     answerOptions: [
       {
         answerText: "participate in a general conversation or",
+        answer: false,
       },
       {
         answerText: "talking with each separately",
+        answer: false,
       },
     ],
   },
@@ -19,9 +21,11 @@ export const Data = [
     answerOptions: [
       {
         answerText: "realistic or",
+        answer: false,
       },
       {
         answerText: "prone to theorizing",
+        answer: false,
       },
     ],
   },
@@ -31,9 +35,11 @@ export const Data = [
     answerOptions: [
       {
         answerText: "“living in a dream world”» or",
+        answer: false,
       },
       {
         answerText: "«all goes according to the plan»",
+        answer: false,
       },
     ],
   },

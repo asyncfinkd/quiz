@@ -33,6 +33,8 @@ class Hero extends React.Component {
     showButtons: true,
     questions: Data,
     answeredQuestionAlready: [],
+    left: [],
+    right: [],
   };
 
   /*
@@ -158,6 +160,17 @@ class Hero extends React.Component {
     } else {
       return (
         <>
+          <button type="button" className="resp-button">
+            <svg width="24" height="24" fill="none">
+              <path
+                d="M4 8h16M4 16h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
           <div className="flex">
             <HeroMain
               showResult={this.state.showResult}

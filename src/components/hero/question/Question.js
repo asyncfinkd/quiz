@@ -65,6 +65,7 @@ class Question extends React.Component {
                     <div
                       role="button"
                       className="mt-6 questionContainer-button"
+                      style={{ maxWidth: "100%" }}
                     >
                       {/* answers. In its quantity */}
                       {this.props.showButtons && (

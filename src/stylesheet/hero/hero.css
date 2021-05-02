@@ -126,3 +126,40 @@
 .question-button:disabled:focus {
   background-color: #0d6efd !important;
 }
+
+.resp-button {
+  color: white;
+  background-color: rgba(17, 24, 39, 1);
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  display: none !important;
+  right: 1rem;
+  bottom: 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.resp-button:hover {
+  background-color: rgba(17, 24, 39, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .list-container {
+    opacity: 0;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+  }
+  .resp-button {
+    display: flex !important;
+  }
+}
