@@ -20,8 +20,8 @@ export default function SkeletonLogin() {
             <SkeletonElement type="input" />
             <SkeletonElement type="button" />
             <SkeletonElement type="text styled mt-3" />
+            <Shimmer />
           </div>
-          <Shimmer />
         </div>
       </div>
     </>
