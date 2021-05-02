@@ -159,6 +159,7 @@ class Hero extends React.Component {
     } else {
       return (
         <>
+          {/* Button Responsive Click (open / close) */}
           <button
             type="button"
             className="resp-button"
