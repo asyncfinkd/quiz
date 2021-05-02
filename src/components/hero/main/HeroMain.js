@@ -27,6 +27,7 @@ class HeroMain extends React.Component {
           history={this.props.history}
           currentQuestion={this.props.currentQuestion}
           listItem={this.props.listItem}
+          buttonList={this.props.buttonList}
         />
         <Question
           showResult={this.props.showResult}

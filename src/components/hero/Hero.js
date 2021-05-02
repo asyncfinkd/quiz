@@ -33,8 +33,7 @@ class Hero extends React.Component {
     showButtons: true,
     questions: Data,
     answeredQuestionAlready: [],
-    left: [],
-    right: [],
+    buttonList: false,
   };
 
   /*
@@ -160,7 +159,15 @@ class Hero extends React.Component {
     } else {
       return (
         <>
-          <button type="button" className="resp-button">
+          <button
+            type="button"
+            className="resp-button"
+            onClick={() => {
+              this.setState({
+                buttonList: (this.state.buttonList = !this.state.buttonList),
+              });
+            }}
+          >
             <svg width="24" height="24" fill="none">
               <path
                 d="M4 8h16M4 16h16"
@@ -184,6 +191,7 @@ class Hero extends React.Component {
               returnQuestions={() => {
                 this.setState({ showResult: (this.state.showResult = false) });
               }}
+              buttonList={this.state.buttonList}
             />
           </div>
         </>

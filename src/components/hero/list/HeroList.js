@@ -16,7 +16,15 @@ class HeroList extends React.Component {
     return (
       <>
         {/* Here I just have one props that will render the entire component at the receiver time */}
-        <div className="list-container" id="modal">
+        <div
+          className={this.props.buttonList && "list-bg-container-resp"}
+        ></div>
+        <div
+          className={
+            this.props.buttonList ? "list-container-resp" : "list-container"
+          }
+          id="modal"
+        >
           <ul>{this.props.listItem}</ul>
         </div>
       </>
