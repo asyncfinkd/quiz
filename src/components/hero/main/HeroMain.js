@@ -28,6 +28,7 @@ class HeroMain extends React.Component {
           currentQuestion={this.props.currentQuestion}
           listItem={this.props.listItem}
           buttonList={this.props.buttonList}
+          closeModal={this.props.closeModal}
         />
         <Question
           showResult={this.props.showResult}

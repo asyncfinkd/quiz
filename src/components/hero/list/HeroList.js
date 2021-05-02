@@ -18,6 +18,7 @@ class HeroList extends React.Component {
         {/* Here I just have one props that will render the entire component at the receiver time */}
         <div
           className={this.props.buttonList && "list-bg-container-resp"}
+          onClick={this.props.closeModal}
         ></div>
         <div
           className={
