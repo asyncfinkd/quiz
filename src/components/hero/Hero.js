@@ -72,8 +72,19 @@ class Hero extends React.Component {
     });
 
     this.state.questions.map((item) => {
-      if (item.id == this.state.questions[this.state.currentQuestion + 1].id) {
-        document.getElementById(`${item.id}`).style.backgroundColor = "#0d6efd";
+      if (
+        document.getElementById(`${item.id}`).style.backgroundColor != "green"
+      ) {
+        if (
+          document.getElementById(`${item.id}`).style.backgroundColor != "gray"
+        ) {
+          if (
+            item.id == this.state.questions[this.state.currentQuestion + 1].id
+          ) {
+            document.getElementById(`${item.id}`).style.backgroundColor =
+              "#0d6efd";
+          }
+        }
       }
     });
   };
@@ -99,15 +110,8 @@ class Hero extends React.Component {
                         `${item2.id}`
                       ).style.backgroundColor = "gray";
                     }
-                    if (
-                      item2.id ==
-                      this.state.questions[this.state.currentQuestion + 1].id
-                    ) {
-                      document.getElementById(
-                        `${item.id}`
-                      ).style.backgroundColor = "#0d6efd";
-                    }
                   });
+
                   this.state.history.map((item2) => {
                     document.getElementById(`${+item2}`).style.backgroundColor =
                       "green";
