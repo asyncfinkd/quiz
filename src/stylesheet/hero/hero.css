@@ -79,7 +79,7 @@
   cursor: pointer;
   font-family: "Open Sans";
   font-size: 15px;
-  width: 360px;
+  width: 100%;
   letter-spacing: 0.09px;
   overflow: hidden;
   text-overflow: ellipsis;
