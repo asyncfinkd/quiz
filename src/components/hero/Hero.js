@@ -15,6 +15,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
+import SkeletonQuiz from "../skeletons/SkeletonQuiz";
 import HeroMain from "./main/HeroMain";
 
 class Hero extends React.Component {
@@ -184,6 +185,7 @@ class Hero extends React.Component {
       return (
         <>
           {/* Button Responsive Click (open / close) */}
+          <SkeletonQuiz />
           <button
             type="button"
             className="resp-button"
