@@ -252,6 +252,22 @@ class Hero extends React.Component {
                         .buttonList),
                     });
                   }}
+                  restart={() => {
+                    this.setState({ history: (this.state.history = []) });
+                    this.setState({
+                      currentQuestion: (this.state.currentQuestion = 0),
+                    });
+                    this.setState({
+                      showResult: (this.state.showResult = false),
+                    });
+                    this.state.questions.map((item) => {
+                      document.getElementById(
+                        `${item.id}`
+                      ).style.backgroundColor = "#fff";
+                      document.getElementById(`${item.id}`).style.color =
+                        "#000";
+                    });
+                  }}
                 />
               </div>
             </>

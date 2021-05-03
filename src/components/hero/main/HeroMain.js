@@ -38,6 +38,7 @@ class HeroMain extends React.Component {
           nextQuestion={this.props.nextQuestion}
           backHandle={this.props.backHandle}
           returnQuestions={this.props.returnQuestions}
+          restart={this.props.restart}
         />
       </>
     );
