@@ -30,7 +30,6 @@ class Question extends React.Component {
                 /* What if there are no more questions */
                 <>
                   <p>You Finish exam</p>
-                  <button onClick={this.props.restart}>restart</button>
                   <div className="back-component">
                     <span onClick={this.props.returnQuestions}>← Back</span>
                   </div>
