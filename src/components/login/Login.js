@@ -1,3 +1,12 @@
+/* import:
+  React -> Framework
+  withRouter -> package
+  SkeletonLogin -> file
+
+  Package || Framework:
+  React, React-router-dom
+*/
+
 import React from "react";
 import { withRouter } from "react-router-dom";
 import SkeletonLogin from "../skeletons/SkeletonLogin";
@@ -5,14 +14,17 @@ import SkeletonLogin from "../skeletons/SkeletonLogin";
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    /* This is the same as useRef */
     this.usernameErrorRef = React.createRef();
   }
+  /* Variables for component operation */
   state = {
     username: "",
     usernameError: false,
     showLoading: true,
   };
 
+  /* Display message in 2 seconds. With skeleton */
   componentWillMount = () => {
     setTimeout(() => {
       this.setState({ showLoading: (this.state.showLoading = false) });
@@ -23,6 +35,7 @@ class Login extends React.Component {
     this.setState({ username: event.target.value });
   };
 
+  /* Authentication entry component */
   renderSignupComponent = () => {
     if (!this.state.username) {
       this.setState((state) => ({
@@ -38,6 +51,7 @@ class Login extends React.Component {
     }
   };
 
+  /* Identify locally */
   renderLoginComponent = () => {
     const username = localStorage.getItem("sb_wiz.zpc.");
     if (!username || username == "") {

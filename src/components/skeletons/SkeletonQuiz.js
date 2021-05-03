@@ -1,13 +1,24 @@
+/* 
+  React -> Framework
+  Shimmer -> File
+  SkeletonElement -> File
+
+  Framework || Package:
+  React
+*/
+
 import React from "react";
 import SkeletonElement from "./SkeletonElement";
 import Shimmer from "./Shimmer";
 
 export default function SkeletonQuiz() {
+  /* Skeleton for quiz component */
   return (
     <>
       <div className="skeleton-wrapper">
         <div className="flex">
           <div className="list-container" id="modal">
+            {/* Map */}
             {[
               1,
               2,
