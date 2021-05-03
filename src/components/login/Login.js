@@ -33,13 +33,13 @@ class Login extends React.Component {
       this.setState((state) => ({
         usernameError: (state.usernameError = false),
       }));
-      localStorage.setItem("username", this.state.username);
+      localStorage.setItem("sb_wiz.zpc.", this.state.username);
       this.props.history.push("/quiz");
     }
   };
 
   renderLoginComponent = () => {
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("sb_wiz.zpc.");
     if (!username || username == "") {
       return (
         <>
