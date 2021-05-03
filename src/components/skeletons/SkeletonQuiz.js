@@ -60,28 +60,15 @@ export default function SkeletonQuiz() {
                     <SkeletonElement type="text styled" />
                   </div>
                   <div aria-label="Question" className="mt-3">
-                    <span className="question-span">
-                      When you are in a community (at a party with fellow
-                      workers or fellow practitioners), you usually prefer
-                    </span>
+                    <SkeletonElement type="thumbnail sty" />
                   </div>
                   <div
                     role="button"
                     className="mt-6 questionContainer-button"
-                    style={{ maxWidth: "100%" }}
+                    style={{ maxWidth: "100%", justifyContent: "center" }}
                   >
-                    <button
-                      type="submit"
-                      className="question-button button-primary h-70"
-                    >
-                      participate in a general conversation or
-                    </button>
-                    <button
-                      type="submit"
-                      className="question-button button-primary h-70"
-                    >
-                      talking with each separately
-                    </button>
+                    <SkeletonElement type="button-sty" />
+                    <SkeletonElement type="button-sty" />
                   </div>
                 </div>
               </div>
