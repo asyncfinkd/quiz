@@ -85,6 +85,7 @@ class Hero extends React.Component {
           ) {
             document.getElementById(`${item.id}`).style.backgroundColor =
               "#0d6efd";
+            document.getElementById(`${item.id}`).style.color = "white";
           }
         }
       }
