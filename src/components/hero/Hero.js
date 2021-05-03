@@ -96,7 +96,7 @@ class Hero extends React.Component {
   renderListItem = () => {
     /* Disabled Button Logic */
     const renderBlocked =
-      this.state.history.length < this.state.questions.length;
+      this.state.history.length <= this.state.questions.length - 1;
     return (
       <>
         {this.state.questions.map((item) => {
