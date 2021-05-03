@@ -604,3 +604,64 @@ h1 {
     transform: translateX(150%);
   }
 }
+
+.alert {
+  position: fixed;
+  z-index: 999;
+  width: 320px;
+  max-width: 100%;
+  padding: 10px;
+  top: 0;
+  user-select: none;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(231, 232, 233);
+  box-shadow: 0px 0px 6px #888888;
+  color: #000;
+}
+
+.alert-title {
+  margin-left: 55px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 18px;
+}
+
+.alert-text {
+  margin-left: 55px;
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.alert-button-container {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  float: right;
+}
+
+.alert-btn-not {
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  color: #666;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 24px;
+  margin-right: 6px;
+  cursor: default;
+}
+
+.alert-btn-agree {
+  display: inline-block;
+  background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #057fd0;
+  font-size: 12px;
+  padding: 4px 24px;
+  cursor: default;
+}
