@@ -35,6 +35,13 @@ class Hero extends React.Component {
     questions: Data,
     answeredQuestionAlready: [],
     buttonList: false,
+    showSkeleton: true,
+  };
+
+  componentWillMount = () => {
+    setTimeout(() => {
+      this.setState({ showSkeleton: (this.state.showSkeleton = false) });
+    }, 2000);
   };
 
   /*
@@ -185,64 +192,72 @@ class Hero extends React.Component {
       return (
         <>
           {/* Button Responsive Click (open / close) */}
-          <SkeletonQuiz />
-          <button
-            type="button"
-            className="resp-button"
-            onClick={() => {
-              this.setState({
-                buttonList: (this.state.buttonList = !this.state.buttonList),
-              });
-            }}
-          >
-            {this.state.buttonList != true ? (
-              <svg width="24" height="24" fill="none">
-                <path
-                  d="M4 8h16M4 16h16"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            ) : (
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
+          {this.state.showSkeleton && <SkeletonQuiz />}
+          {!this.state.showSkeleton && (
+            <>
+              <button
+                type="button"
+                className="resp-button"
+                onClick={() => {
+                  this.setState({
+                    buttonList: (this.state.buttonList = !this.state
+                      .buttonList),
+                  });
+                }}
               >
-                <path
-                  d="M6 18L18 6M6 6l12 12"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            )}
-          </button>
-          <div className="flex">
-            <HeroMain
-              showResult={this.state.showResult}
-              currentQuestion={this.state.currentQuestion}
-              questions={this.state.questions}
-              showButtons={this.state.showButtons}
-              nextQuestion={() => this.nextQuestion()}
-              history={this.state.history}
-              listItem={this.renderListItem()}
-              backHandle={() => this.prevQuestion()}
-              returnQuestions={() => {
-                this.setState({ showResult: (this.state.showResult = false) });
-              }}
-              buttonList={this.state.buttonList}
-              closeModal={() => {
-                this.setState({
-                  buttonList: (this.state.buttonList = !this.state.buttonList),
-                });
-              }}
-            />
-          </div>
+                {this.state.buttonList != true ? (
+                  <svg width="24" height="24" fill="none">
+                    <path
+                      d="M4 8h16M4 16h16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                ) : (
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
+                  >
+                    <path
+                      d="M6 18L18 6M6 6l12 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                )}
+              </button>
+              <div className="flex">
+                <HeroMain
+                  showResult={this.state.showResult}
+                  currentQuestion={this.state.currentQuestion}
+                  questions={this.state.questions}
+                  showButtons={this.state.showButtons}
+                  nextQuestion={() => this.nextQuestion()}
+                  history={this.state.history}
+                  listItem={this.renderListItem()}
+                  backHandle={() => this.prevQuestion()}
+                  returnQuestions={() => {
+                    this.setState({
+                      showResult: (this.state.showResult = false),
+                    });
+                  }}
+                  buttonList={this.state.buttonList}
+                  closeModal={() => {
+                    this.setState({
+                      buttonList: (this.state.buttonList = !this.state
+                        .buttonList),
+                    });
+                  }}
+                />
+              </div>
+            </>
+          )}
         </>
       );
     }
