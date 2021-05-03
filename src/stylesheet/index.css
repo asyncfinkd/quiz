@@ -513,6 +513,17 @@ h1 {
   height: 100px;
 }
 
+.skeleton.sty {
+  width: 100%;
+}
+
+.skeleton.button-sty {
+  width: 250px;
+  height: 65px;
+  margin-right: 50px;
+  background: #ddd;
+}
+
 .skeleton-wrapper {
   margin: 20px auto;
   padding: 10px 15px;
