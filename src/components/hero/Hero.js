@@ -38,12 +38,6 @@ class Hero extends React.Component {
     showSkeleton: true,
   };
 
-  componentWillMount = () => {
-    setTimeout(() => {
-      this.setState({ showSkeleton: (this.state.showSkeleton = false) });
-    }, 2000);
-  };
-
   /*
     The next reading function that completes the quiz question transition.
   */
@@ -181,6 +175,9 @@ class Hero extends React.Component {
         this.nextQuestion();
       }
     });
+    setTimeout(() => {
+      this.setState({ showSkeleton: (this.state.showSkeleton = false) });
+    }, 2000);
   };
 
   /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
