@@ -27,13 +27,11 @@ class Hero extends React.Component {
     /* 
       Variables that the program uses when quiz work
     */
-    round: 0,
     currentQuestion: 0,
     showResult: false,
     history: [],
     showButtons: true,
     questions: Data,
-    answeredQuestionAlready: [],
     buttonList: false,
     showSkeleton: true,
   };
