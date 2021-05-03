@@ -13,18 +13,26 @@
   React, React-router-dom
 */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Login from "./components/login/Login";
 import { BrowserRouter, Route } from "react-router-dom";
 import Hero from "./components/hero/Hero";
+import Alert from "./components/alert/Alert";
 
 export default function App() {
+  const [showPopup, setShowPopup] = useState(false);
   /* 
     Here I create a function that will render at boot time.
     Using the package mentioned above.
   */
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
+  });
   return (
     <>
+      {showPopup && <Alert />}
       <BrowserRouter>
         {/* 
           Here we give the first boot page component
