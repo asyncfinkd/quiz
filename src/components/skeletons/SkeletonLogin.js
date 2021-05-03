@@ -1,8 +1,18 @@
+/* 
+  React -> Framework
+  Shimmer -> File
+  SkeletonElement -> File
+
+  Framework || Package:
+  React
+*/
+
 import React from "react";
 import Shimmer from "./Shimmer";
 import SkeletonElement from "./SkeletonElement";
 
 export default function SkeletonLogin() {
+  /* Skeleton For Login Component */
   return (
     <>
       <div

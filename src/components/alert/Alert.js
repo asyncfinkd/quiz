@@ -1,14 +1,25 @@
+/* import:
+  React -> Framework
+
+  Package || Framework:
+  React
+*/
+
 import React, { useState } from "react";
 
 export default function Alert() {
   const [showModal, setShowModal] = useState(false);
+  /* The render of component should display a message when the website loads */
   const render = () => {
+    /* We use local identification */
     const local = localStorage.getItem("sb_wiz.zpc.__ag");
     if (local != "cl__ag") {
       return (
         <>
+          {/* What will return in case of first sight */}
           {showModal != true && (
             <div className="alert">
+              {/* Svg (web-cookie icon) */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="34"
@@ -26,12 +37,14 @@ export default function Alert() {
                   ></path>
                 </g>
               </svg>
+              {/* Text Message */}
               <div className="alert-title">The web uses a hook</div>
               <div className="alert-text">
                 Click the "Agree" button to agree. If you refuse consent will be
                 sent automatically. Because it is needed
               </div>
               <div className="alert-button-container">
+                {/* Local transfer */}
                 <div
                   className="alert-btn-not"
                   onClick={() => {
@@ -41,6 +54,7 @@ export default function Alert() {
                 >
                   Don't Agree
                 </div>
+                {/* Local transfer */}
                 <div
                   className="alert-btn-agree"
                   onClick={() => {

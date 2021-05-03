@@ -1,3 +1,4 @@
+/* Render Component */
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -5,6 +6,7 @@ import "./stylesheet/index.css";
 import reportWebVitals from "./reportWebVitals";
 import "antd/dist/antd.css";
 
+/* Give App in HTML */
 ReactDOM.render(
   <React.StrictMode>
     <App />
