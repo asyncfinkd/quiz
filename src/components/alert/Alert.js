@@ -5,9 +5,9 @@
   React
 */
 
-import React from "react";
+import React, { Component } from "react";
 
-class Alert extends React.Component {
+class Alert extends Component {
   state = {
     showModal: false,
   };
