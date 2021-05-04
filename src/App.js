@@ -13,39 +13,45 @@
   React, React-router-dom
 */
 
-import React, { useState, useEffect } from "react";
-import Login from "./components/login/Login";
-import { BrowserRouter, Route } from "react-router-dom";
-import Hero from "./components/hero/Hero";
+import React, { Component } from "react";
 import Alert from "./components/alert/Alert";
+import Login from "./components/login/Login";
+import Hero from "./components/hero/Hero";
+import { BrowserRouter, Route } from "react-router-dom";
 
-export default function App() {
-  const [showPopup, setShowPopup] = useState(false);
+class App extends Component {
+  state = {
+    showPopup: false,
+  };
   /* 
-    Here I create a function that will render at boot time.
-    Using the package mentioned above.
-  */
-  useEffect(() => {
+     Here I create a function that will render at boot time.
+     Using the package mentioned above.
+   */
+  componentWillMount = () => {
     setTimeout(() => {
-      setShowPopup(true);
+      this.setState({ showPopup: (this.state.showPopup = true) });
     }, 2000);
-  });
-  return (
-    <>
-      {showPopup && <Alert />}
-      <BrowserRouter>
-        {/* 
+  };
+  render() {
+    return (
+      <>
+        {this.state.showPopup && <Alert />}
+        <BrowserRouter>
+          {/* 
           Here we give the first boot page component
           As you know the first page loads / expands.
           We have authentication, if you do not enter
           the name you will not be allowed in the game
-      */}
-        <Route path="/" exact component={Login}></Route>
-        {/* 
+         */}
+          <Route path="/" exact component={Login}></Route>
+          {/* 
           The quiz component where everything happens. Which may be interesting to you.
         */}
-        <Route path="/quiz" component={Hero}></Route>
-      </BrowserRouter>
-    </>
-  );
+          <Route path="/quiz" component={Hero}></Route>
+        </BrowserRouter>
+      </>
+    );
+  }
 }
+
+export default App;
