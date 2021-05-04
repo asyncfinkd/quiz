@@ -8,6 +8,24 @@ The project had many bugs but could be fixed. It was not difficult to work on th
 
 ## Where can I see project photos?
 
+<br/><img src="./content/123.png">
+
+<br/><img src="./content/1233.png">
+
+<br/>
+
+## Responsive
+
+<img src="./content/12333.png">
+
+<br/>
+<br/>
+<img src="./content/123333.png">
+<br/>
+<br/>
+
+<b>If you do not like the stylization is handwritten CSS and edit or contribute to the design.</b>
+
 ## Contributing
 
 The main purpose of this repository is to continue evolving Quiz core, making it faster and easier to use. Development of Quiz happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Quiz.
