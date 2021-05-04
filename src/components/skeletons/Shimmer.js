@@ -5,15 +5,19 @@
   React
 */
 
-import React from "react";
+import React, { Component } from "react";
 
-export default function Shimmer() {
+class Shimmer extends Component {
   /* Animation for skeleton */
-  return (
-    <>
-      <div className="shimmer-wrapper">
-        <div className="shimmer"></div>
-      </div>
-    </>
-  );
+  render() {
+    return (
+      <>
+        <div className="shimmer-wrapper">
+          <div className="shimmer"></div>
+        </div>
+      </>
+    );
+  }
 }
+
+export default Shimmer;
