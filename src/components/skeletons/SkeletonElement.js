@@ -5,13 +5,17 @@
   React
 */
 
-import React from "react";
+import React, { Component } from "react";
 
 /* Skeleton Type Indeitfy for good, beautiful component is render */
-export default function SkeletonElement({ type }) {
-  return (
-    <>
-      <div className={`skeleton ${type}`}></div>
-    </>
-  );
+class SkeletonElement extends Component {
+  render() {
+    return (
+      <>
+        <div className={`skeleton ${this.props.type}`}></div>
+      </>
+    );
+  }
 }
+
+export default SkeletonElement;
