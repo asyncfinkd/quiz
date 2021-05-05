@@ -3,10 +3,8 @@
   Data -> Component -> Location -> src/components/data
   withRouter -> Package for Route, Pagination
   HeroMain -> Component -> Location -> src/components/hero/main
-
   Files:
   HeroMain, Data
-
   Package || Framework:
   React, React-router-dom
 */
@@ -19,12 +17,12 @@ import SkeletonQuiz from "../skeletons/SkeletonQuiz";
 import HeroMain from "./main/HeroMain";
 
 class Hero extends React.Component {
-  /* 
+  /*
     In this file we use the class component. To better do object-oriented programming.
   */
 
   state = {
-    /* 
+    /*
       Variables that the program uses when quiz work
     */
     currentQuestion: 0,
@@ -42,7 +40,7 @@ class Hero extends React.Component {
 
   nextQuestion = () => {
     const nextQuestion = this.state.currentQuestion + 1;
-    /* 
+    /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
     if (nextQuestion < this.state.questions.length) {
@@ -142,7 +140,7 @@ class Hero extends React.Component {
         <button
           className="question-button button-primary"
           style={{
-            width: "360px",
+            width: "100%",
             marginLeft: "0px",
             marginTop: "1rem",
             height: "44px",
