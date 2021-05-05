@@ -26,6 +26,7 @@ class Hero extends React.Component {
       Variables that the program uses when quiz work
     */
     currentQuestion: 0,
+    answerTheQuestion: [],
     showResult: false,
     history: [],
     showButtons: true,
