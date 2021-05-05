@@ -77,7 +77,7 @@ class Question extends React.Component {
                               <>
                                 <button
                                   type="submit"
-                                  id={i}
+                                  id={`${i}__btn`}
                                   className="question-button button-primary"
                                   style={{ minHeight: "70px" }}
                                   onClick={this.props.nextQuestion}

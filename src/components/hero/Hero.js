@@ -58,6 +58,26 @@ class Hero extends React.Component {
       this.state.questions[this.state.currentQuestion].id
     );
 
+    document.getElementById("0__btn").addEventListener("click", () => {
+      if (
+        this.state.answerTheQuestion[this.state.currentQuestion] !=
+        this.state.questions[this.state.currentQuestion].id
+      ) {
+        this.state.answerTheQuestion.push(
+          this.state.questions[this.state.currentQuestion].id
+        );
+      }
+    });
+
+    console.log(this.state.answerTheQuestion[this.state.currentQuestion]);
+    console.log(this.state.questions[this.state.currentQuestion].id);
+
+    document.getElementById("1__btn").addEventListener("click", () => {
+      console.log("1");
+    });
+
+    console.log(this.state.answerTheQuestion);
+
     /* This is where the rendering of the answer memorized in the quiz takes place. If you have not seen it then I will tell you: if you choose one of the two answers the question to the left will be green. If you want to go down and see another question it will already be ignored or it will have a separate color brown. */
 
     /* What is this.state? Or even questions, history. Questions and history are variables this.state - are even references to object-oriented programming. That is, I have access to the above in the variable with this.state. Simply put it is an indication */
