@@ -72,11 +72,12 @@ class Question extends React.Component {
                         <>
                           {this.props.questions[
                             this.props.currentQuestion
-                          ].answerOptions.map((item) => {
+                          ].answerOptions.map((item, i) => {
                             return (
                               <>
                                 <button
                                   type="submit"
+                                  id={i}
                                   className="question-button button-primary"
                                   style={{ minHeight: "70px" }}
                                   onClick={this.props.nextQuestion}
