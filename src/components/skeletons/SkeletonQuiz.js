@@ -17,7 +17,7 @@ class SkeletonQuiz extends React.Component {
     return (
       <>
         <div className="skeleton-wrapper">
-          <div className="flex">
+          <div className="flex container">
             <div className="list-container" id="modal">
               {/* Map */}
               {[
@@ -59,7 +59,7 @@ class SkeletonQuiz extends React.Component {
                 );
               })}
             </div>
-            <div className="container">
+            <div style={{ maxWidth: "100%" }}>
               <div className="h-full full-display-flex">
                 <div
                   className="relative box max-w-full"

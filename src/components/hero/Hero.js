@@ -236,7 +236,7 @@ class Hero extends React.Component {
                   </svg>
                 )}
               </button>
-              <div className="flex">
+              <div className="flex container">
                 <HeroMain
                   showResult={this.state.showResult}
                   currentQuestion={this.state.currentQuestion}

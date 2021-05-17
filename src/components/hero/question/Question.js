@@ -20,7 +20,7 @@ class Question extends React.Component {
     );
     return (
       <>
-        <div className="container">
+        <div style={{ maxWidth: "100%" }}>
           <div className="h-full full-display-flex">
             <div
               className="relative box max-w-full"
