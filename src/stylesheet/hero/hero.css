@@ -215,6 +215,7 @@
     width: 0px;
     height: 0px;
     padding: 0px;
+    display: none;
   }
   .resp-button {
     display: flex !important;
@@ -226,6 +227,7 @@
   .list-container-resp {
     opacity: 1 !important;
     pointer-events: visible;
+    left: 0;
   }
 }
 
