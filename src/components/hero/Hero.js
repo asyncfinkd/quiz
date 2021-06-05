@@ -79,9 +79,9 @@ class Hero extends React.Component {
           if (
             item.id == this.state.questions[this.state.currentQuestion + 1].id
           ) {
-            document.getElementById(`${item.id}`).style.backgroundColor =
-              "#0d6efd";
-            document.getElementById(`${item.id}`).style.color = "white";
+            // document.getElementById(`${item.id}`).style.backgroundColor =
+            //   "#0d6efd";
+            // document.getElementById(`${item.id}`).style.color = "white";
           }
         }
       }
@@ -111,16 +111,16 @@ class Hero extends React.Component {
                       document.getElementById(`${item2.id}`).style.color =
                         "white";
                     }
-                    if (
-                      item2.id ==
-                      this.state.questions[this.state.currentQuestion + 1].id
-                    ) {
-                      document.getElementById(
-                        `${item.id}`
-                      ).style.backgroundColor = "#0d6efd";
-                      document.getElementById(`${item.id}`).style.color =
-                        "white";
-                    }
+                    // if (
+                    //   item2.id ==
+                    //   this.state.questions[this.state.currentQuestion + 1].id
+                    // ) {
+                    //   // document.getElementById(
+                    //   //   `${item.id}`
+                    //   // ).style.backgroundColor = "#0d6efd";
+                    //   // document.getElementById(`${item.id}`).style.color =
+                    //   //   "white";
+                    // }
                   });
 
                   this.state.history.map((item2) => {
