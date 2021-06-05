@@ -13,6 +13,7 @@ class Question extends React.Component {
   /* 
     In this file we use the class component. To better do object-oriented programming.
   */
+
   render() {
     /* I calculate the percentage using the formula x = (a / b) * 100 */
     const renderPercent = Math.round(
@@ -72,12 +73,13 @@ class Question extends React.Component {
                         <>
                           {this.props.questions[
                             this.props.currentQuestion
-                          ].answerOptions.map((item) => {
+                          ].answerOptions.map((item, i) => {
                             return (
                               <>
                                 <button
                                   type="submit"
                                   className="question-button button-primary"
+                                  id={i}
                                   style={{ minHeight: "70px" }}
                                   onClick={this.props.nextQuestion}
                                 >
