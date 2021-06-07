@@ -1,5 +1,5 @@
 .question-span {
-  font-size: 21px;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -13,7 +13,7 @@
   -ms-user-select: none;
   user-select: none;
   text-transform: capitalize;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .questionContainer-button {
@@ -240,15 +240,6 @@
     justify-content: center;
     flex-direction: column;
   }
-  .question-button {
-    font-size: 0.8rem !important;
-  }
-  .question-span {
-    font-size: 1rem;
-  }
-  .questionLength-span {
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 450px) {
@@ -263,5 +254,8 @@
     margin-left: 0px;
     margin-top: 10px;
     padding: 15px !important;
+  }
+  .mt-6.questionContainer-button span {
+    margin-top: 10px;
   }
 }
