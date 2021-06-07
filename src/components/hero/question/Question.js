@@ -14,11 +14,16 @@ class Question extends React.Component {
     In this file we use the class component. To better do object-oriented programming.
   */
 
+  componentDidMount = () => {
+    document.getElementById("1__span").style.display = "none";
+  };
+
   render() {
     /* I calculate the percentage using the formula x = (a / b) * 100 */
     const renderPercent = Math.round(
       ((this.props.currentQuestion + 1) / this.props.questions.length) * 100
     );
+
     return (
       <>
         <div style={{ maxWidth: "100%" }}>
@@ -85,6 +90,7 @@ class Question extends React.Component {
                                 >
                                   {item.answerText}
                                 </button>
+                                <span id={`${i}__span`}>Or</span>
                               </>
                             );
                           })}
