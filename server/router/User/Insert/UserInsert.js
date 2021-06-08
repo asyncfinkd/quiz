@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const UserSchema = require("../../../schema/User/User");
 const nodemailer = require("nodemailer");
+const env = require("../../../env.json");
 
 router.route("/insertUser").post(async (req, res) => {
   const email = req.body.email;
@@ -17,8 +18,8 @@ router.route("/insertUser").post(async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "billgatesprogrammer@gmail.com",
-      pass: "nikanikonika",
+      user: `${env.user}`,
+      pass: `${env.pass}`,
     },
   });
 
