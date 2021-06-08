@@ -24,7 +24,7 @@ router.route("/insertUser").post(async (req, res) => {
   });
 
   let mailOptions = {
-    from: "billgatesprogrammer@gmail.com",
+    from: `${env.user}`,
     to: `${email}`,
     subject: "Result",
     text: `Hello, This is your Result:
