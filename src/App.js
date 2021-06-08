@@ -15,7 +15,6 @@
 
 import React, { Component } from "react";
 import Alert from "./components/alert/Alert";
-import Login from "./components/login/Login";
 import Hero from "./components/hero/Hero";
 import { BrowserRouter, Route } from "react-router-dom";
 

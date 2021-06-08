@@ -86,7 +86,7 @@ class Question extends React.Component {
                                   className="question-button button-primary"
                                   id={i}
                                   style={{ minHeight: "70px" }}
-                                  onClick={this.props.nextQuestion}
+                                  onClick={() => this.props.nextQuestion(item.answerText)}
                                 >
                                   {item.answerText}
                                 </button>

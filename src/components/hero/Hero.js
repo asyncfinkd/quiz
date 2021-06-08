@@ -40,11 +40,14 @@ class Hero extends React.Component {
     The next reading function that completes the quiz question transition.
   */
 
-  nextQuestion = () => {
+  nextQuestion = (value) => {
     const nextQuestion = this.state.currentQuestion + 1;
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
+      console.log(this.state.questions[this.state.currentQuestion]);
+      console.log(value);
+
     if (nextQuestion < this.state.questions.length) {
       /* Assignment Operator When I want to change something I write an essay with a particular variable. This is where the next question for the user as I said above happens */
       this.setState((state) => ({
@@ -243,7 +246,7 @@ class Hero extends React.Component {
                     currentQuestion={this.state.currentQuestion}
                     questions={this.state.questions}
                     showButtons={this.state.showButtons}
-                    nextQuestion={() => this.nextQuestion()}
+                    nextQuestion={this.nextQuestion}
                     history={this.state.history}
                     listItem={this.renderListItem()}
                     backHandle={() => this.prevQuestion()}
