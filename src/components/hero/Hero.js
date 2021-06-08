@@ -34,6 +34,7 @@ class Hero extends React.Component {
     showSkeleton: true,
     showHero: false,
     language: "English",
+    lastResult: []
   };
 
   /*
@@ -45,8 +46,14 @@ class Hero extends React.Component {
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
-      console.log(this.state.questions[this.state.currentQuestion]);
-      console.log(value);
+
+ this.state.lastResult.push({
+        id: this.state.questions[this.state.currentQuestion].id,
+        question: this.state.questions[this.state.currentQuestion].question,
+        value: value
+      });
+
+      console.log(this.state.lastResult);
 
     if (nextQuestion < this.state.questions.length) {
       /* Assignment Operator When I want to change something I write an essay with a particular variable. This is where the next question for the user as I said above happens */
