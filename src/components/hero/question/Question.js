@@ -10,13 +10,26 @@ import React from "react";
 import { Progress } from "antd";
 
 class Question extends React.Component {
+  state = {
+    username: ""
+  }
   /* 
     In this file we use the class component. To better do object-oriented programming.
   */
 
   componentDidMount = () => {
-    document.getElementById("1__span").style.display = "none";
+    // document.getElementById("1__span").style.display = "none";
   };
+
+  handleChange = (event) => {
+    this.setState({ username: event.target.value });
+  };
+
+  renderSignupComponent = () => {
+    if(!this.state.username) {
+      alert("Please enter a username");
+    }
+  }
 
   render() {
     /* I calculate the percentage using the formula x = (a / b) * 100 */
@@ -35,10 +48,45 @@ class Question extends React.Component {
               {this.props.showResult ? (
                 /* What if there are no more questions */
                 <>
-                  <p>You Finish exam</p>
-                  <div className="back-component">
-                    <span onClick={this.props.returnQuestions}>← Back</span>
-                  </div>
+                <h1>Input your name</h1>
+                 <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                      }}
+                    >
+                      <div className="text-center form-ai mt-3">
+                        <input
+                          type="text"
+                          placeholder=" "
+                          className="input form-ai-control w-350 max-w-full"
+                          autoFocus
+                          value={this.state.username}
+                           onChange={this.handleChange}
+                        />
+                        <label
+                        >
+                          Username
+                        </label>
+                      </div>
+                      <div className="mt-3">
+                        <button
+                          type="submit"
+                          onClick={() => this.renderSignupComponent()}
+                          className="button w-full max-w-full button-primary"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <footer className="mt-6">
+                        <ul className="list-style ul-flex">
+                          <li className="color-gray">Home</li>
+                          <span className="circle-span">•</span>
+                          <li className="color-gray">Support</li>
+                          <span className="circle-span">•</span>
+                          <li className="color-gray">FAQ</li>
+                        </ul>
+                      </footer>
+                    </form>
                 </>
               ) : (
                 <>

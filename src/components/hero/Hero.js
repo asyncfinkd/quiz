@@ -26,7 +26,7 @@ class Hero extends React.Component {
       Variables that the program uses when quiz work
     */
     currentQuestion: 0,
-    showResult: false,
+    showResult: true,
     history: [],
     showButtons: true,
     questions: [],
@@ -196,6 +196,7 @@ class Hero extends React.Component {
         this.nextQuestion();
       }
     });
+
     setTimeout(() => {
       this.setState({ showSkeleton: (this.state.showSkeleton = false) });
     }, 2000);
