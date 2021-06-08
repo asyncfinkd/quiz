@@ -29,9 +29,11 @@ class Hero extends React.Component {
     showResult: false,
     history: [],
     showButtons: true,
-    questions: Data,
+    questions: [],
     buttonList: false,
     showSkeleton: true,
+    showHero: false,
+    language: "English",
   };
 
   /*
@@ -195,77 +197,141 @@ class Hero extends React.Component {
     if (username == "" || !username) {
       this.props.history.push("/");
     } else {
-      return (
-        <>
-          {/* Button Responsive Click (open / close) */}
-          {this.state.showSkeleton && <SkeletonQuiz />}
-          {!this.state.showSkeleton && (
-            <>
-              <button
-                type="button"
-                className="resp-button"
-                onClick={() => {
-                  this.setState({
-                    buttonList: (this.state.buttonList = !this.state
-                      .buttonList),
-                  });
-                }}
-              >
-                {this.state.buttonList != true ? (
-                  <svg width="24" height="24" fill="none">
-                    <path
-                      d="M4 8h16M4 16h16"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                ) : (
-                  <svg
-                    width="24"
-                    height="24"
-                    fill="none"
-                    class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
+      if (this.state.showHero) {
+        return (
+          <>
+            {/* Button Responsive Click (open / close) */}
+            {this.state.showSkeleton && <SkeletonQuiz />}
+            {!this.state.showSkeleton && (
+              <>
+                <button
+                  type="button"
+                  className="resp-button"
+                  onClick={() => {
+                    this.setState({
+                      buttonList: (this.state.buttonList =
+                        !this.state.buttonList),
+                    });
+                  }}
+                >
+                  {this.state.buttonList != true ? (
+                    <svg width="24" height="24" fill="none">
+                      <path
+                        d="M4 8h16M4 16h16"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
+                    >
+                      <path
+                        d="M6 18L18 6M6 6l12 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  )}
+                </button>
+                <div className="flex container">
+                  <HeroMain
+                    showResult={this.state.showResult}
+                    currentQuestion={this.state.currentQuestion}
+                    questions={this.state.questions}
+                    showButtons={this.state.showButtons}
+                    nextQuestion={() => this.nextQuestion()}
+                    history={this.state.history}
+                    listItem={this.renderListItem()}
+                    backHandle={() => this.prevQuestion()}
+                    returnQuestions={() => {
+                      this.setState({
+                        showResult: (this.state.showResult = false),
+                      });
+                    }}
+                    buttonList={this.state.buttonList}
+                    closeModal={() => {
+                      this.setState({
+                        buttonList: (this.state.buttonList =
+                          !this.state.buttonList),
+                      });
+                    }}
+                  />
+                </div>
+              </>
+            )}
+          </>
+        );
+      } else {
+        return (
+          <>
+            <div style={{ maxWidth: "100%" }}>
+              <div className="h-full full-display-flex">
+                <div
+                  className="relative box max-w-full"
+                  style={{
+                    width: "700px",
+                    height: "362px",
+                    justifyContent: "center",
+                  }}
+                >
+                  <select
+                    style={{
+                      border: "1px solid lightgray",
+                      outline: "none",
+                      borderRadius: "5px",
+                      width: "200px",
+                      height: "44px",
+                      paddingLeft: "10px",
+                    }}
+                    value={this.state.language}
+                    onChange={(event) =>
+                      {
+                        this.setState({ language: event.target.value })
+                      }
+                    }
                   >
-                    <path
-                      d="M6 18L18 6M6 6l12 12"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                )}
-              </button>
-              <div className="flex container">
-                <HeroMain
-                  showResult={this.state.showResult}
-                  currentQuestion={this.state.currentQuestion}
-                  questions={this.state.questions}
-                  showButtons={this.state.showButtons}
-                  nextQuestion={() => this.nextQuestion()}
-                  history={this.state.history}
-                  listItem={this.renderListItem()}
-                  backHandle={() => this.prevQuestion()}
-                  returnQuestions={() => {
-                    this.setState({
-                      showResult: (this.state.showResult = false),
-                    });
-                  }}
-                  buttonList={this.state.buttonList}
-                  closeModal={() => {
-                    this.setState({
-                      buttonList: (this.state.buttonList = !this.state
-                        .buttonList),
-                    });
-                  }}
-                />
+                    <option>English</option>
+                    <option>Russia</option>
+                  </select>
+                  <button
+                    type="submit"
+                    style={{
+                      backgroundColor: "#0d6efd",
+                      color: "white",
+                      fontSize: "1rem",
+                      borderRadius: "0.25rem",
+                      border: "none",
+                      outline: "none",
+                      height: "44px",
+                      marginTop: "10px",
+                      width: "200px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      if(this.state.language == "English") {
+                        this.setState({ questions: this.state.questions = Data.EN })
+                      } else {
+                        this.setState({ questions: this.state.questions = Data.RU })
+                      }
+                      this.setState({ showHero: (this.state.showHero = true) });
+                    }}
+                  >
+                    Continue
+                  </button>
+                </div>
               </div>
-            </>
-          )}
-        </>
-      );
+            </div>
+          </>
+        );
+      }
     }
   };
 
