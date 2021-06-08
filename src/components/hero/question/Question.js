@@ -12,27 +12,27 @@ import axios from "axios";
 
 class Question extends React.Component {
   state = {
-    username: "",
+    email: "",
   };
   /* 
     In this file we use the class component. To better do object-oriented programming.
   */
 
   componentDidMount = () => {
-    // document.getElementById("1__span").style.display = "none";
+    document.getElementById("1__span").style.display = "none";
   };
 
   handleChange = (event) => {
-    this.setState({ username: event.target.value });
+    this.setState({ email: event.target.value });
   };
 
   renderSignupComponent = () => {
-    if (!this.state.username) {
-      alert("Please enter a username");
+    if (!this.state.email) {
+      alert("Please enter a email");
     } else {
       axios
         .post("http://localhost:3001/auth/insertUser", {
-          username: this.state.username,
+          email: this.state.email,
           result: this.props.result,
         })
         .then(() => {
@@ -70,7 +70,7 @@ class Question extends React.Component {
                         placeholder=" "
                         className="input form-ai-control w-350 max-w-full"
                         autoFocus
-                        value={this.state.username}
+                        value={this.state.email}
                         onChange={this.handleChange}
                       />
                       <label>Username</label>

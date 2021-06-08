@@ -14,7 +14,7 @@ const Result = new mongoose.Schema({
 });
 
 const UserSchema = mongoose.Schema({
-  username: {
+  email: {
     type: String,
     required: true,
   },

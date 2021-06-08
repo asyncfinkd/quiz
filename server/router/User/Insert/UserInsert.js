@@ -3,11 +3,11 @@ const UserSchema = require("../../../schema/User/User");
 const nodemailer = require("nodemailer");
 
 router.route("/insertUser").post(async (req, res) => {
-  const username = req.body.username;
+  const email = req.body.email;
   const result = req.body.result;
 
   const insertUserSchema = new UserSchema({
-    username: username,
+    email: email,
     result: result,
   });
 
@@ -24,7 +24,7 @@ router.route("/insertUser").post(async (req, res) => {
 
   let mailOptions = {
     from: "billgatesprogrammer@gmail.com",
-    to: `${username}`,
+    to: `${email}`,
     subject: "Result",
     text: `Hello, This is your Result:
 ${result.map((item) => {
