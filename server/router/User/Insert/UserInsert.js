@@ -6,7 +6,11 @@ router.route("/insertUser").post(async (req, res) => {
 
   const insertUserSchema = new UserSchema({
     username: username,
+    result: req.body.result,
   });
+
   insertUserSchema.save();
   res.json("insert");
 });
+
+module.exports = router;

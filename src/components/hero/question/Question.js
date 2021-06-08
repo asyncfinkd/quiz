@@ -33,9 +33,10 @@ class Question extends React.Component {
       axios
         .post("http://localhost:3001/auth/insertUser", {
           username: this.state.username,
+          result: this.props.result,
         })
         .then(() => {
-          console.log("1");
+          window.location.reload();
         });
     }
   };

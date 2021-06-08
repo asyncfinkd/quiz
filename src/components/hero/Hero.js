@@ -26,7 +26,7 @@ class Hero extends React.Component {
       Variables that the program uses when quiz work
     */
     currentQuestion: 0,
-    showResult: true,
+    showResult: false,
     history: [],
     showButtons: true,
     questions: [],
@@ -34,7 +34,7 @@ class Hero extends React.Component {
     showSkeleton: true,
     showHero: false,
     language: "English",
-    lastResult: []
+    lastResult: [],
   };
 
   /*
@@ -47,13 +47,13 @@ class Hero extends React.Component {
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
 
- this.state.lastResult.push({
-        id: this.state.questions[this.state.currentQuestion].id,
-        question: this.state.questions[this.state.currentQuestion].question,
-        value: value
-      });
+    this.state.lastResult.push({
+      id: this.state.questions[this.state.currentQuestion].id,
+      question: this.state.questions[this.state.currentQuestion].question,
+      value: value,
+    });
 
-      console.log(this.state.lastResult);
+    console.log(this.state.lastResult);
 
     if (nextQuestion < this.state.questions.length) {
       /* Assignment Operator When I want to change something I write an essay with a particular variable. This is where the next question for the user as I said above happens */
@@ -204,142 +204,147 @@ class Hero extends React.Component {
 
   /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
   rendeHero = () => {
-      if (this.state.showHero) {
-        return (
-          <>
-            {/* Button Responsive Click (open / close) */}
-            {this.state.showSkeleton && <SkeletonQuiz />}
-            {!this.state.showSkeleton && (
-              <>
-                <button
-                  type="button"
-                  className="resp-button"
-                  onClick={() => {
+    if (this.state.showHero) {
+      return (
+        <>
+          {/* Button Responsive Click (open / close) */}
+          {this.state.showSkeleton && <SkeletonQuiz />}
+          {!this.state.showSkeleton && (
+            <>
+              <button
+                type="button"
+                className="resp-button"
+                onClick={() => {
+                  this.setState({
+                    buttonList: (this.state.buttonList = !this.state
+                      .buttonList),
+                  });
+                }}
+              >
+                {this.state.buttonList != true ? (
+                  <svg width="24" height="24" fill="none">
+                    <path
+                      d="M4 8h16M4 16h16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                ) : (
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
+                  >
+                    <path
+                      d="M6 18L18 6M6 6l12 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                )}
+              </button>
+              <div className="flex container">
+                <HeroMain
+                  showResult={this.state.showResult}
+                  currentQuestion={this.state.currentQuestion}
+                  questions={this.state.questions}
+                  showButtons={this.state.showButtons}
+                  nextQuestion={this.nextQuestion}
+                  history={this.state.history}
+                  listItem={this.renderListItem()}
+                  backHandle={() => this.prevQuestion()}
+                  returnQuestions={() => {
                     this.setState({
-                      buttonList: (this.state.buttonList =
-                        !this.state.buttonList),
+                      showResult: (this.state.showResult = false),
                     });
                   }}
-                >
-                  {this.state.buttonList != true ? (
-                    <svg width="24" height="24" fill="none">
-                      <path
-                        d="M4 8h16M4 16h16"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  ) : (
-                    <svg
-                      width="24"
-                      height="24"
-                      fill="none"
-                      class="absolute top-1/2 left-1/2 -mt-3 -ml-3 transition duration-300 transform"
-                    >
-                      <path
-                        d="M6 18L18 6M6 6l12 12"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  )}
-                </button>
-                <div className="flex container">
-                  <HeroMain
-                    showResult={this.state.showResult}
-                    currentQuestion={this.state.currentQuestion}
-                    questions={this.state.questions}
-                    showButtons={this.state.showButtons}
-                    nextQuestion={this.nextQuestion}
-                    history={this.state.history}
-                    listItem={this.renderListItem()}
-                    backHandle={() => this.prevQuestion()}
-                    returnQuestions={() => {
-                      this.setState({
-                        showResult: (this.state.showResult = false),
-                      });
-                    }}
-                    buttonList={this.state.buttonList}
-                    closeModal={() => {
-                      this.setState({
-                        buttonList: (this.state.buttonList =
-                          !this.state.buttonList),
-                      });
-                    }}
-                  />
-                </div>
-              </>
-            )}
-          </>
-        );
-      } else {
-        return (
-          <>
-            <div style={{ maxWidth: "100%" }}>
-              <div className="h-full full-display-flex">
-                <div
-                  className="relative box max-w-full"
+                  result={this.state.lastResult}
+                  buttonList={this.state.buttonList}
+                  closeModal={() => {
+                    this.setState({
+                      buttonList: (this.state.buttonList = !this.state
+                        .buttonList),
+                    });
+                  }}
+                />
+              </div>
+            </>
+          )}
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div style={{ maxWidth: "100%" }}>
+            <div className="h-full full-display-flex">
+              <div
+                className="relative box max-w-full"
+                style={{
+                  width: "500px",
+                  height: "362px",
+                  justifyContent: "center",
+                }}
+              >
+                <p style={{ fontSize: "1rem", userSelect: "none" }}>
+                  Choose Language
+                </p>
+                <select
                   style={{
-                    width: "500px",
-                    height: "362px",
-                    justifyContent: "center",
+                    border: "1px solid lightgray",
+                    outline: "none",
+                    borderRadius: "5px",
+                    width: "300px",
+                    height: "44px",
+                    paddingLeft: "10px",
+                  }}
+                  value={this.state.language}
+                  onChange={(event) =>
+                    this.setState({ language: event.target.value })
+                  }
+                >
+                  <option>English</option>
+                  <option>Russia</option>
+                </select>
+                <button
+                  type="submit"
+                  style={{
+                    backgroundColor: "#0d6efd",
+                    color: "white",
+                    fontSize: "1rem",
+                    borderRadius: "0.25rem",
+                    border: "none",
+                    outline: "none",
+                    height: "44px",
+                    marginTop: "10px",
+                    width: "300px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    if (this.state.language == "English") {
+                      this.setState({
+                        questions: (this.state.questions = Data.EN),
+                      });
+                    } else {
+                      this.setState({
+                        questions: (this.state.questions = Data.RU),
+                      });
+                    }
+                    this.setState({ showHero: (this.state.showHero = true) });
                   }}
                 >
-                  <p style={{fontSize: "1rem", userSelect: "none"}}>Choose Language</p>
-                  <select
-                    style={{
-                      border: "1px solid lightgray",
-                      outline: "none",
-                      borderRadius: "5px",
-                      width: "300px",
-                      height: "44px",
-                      paddingLeft: "10px",
-                    }}
-                    value={this.state.language}
-                    onChange={(event) =>
-                      {
-                        this.setState({ language: event.target.value })
-                      }
-                    }
-                  >
-                    <option>English</option>
-                    <option>Russia</option>
-                  </select>
-                  <button
-                    type="submit"
-                    style={{
-                      backgroundColor: "#0d6efd",
-                      color: "white",
-                      fontSize: "1rem",
-                      borderRadius: "0.25rem",
-                      border: "none",
-                      outline: "none",
-                      height: "44px",
-                      marginTop: "10px",
-                      width: "300px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => {
-                      if(this.state.language == "English") {
-                        this.setState({ questions: this.state.questions = Data.EN })
-                      } else {
-                        this.setState({ questions: this.state.questions = Data.RU })
-                      }
-                      this.setState({ showHero: (this.state.showHero = true) });
-                    }}
-                  >
-                    Continue
-                  </button>
-                </div>
+                  Continue
+                </button>
               </div>
             </div>
-          </>
-        );
-      }
+          </div>
+        </>
+      );
+    }
   };
 
   render() {
