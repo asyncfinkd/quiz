@@ -43,11 +43,10 @@ class App extends Component {
           We have authentication, if you do not enter
           the name you will not be allowed in the game
          */}
-          <Route path="/" exact component={Login}></Route>
+          <Route path="/" exact component={Hero}></Route>
           {/* 
           The quiz component where everything happens. Which may be interesting to you.
         */}
-          <Route path="/quiz" component={Hero}></Route>
         </BrowserRouter>
       </>
     );

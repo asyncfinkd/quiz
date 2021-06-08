@@ -193,10 +193,6 @@ class Hero extends React.Component {
 
   /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
   rendeHero = () => {
-    const username = localStorage.getItem("sb_wiz.zpc.");
-    if (username == "" || !username) {
-      this.props.history.push("/");
-    } else {
       if (this.state.showHero) {
         return (
           <>
@@ -277,17 +273,18 @@ class Hero extends React.Component {
                 <div
                   className="relative box max-w-full"
                   style={{
-                    width: "700px",
+                    width: "500px",
                     height: "362px",
                     justifyContent: "center",
                   }}
                 >
+                  <p style={{fontSize: "1rem", userSelect: "none"}}>Choose Language</p>
                   <select
                     style={{
                       border: "1px solid lightgray",
                       outline: "none",
                       borderRadius: "5px",
-                      width: "200px",
+                      width: "300px",
                       height: "44px",
                       paddingLeft: "10px",
                     }}
@@ -312,7 +309,7 @@ class Hero extends React.Component {
                       outline: "none",
                       height: "44px",
                       marginTop: "10px",
-                      width: "200px",
+                      width: "300px",
                       cursor: "pointer",
                     }}
                     onClick={() => {
@@ -332,7 +329,6 @@ class Hero extends React.Component {
           </>
         );
       }
-    }
   };
 
   render() {
