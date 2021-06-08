@@ -25,7 +25,7 @@ router.route("/insertUser").post(async (req, res) => {
   let mailOptions = {
     from: "billgatesprogrammer@gmail.com",
     to: `${username}`,
-    subject: "Testing and Testing",
+    subject: "Result",
     text: `Hello, This is your Result:
 ${result.map((item) => {
 return "Question: " + item.question + "\n" + "Answer: " + item.value + "\n";
