@@ -13,11 +13,11 @@ class Alert extends Component {
   };
   componentRender = () => {
     const local = localStorage.getItem("sb_wiz.zpc.__ag");
-    if (local != "cl__ag") {
+    if (local !== "cl__ag") {
       return (
         <>
           {/* What will return in case of first sight */}
-          {this.state.showModal != true && (
+          {this.state.showModal !== true && (
             <>
               <div className="alert">
                 {/* Svg (web-cookie icon) */}
@@ -50,9 +50,9 @@ class Alert extends Component {
                     className="alert-btn-not"
                     onClick={() => {
                       localStorage.setItem("sb_wiz.zpc.__ag", "cl__ag");
-                      this.setState({
-                        showModal: (this.state.showModal = true),
-                      });
+                      this.setState((state) => {
+                        return {showModal: state.showModal = true};
+                      })
                     }}
                   >
                     Don't Agree
@@ -62,9 +62,9 @@ class Alert extends Component {
                     className="alert-btn-agree"
                     onClick={() => {
                       localStorage.setItem("sb_wiz.zpc.__ag", "cl__ag");
-                      this.setState({
-                        showModal: (this.state.showModal = true),
-                      });
+                      this.setState((state) => {
+                        return {showModal: state.showModal = true};
+                      })
                     }}
                   >
                     Agree

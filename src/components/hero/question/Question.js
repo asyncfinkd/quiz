@@ -73,7 +73,7 @@ class Question extends React.Component {
                         value={this.state.email}
                         onChange={this.handleChange}
                       />
-                      <label>Username</label>
+                      <label>Email</label>
                     </div>
                     <div className="mt-3">
                       <button

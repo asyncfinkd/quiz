@@ -28,7 +28,9 @@ class App extends Component {
    */
   componentWillMount = () => {
     setTimeout(() => {
-      this.setState({ showPopup: (this.state.showPopup = true) });
+      this.setState((state) => {
+        return {showPopup: state.showPopup = true};
+      })
     }, 2000);
   };
   render() {
