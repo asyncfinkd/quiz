@@ -31,7 +31,7 @@ class Question extends React.Component {
       alert("Please enter a email");
     } else {
       axios
-        .post("https://nifty-wilson-71dc70.netlify.app/auth/insertUser", {
+        .post("https://quiz-app-second.herokuapp.com/auth/insertUser", {
           email: this.state.email,
           result: this.props.result,
         })
