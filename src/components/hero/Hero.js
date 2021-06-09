@@ -49,9 +49,9 @@ class Hero extends React.Component {
    let state = false;
     if(this.state.lastResult.length > 0) {
       this.state.lastResult.map((item,i) => {
-        if(item.question == this.state.questions[this.state.currentQuestion].question) {
+        if(item.question === this.state.questions[this.state.currentQuestion].question) {
 
-          let index = this.state.lastResult.findIndex(item => item.question == this.state.questions[this.state.currentQuestion].question)
+          let index = this.state.lastResult.findIndex(item => item.question === this.state.questions[this.state.currentQuestion].question)
           console.log(index);
           if(index > -1) {
             this.state.lastResult.splice(index, 1)
@@ -63,6 +63,7 @@ class Hero extends React.Component {
           }
           state = true;
         }
+        return null;
       })
     }else {
       this.state.lastResult.push({
