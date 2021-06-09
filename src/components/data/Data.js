@@ -1171,15 +1171,53 @@ export const Data = {
     {
       id: "0",
       question:
-        "пас",
+        "пас0",
       answerOptions: [
         {
-          answerText: "йцу",
+          answerText: "йцу0",
         },
         {
-          answerText: "йцу",
+          answerText: "йцу1",
         },
       ],
     }, 
+    {
+      id: "1",
+      question:
+        "пас2",
+      answerOptions: [
+        {
+          answerText: "йцу1",
+        },
+        {
+          answerText: "йцу2",
+        },
+      ],
+    },
+    {
+      id: "2",
+      question:
+        "пас3",
+      answerOptions: [
+        {
+          answerText: "йцу3",
+        },
+        {
+          answerText: "йцу4",
+        },
+      ],
+    },    {
+      id: "3",
+      question:
+        "пас4",
+      answerOptions: [
+        {
+          answerText: "йцу5",
+        },
+        {
+          answerText: "йцу6",
+        },
+      ],
+    },
   ]
 };

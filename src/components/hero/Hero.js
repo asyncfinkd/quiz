@@ -42,16 +42,47 @@ class Hero extends React.Component {
   */
 
   nextQuestion = (value) => {
-    const nextQuestion = this.state.currentQuestion + 1;
+    let nextQuestion;
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
+   let state = false;
+    if(this.state.lastResult.length > 0) {
+      this.state.lastResult.map((item,i) => {
+        if(item.question == this.state.questions[this.state.currentQuestion].question) {
 
-    this.state.lastResult.push({
-      question: this.state.questions[this.state.currentQuestion].question,
-      value: value,
-    });
-
+          let index = this.state.lastResult.findIndex(item => item.question == this.state.questions[this.state.currentQuestion].question)
+          console.log(index);
+          if(index > -1) {
+            this.state.lastResult.splice(index, 1)
+            this.state.lastResult.push({
+              question: this.state.questions[this.state.currentQuestion].question,
+              value: value,
+            });
+            nextQuestion = this.state.currentQuestion + 1;
+          }
+          state = true;
+        }
+      })
+    }else {
+      this.state.lastResult.push({
+        question: this.state.questions[this.state.currentQuestion].question,
+        value: value,
+      });
+      nextQuestion = this.state.currentQuestion + 1;
+      state = true;
+    }
+    // this.state.lastResult.push({
+    //   question: this.state.questions[this.state.currentQuestion].question,
+    //   value: value,
+    // });
+    if(!state) {
+      this.state.lastResult.push({
+        question: this.state.questions[this.state.currentQuestion].question,
+        value: value,
+      });
+      nextQuestion = this.state.currentQuestion + 1;
+    }
     console.log(this.state.lastResult);
 
     if (nextQuestion < this.state.questions.length) {
