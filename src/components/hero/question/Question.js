@@ -14,7 +14,7 @@ class Question extends React.Component {
   state = {
     email: "",
   };
-  /* 
+  /*
     In this file we use the class component. To better do object-oriented programming.
   */
 
@@ -36,7 +36,7 @@ class Question extends React.Component {
           result: this.props.result,
         })
         .then(() => {
-          window.location.reload();
+          console.log("1");
         });
     }
   };
