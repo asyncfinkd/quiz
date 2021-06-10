@@ -219,7 +219,7 @@ class Hero extends React.Component {
             this.setState((state) => { return {buttonList: state.buttonList = false}; })
           }}
         >
-          Submit
+          {this.state.language === "English" ? "Submit" : "Отправить"}
         </button>
       </>
     );
@@ -327,6 +327,7 @@ class Hero extends React.Component {
                     // });
                     this.setState((state) => { return {buttonList: state.buttonList = !this.state.buttonList}; })
                   }}
+                  language={this.state.language}
                 />
               </div>
             </>
