@@ -348,7 +348,7 @@ class Hero extends React.Component {
                   onChange={this.props.onChangeLanguage}
                 >
                   <option>English</option>
-                  <option>Russia</option>
+                  <option>Россия</option>
                 </select>
                 <button
                   type="submit"
