@@ -8,8 +8,9 @@
 
 import React from "react";
 import { Progress } from "antd";
-import axios from "axios";
-import Swal from "sweetalert2";
+// import axios from "axios";
+// import Swal from "sweetalert2";
+import { SentEmail } from "../../../hooks/Listener";
 
 class Question extends React.Component {
   state = {
@@ -28,44 +29,7 @@ class Question extends React.Component {
   };
 
   renderSignupComponent = () => {
-    if (!this.state.email) {
-      if (this.props.language === "English") {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Please enter a email!",
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Ой...",
-          text: "Пожалуйста, введите адрес электронной почты!",
-        });
-      }
-    } else {
-      axios
-        .post("https://quiz-app-second.herokuapp.com/auth/insertUser", {
-          email: this.state.email,
-          result: this.props.result,
-        })
-        .then(() => {
-          if (this.props.language === "English") {
-            Swal.fire("Success!", "You Result Sented Gmail!", "success").then(
-              function () {
-                window.location.reload();
-              }
-            );
-          } else {
-            Swal.fire(
-              "Успех!",
-              "Вы отправили Gmail в результате!",
-              "success"
-            ).then(function () {
-              window.location.reload();
-            });
-          }
-        });
-    }
+    SentEmail(this.props.language, this.state.email, this.props.result)
   };
 
   render() {
