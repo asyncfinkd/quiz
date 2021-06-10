@@ -9,6 +9,7 @@
 import React from "react";
 import { Progress } from "antd";
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 class Question extends React.Component {
   state = {
@@ -36,7 +37,11 @@ class Question extends React.Component {
           result: this.props.result,
         })
         .then(() => {
-          console.log("1");
+          Swal.fire(
+            'Success!',
+            'You Result Sented Gmail!',
+            'success'
+          )
         });
     }
   };
