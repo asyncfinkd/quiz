@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {this.state.showPopup && <Alert />}
+        {this.state.showPopup && <Alert language={this.state.language} />}
         <BrowserRouter>
           {/* 
           Here we give the first boot page component

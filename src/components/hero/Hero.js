@@ -333,7 +333,7 @@ class Hero extends React.Component {
                 }}
               >
                 <p style={{ fontSize: "1rem", userSelect: "none" }}>
-                  Choose Language
+                  {this.props.language === "English" ? "Choose Language" : "Выберите язык"}
                 </p>
                 <select
                   style={{
@@ -380,7 +380,7 @@ class Hero extends React.Component {
                     this.setState((state) => { return {showHero: state.showHero = true}; })
                   }}
                 >
-                  Continue
+                  {this.props.language === "English" ? "Continue" : "Продолжать"}
                 </button>
               </div>
             </div>
