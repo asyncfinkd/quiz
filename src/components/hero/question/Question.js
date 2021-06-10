@@ -9,7 +9,7 @@
 import React from "react";
 import { Progress } from "antd";
 import axios from "axios";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 class Question extends React.Component {
   state = {
@@ -37,23 +37,21 @@ class Question extends React.Component {
           result: this.props.result,
         })
         .then(() => {
-          {this.props.language === "English" ? (
+          if (this.props.language === "English") {
+            Swal.fire("Success!", "You Result Sented Gmail!", "success").then(
+              function () {
+                window.location.reload();
+              }
+            );
+          } else {
             Swal.fire(
-              'Success!',
-              'You Result Sented Gmail!',
-              'success'
-            ).then(function() {
+              "Успех!",
+              "Вы отправили Gmail в результате!",
+              "success"
+            ).then(function () {
               window.location.reload();
-            })  
-          ) : (
-            Swal.fire(
-              'Успех!',
-              'Вы отправили Gmail в результате!',
-              'success'
-            ).then(function() {
-              window.location.reload();
-            })  
-          )}
+            });
+          }
         });
     }
   };
@@ -75,7 +73,11 @@ class Question extends React.Component {
               {this.props.showResult ? (
                 /* What if there are no more questions */
                 <>
-                  <h1>{this.props.language === "English" ? "Input your email" : "Введите вашу эл.почту"}</h1>
+                  <h1>
+                    {this.props.language === "English"
+                      ? "Input your email"
+                      : "Введите вашу эл.почту"}
+                  </h1>
                   <form
                     onSubmit={(e) => {
                       e.preventDefault();
@@ -90,7 +92,11 @@ class Question extends React.Component {
                         value={this.state.email}
                         onChange={this.handleChange}
                       />
-                      <label>{this.props.language === "English" ? "Email" : "эл.почту"}</label>
+                      <label>
+                        {this.props.language === "English"
+                          ? "Email"
+                          : "эл.почту"}
+                      </label>
                     </div>
                     <div className="mt-3">
                       <button
@@ -98,16 +104,30 @@ class Question extends React.Component {
                         onClick={() => this.renderSignupComponent()}
                         className="button w-full max-w-full button-primary"
                       >
-                        {this.props.language === "English" ? "Next" : "Отправить"}
+                        {this.props.language === "English"
+                          ? "Next"
+                          : "Отправить"}
                       </button>
                     </div>
                     <footer className="mt-6">
                       <ul className="list-style ul-flex">
-                        <li className="color-gray">{this.props.language === "English" ? "Home" : "Главное"}</li>
+                        <li className="color-gray">
+                          {this.props.language === "English"
+                            ? "Home"
+                            : "Главное"}
+                        </li>
                         <span className="circle-span">•</span>
-                        <li className="color-gray">{this.props.language === "English" ? "Support" : "поддержка"}</li>
+                        <li className="color-gray">
+                          {this.props.language === "English"
+                            ? "Support"
+                            : "поддержка"}
+                        </li>
                         <span className="circle-span">•</span>
-                        <li className="color-gray">{this.props.language === "English" ? "FAQ" : "Часто задаваемые вопросы"}</li>
+                        <li className="color-gray">
+                          {this.props.language === "English"
+                            ? "FAQ"
+                            : "Часто задаваемые вопросы"}
+                        </li>
                       </ul>
                     </footer>
                   </form>
@@ -117,7 +137,9 @@ class Question extends React.Component {
                   {this.props.currentQuestion > 0 && (
                     /* This component will appear if we select a single question. Or move on to any question from the first question */
                     <div className="back-component">
-                      <span onClick={this.props.backHandle}>← {this.props.language === "English" ? "Back" : "назад"}</span>
+                      <span onClick={this.props.backHandle}>
+                        ← {this.props.language === "English" ? "Back" : "назад"}
+                      </span>
                     </div>
                   )}
                   <div className="box-content max-w-full">
@@ -126,7 +148,11 @@ class Question extends React.Component {
                     <Progress percent={renderPercent} status="active" />
                     <div aria-label="Question Length" className="mt-3">
                       <span className="questionLength-span">
-                        {`${this.props.language === "English" ? "Question" : "Вопрос"} ${this.props.currentQuestion + 1}/${
+                        {`${
+                          this.props.language === "English"
+                            ? "Question"
+                            : "Вопрос"
+                        } ${this.props.currentQuestion + 1}/${
                           this.props.questions.length
                         }`}
                       </span>
@@ -164,7 +190,11 @@ class Question extends React.Component {
                                 >
                                   {item.answerText}
                                 </button>
-                                <span id={`${i}__span`}>{this.props.language === "English" ? "Or" : "или"}</span>
+                                <span id={`${i}__span`}>
+                                  {this.props.language === "English"
+                                    ? "Or"
+                                    : "или"}
+                                </span>
                               </>
                             );
                           })}
