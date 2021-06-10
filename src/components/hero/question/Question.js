@@ -41,7 +41,9 @@ class Question extends React.Component {
             'Success!',
             'You Result Sented Gmail!',
             'success'
-          )
+          ).then(function() {
+            window.location.reload();
+          })
         });
     }
   };
