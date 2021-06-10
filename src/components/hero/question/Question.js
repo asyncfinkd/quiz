@@ -91,6 +91,7 @@ class Question extends React.Component {
                         autoFocus
                         value={this.state.email}
                         onChange={this.handleChange}
+                        style={{width: "100%"}}
                       />
                       <label>
                         {this.props.language === "English"
