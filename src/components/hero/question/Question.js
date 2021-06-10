@@ -29,7 +29,19 @@ class Question extends React.Component {
 
   renderSignupComponent = () => {
     if (!this.state.email) {
-      alert("Please enter a email");
+      if (this.props.language === "English") {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please enter a email!",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Ой...",
+          text: "Пожалуйста, введите адрес электронной почты!",
+        });
+      }
     } else {
       axios
         .post("https://quiz-app-second.herokuapp.com/auth/insertUser", {
@@ -91,7 +103,7 @@ class Question extends React.Component {
                         autoFocus
                         value={this.state.email}
                         onChange={this.handleChange}
-                        style={{width: "100%"}}
+                        style={{ width: "100%" }}
                       />
                       <label>
                         {this.props.language === "English"
