@@ -65,7 +65,7 @@ class Question extends React.Component {
               {this.props.showResult ? (
                 /* What if there are no more questions */
                 <>
-                  <h1>Input your name</h1>
+                  <h1>Input your email</h1>
                   <form
                     onSubmit={(e) => {
                       e.preventDefault();
