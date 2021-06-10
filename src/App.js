@@ -21,6 +21,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
   state = {
     showPopup: false,
+    language: "English",
   };
   /* 
      Here I create a function that will render at boot time.
@@ -29,8 +30,8 @@ class App extends Component {
   componentWillMount = () => {
     setTimeout(() => {
       this.setState((state) => {
-        return {showPopup: state.showPopup = true};
-      })
+        return { showPopup: (state.showPopup = true) };
+      });
     }, 2000);
   };
   render() {
@@ -44,7 +45,14 @@ class App extends Component {
           We have authentication, if you do not enter
           the name you will not be allowed in the game
          */}
-          <Route path="/" exact component={Hero}></Route>
+          <Route path="/" exact>
+            <Hero
+              language={this.state.language}
+              onChangeLanguage={(event) =>
+                this.setState({ language: event.target.value })
+              }
+            />
+          </Route>
           {/* 
           The quiz component where everything happens. Which may be interesting to you.
         */}

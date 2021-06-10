@@ -33,7 +33,6 @@ class Hero extends React.Component {
     buttonList: false,
     showSkeleton: true,
     showHero: false,
-    language: "English",
     lastResult: [],
   };
 
@@ -205,7 +204,7 @@ class Hero extends React.Component {
             this.setState((state) => { return {buttonList: state.buttonList = false}; })
           }}
         >
-          {this.state.language === "English" ? "Submit" : "Отправить"}
+          {this.props.language === "English" ? "Submit" : "Отправить"}
         </button>
       </>
     );
@@ -313,7 +312,7 @@ class Hero extends React.Component {
                     // });
                     this.setState((state) => { return {buttonList: state.buttonList = !this.state.buttonList}; })
                   }}
-                  language={this.state.language}
+                  language={this.props.language}
                 />
               </div>
             </>
@@ -345,10 +344,8 @@ class Hero extends React.Component {
                     height: "44px",
                     paddingLeft: "10px",
                   }}
-                  value={this.state.language}
-                  onChange={(event) =>
-                    this.setState({ language: event.target.value })
-                  }
+                  value={this.props.language}
+                  onChange={this.props.onChangeLanguage}
                 >
                   <option>English</option>
                   <option>Russia</option>
@@ -368,7 +365,7 @@ class Hero extends React.Component {
                     cursor: "pointer",
                   }}
                   onClick={() => {
-                    if (this.state.language === "English") {
+                    if (this.props.language === "English") {
                       // this.setState({
                       //   questions: (this.state.questions = Data.EN),
                       // });
