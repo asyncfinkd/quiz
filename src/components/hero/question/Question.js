@@ -16,6 +16,7 @@ class Question extends React.Component {
   state = {
     email: "",
   };
+
   /*
     In this file we use the class component. To better do object-oriented programming.
   */
