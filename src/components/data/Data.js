@@ -1171,39 +1171,39 @@ export const Data = {
     {
       id: "0",
       question:
-        "пас0",
+        "Когда вы находитесь в обществе (на вечеринке с коллегами по работе или соучениками), вы обычно предпочитаете",
       answerOptions: [
         {
-          answerText: "йцу0",
+          answerText: "участвовать в общей беседе",
         },
         {
-          answerText: "йцу1",
+          answerText: "беседовать с каждым отдельно",
         },
       ],
     }, 
     {
       id: "1",
       question:
-        "пас2",
+        "Вы в большей степени человек",
       answerOptions: [
         {
-          answerText: "йцу1",
+          answerText: "реалистичный",
         },
         {
-          answerText: "йцу2",
+          answerText: "склонный к теоретизированию",
         },
       ],
     },
     {
       id: "2",
       question:
-        "пас3",
+        "По вашему мнению, хуже",
       answerOptions: [
         {
-          answerText: "йцу3",
+          answerText: "«витать в облаках» фантазий",
         },
         {
-          answerText: "йцу4",
+          answerText: "«катиться по накатанной колее» ",
         },
       ],
     },    {
