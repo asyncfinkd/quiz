@@ -1992,5 +1992,29 @@ export const Data = {
         },
       ],
     },
+    {
+      id: "68",
+      question: "Вы предпочитаете",
+      answerOptions: [
+        {
+          answerText: "запланированные события"
+        },
+        {
+        answerText: "спонтанные события"
+      }
+      ]
+    },
+    {
+    id: "69",
+    question: "Вы более склонны",
+    answerOptions: [
+      {
+        answerText: "продумывать и планировать"
+      },
+      {
+      answerText: "действовать по обстоятельствам"
+      }
+    ]
+    }
   ],
 };
