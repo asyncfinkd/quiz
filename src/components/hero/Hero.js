@@ -45,17 +45,24 @@ class Hero extends React.Component {
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
-   let state = false;
-    if(this.state.lastResult.length > 0) {
-      this.state.lastResult.map((item,i) => {
-        if(item.question === this.state.questions[this.state.currentQuestion].question) {
-
-          let index = this.state.lastResult.findIndex(item => item.question === this.state.questions[this.state.currentQuestion].question)
+    let state = false;
+    if (this.state.lastResult.length > 0) {
+      this.state.lastResult.map((item, i) => {
+        if (
+          item.question ===
+          this.state.questions[this.state.currentQuestion].question
+        ) {
+          let index = this.state.lastResult.findIndex(
+            (item) =>
+              item.question ===
+              this.state.questions[this.state.currentQuestion].question
+          );
           console.log(index);
-          if(index > -1) {
-            this.state.lastResult.splice(index, 1)
+          if (index > -1) {
+            this.state.lastResult.splice(index, 1);
             this.state.lastResult.push({
-              question: this.state.questions[this.state.currentQuestion].question,
+              question: this.state.questions[this.state.currentQuestion]
+                .question,
               value: value,
             });
             nextQuestion = this.state.currentQuestion + 1;
@@ -63,8 +70,8 @@ class Hero extends React.Component {
           state = true;
         }
         return null;
-      })
-    }else {
+      });
+    } else {
       this.state.lastResult.push({
         question: this.state.questions[this.state.currentQuestion].question,
         value: value,
@@ -72,7 +79,7 @@ class Hero extends React.Component {
       nextQuestion = this.state.currentQuestion + 1;
       state = true;
     }
-    if(!state) {
+    if (!state) {
       this.state.lastResult.push({
         question: this.state.questions[this.state.currentQuestion].question,
         value: value,
@@ -114,28 +121,30 @@ class Hero extends React.Component {
       </>
     ));
 
-    this.state.questions.map((item) => 
-      (
-        <>
-        {document.getElementById(`${item.id}`).style.backgroundColor !== "green" && (
+    this.state.questions.map((item) => (
+      <>
+        {document.getElementById(`${item.id}`).style.backgroundColor !==
+          "green" && (
           <>
-            {document.getElementById(`${item.id}`).style.backgroundColor !== "gray" && (
+            {document.getElementById(`${item.id}`).style.backgroundColor !==
+              "gray" && (
               <>
-                {item.id === this.state.questions[this.state.currentQuestion + 1].id && (
+                {item.id ===
+                  this.state.questions[this.state.currentQuestion + 1].id && (
                   <>
-                      {// document.getElementById(`${item.id}`).style.backgroundColor =
+                    {
+                      // document.getElementById(`${item.id}`).style.backgroundColor =
                       //   "#0d6efd";
                       // document.getElementById(`${item.id}`).style.color = "white";
-                      }
+                    }
                   </>
                 )}
               </>
             )}
           </>
         )}
-        </>
-      )
-    );
+      </>
+    ));
   };
 
   /* Here is a description of the list. Functional action when pressed. Planting, browning, disassembling array assignment operators are all here. */
@@ -155,26 +164,35 @@ class Hero extends React.Component {
                   }));
                   this.state.questions.map((item2) => (
                     <>
-                    {item2.id < +item.id && (
-                      <>
-                        {
-                          document.getElementById( `${item2.id}` ).style.backgroundColor = "gray"
-                         
-                        }
-                        {
-                          document.getElementById(`${item2.id}`).style.color = "white"
-                        }
-                      </>
-                    )}
+                      {item2.id < +item.id && (
+                        <>
+                          {
+                            (document.getElementById(
+                              `${item2.id}`
+                            ).style.backgroundColor = "gray")
+                          }
+                          {
+                            (document.getElementById(
+                              `${item2.id}`
+                            ).style.color = "white")
+                          }
+                        </>
+                      )}
                     </>
                   ));
 
                   this.state.history.map((item2) => (
                     <>
-                      {document.getElementById(`${+item2}`).style.backgroundColor = "green"}
+                      {
+                        (document.getElementById(
+                          `${+item2}`
+                        ).style.backgroundColor = "green")
+                      }
                     </>
-                  ))
-                  this.setState((state) => { return {buttonList: state.buttonList = false}; })
+                  ));
+                  this.setState((state) => {
+                    return { buttonList: (state.buttonList = false) };
+                  });
                 }}
                 id={item.id}
                 className={this.state.item && "act-show"}
@@ -197,11 +215,15 @@ class Hero extends React.Component {
           /* onClick function for show result */
           onClick={() => {
             // this.setState({ showResult: (this.state.showResult = true) });
-            this.setState((state) => { return {showResult: state.showResult = true}; })
+            this.setState((state) => {
+              return { showResult: (state.showResult = true) };
+            });
             // this.setState({
             //   buttonList: (this.state.buttonList = false),
             // });
-            this.setState((state) => { return {buttonList: state.buttonList = false}; })
+            this.setState((state) => {
+              return { buttonList: (state.buttonList = false) };
+            });
           }}
         >
           {this.props.language === "English" ? "Submit" : "Отправить"}
@@ -234,8 +256,9 @@ class Hero extends React.Component {
 
     setTimeout(() => {
       // this.setState({ showSkeleton: (this.state.showSkeleton = false) });
-      this.setState((state) => { return {showSkeleton: state.showSkeleton = false}; })
-
+      this.setState((state) => {
+        return { showSkeleton: (state.showSkeleton = false) };
+      });
     }, 2000);
   };
 
@@ -256,7 +279,11 @@ class Hero extends React.Component {
                   //   buttonList: (this.state.buttonList =
                   //     !this.state.buttonList),
                   // });
-                  this.setState((state) => { return {buttonList: state.buttonList = !this.state.buttonList}; })
+                  this.setState((state) => {
+                    return {
+                      buttonList: (state.buttonList = !this.state.buttonList),
+                    };
+                  });
                 }}
               >
                 {this.state.buttonList !== true ? (
@@ -300,8 +327,9 @@ class Hero extends React.Component {
                     // this.setState({
                     //   showResult: (this.state.showResult = false),
                     // });
-                    this.setState((state) => { return {showResult: state.showResult = false}; })
-                    
+                    this.setState((state) => {
+                      return { showResult: (state.showResult = false) };
+                    });
                   }}
                   result={this.state.lastResult}
                   buttonList={this.state.buttonList}
@@ -310,7 +338,11 @@ class Hero extends React.Component {
                     //   buttonList: (this.state.buttonList =
                     //     !this.state.buttonList),
                     // });
-                    this.setState((state) => { return {buttonList: state.buttonList = !this.state.buttonList}; })
+                    this.setState((state) => {
+                      return {
+                        buttonList: (state.buttonList = !this.state.buttonList),
+                      };
+                    });
                   }}
                   language={this.props.language}
                 />
@@ -333,7 +365,9 @@ class Hero extends React.Component {
                 }}
               >
                 <p style={{ fontSize: "1rem", userSelect: "none" }}>
-                  {this.props.language === "English" ? "Choose Language" : "Выберите язык"}
+                  {this.props.language === "English"
+                    ? "Choose Language"
+                    : "Выберите язык"}
                 </p>
                 <select
                   style={{
@@ -369,18 +403,26 @@ class Hero extends React.Component {
                       // this.setState({
                       //   questions: (this.state.questions = Data.EN),
                       // });
-                      this.setState((state) => { return {questions: state.questions = Data.EN}; })
+                      this.setState((state) => {
+                        return { questions: (state.questions = Data.EN) };
+                      });
                     } else {
                       // this.setState({
                       //   questions: (this.state.questions = Data.RU),
                       // });
-                      this.setState((state) => { return {questions: state.questions = Data.RU}; })
+                      this.setState((state) => {
+                        return { questions: (state.questions = Data.RU) };
+                      });
                     }
                     // this.setState({ showHero: (this.state.showHero = true) });
-                    this.setState((state) => { return {showHero: state.showHero = true}; })
+                    this.setState((state) => {
+                      return { showHero: (state.showHero = true) };
+                    });
                   }}
                 >
-                  {this.props.language === "English" ? "Continue" : "Продолжать"}
+                  {this.props.language === "English"
+                    ? "Continue"
+                    : "Продолжать"}
                 </button>
               </div>
             </div>
