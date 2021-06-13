@@ -1387,6 +1387,557 @@ export const Data = {
         },
       ],
     },
+    {
+      id: "112",
+      question:
+        "You often think about several things at the same time or do several things at the same time",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "113",
+      question:
+        "You do not like work, in which you need to deal with a large number of small details and facts",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "114",
+      question:
+        "Time for you is relative. You do not think that you are late somewhere, unless the meeting began without you",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "115",
+      question: "You like making puns and play with words",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "116",
+      question:
+        "You are not averse to theorizing and easily perceive abstract concepts",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "117",
+      question:
+        "The essence of things, expressed in symbolism or in their hidden meaning, is always more important for you than external manifestations",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "118",
+      question:
+        "If you believe in God, you do not follow any external rituals. Your faith can exist without any external manifestations or actions on your part",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "119",
+      question:
+        "You can remain calm and objective in situations in which many other people lose their composure or become overly emotional",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "120",
+      question:
+        "You would rather judge someone's argument based on what is fair, and not on how your decision will affect all participants in the dispute",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "121",
+      question: "You like proving your point of view just to get more clarity",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "122",
+      question:
+        "Sometimes you can put forward arguments for both points of view, which are debated, just for fun or to exercise your intellect",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "123",
+      question: "You are rather a tough person than a gentle person",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "124",
+      question:
+        "If you disagree with someone, you usually tell them about it, and do not pretend to agree and let him think that he is right",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "125",
+      question:
+        "You often cannot understand why people get upset about some minor things that seem to be unimportant",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "126",
+      question:
+        "You are more likely to prove your case, rather than try to please everyone",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "127",
+      question:
+        "You think that in order to do your job well, you do not need to be friends with your colleagues.",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "128",
+      question:
+        "You like your ability to be objective, despite the fact that some people accuse you of composure and insensitivity",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "129",
+      question:
+        "You are often accused of taking everything “too close to your heart” or perceiving the words “too personal”",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "130",
+      question:
+        "You “can go all out” to make someone nice. You can even sacrifice your own comfort to make it convenient or pleasant for other people.",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "131",
+      question: "You prefer harmony rather than mental clarity",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "132",
+      question:
+        "You do not like conflicts or quarrels at family gatherings or other public places where you may be present. You are trying to either avoid such conflicts or smooth them out",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "133",
+      question:
+        "You can easily “take your words back” if you feel that they have hurt someone or hurt someone",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "134",
+      question: "You are rather a gentle person than a tough one",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "135",
+      question: "You like decisions that take into account people's feelings",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "136",
+      question:
+        "You like to help people and make people feel good, although sometimes you feel that people just use you",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "137",
+      question:
+        "You know how to put yourself in place of other people and usually do this when you make some decisions regarding other",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "138",
+      question: "If you have any strong feelings, you can easily start crying",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "139",
+      question:
+        "You are often the one who is waiting, and not the one who is late",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "140",
+      question:
+        "When you get up in the morning, you are quite well aware of what your day will be",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "141",
+      question:
+        "Your days are usually scheduled, and you can be upset if something is not going according to plan",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "142",
+      question:
+        "You like when everything is in order, and you have a certain system that you use to regularly put all your things in order. The process of cleaning or putting something in order helps you 'clean' internally",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "143",
+      question:
+        "You like to finish the work started, and you have a special pleasure when you bring something to the end. You like to make to-do lists and, as far as you are done, delete from this list what has already been done",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "144",
+      question: "You do not like surprises and changes in life",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "145",
+      question:
+        "You prefer certainty and the knowledge that unexpected changes will not happen in your life",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "146",
+      question:
+        "You like when everything has its place and when everything is laid out in places",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "147",
+      question:
+        "Your attention is easily distracted by people or events happening around you",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "148",
+      question:
+        "You usually do not plan the order in which tasks are completed until you start to carry them out and you do not fully understand what you need to do",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "149",
+      question:
+        "People often blame you for being insufficiently organized, although you think that this is not true",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "150",
+      question:
+        "You do not think that everything and everywhere has to be in order. And although you like the order, your creativity is more important for you, spontaneity and the desire not to miss any interesting opportunities that can occur",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "151",
+      question:
+        "You usually put things off until the last, and if you have time to complete them on time, then you do it thanks to the enormous efforts at the “last minute”",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "152",
+      question:
+        "You like to experiment and try everything new -  it can be a new dish or a new route home",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "153",
+      question:
+        "In order to succeed in what you do, your work must “entertain” you. You think that if work is not fun for you, it is most likely not worth your effort",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "154",
+      question:
+        "You cannot stand any routine work that is repeated day after day and year after year. Constant changes are more pleasing than scary",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
   ],
   RU: [
     {
@@ -3401,20 +3952,6 @@ export const Data = {
       id: "154",
       question:
         "Для того, чтобы добиться успеха в том, что вы делаете, наша работа должна увлекать и «развлекать» вас. Вы считаете, что, если работа не является для вас развлечением, она, скорее всего, не стоит ваших усилий",
-      answerOptions: [
-        {
-          answerText: "да",
-        },
-        {
-          answerText: "Нет",
-        },
-      ],
-      category: "Feeling",
-    },
-    {
-      id: "155",
-      question:
-        "Вы совершенно не можете терпеть никаких рутинных занятий, которые повторяются изо дня в день и из года в год. Постоянные перемены скорее радуют, а не пугают вас",
       answerOptions: [
         {
           answerText: "да",
