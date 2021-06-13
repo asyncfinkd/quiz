@@ -51,74 +51,81 @@ class Hero extends React.Component {
       console.log(0);
     } else {
       console.log(this.state.questions[this.state.currentQuestion].category);
-      if (
-        this.state.questions[this.state.currentQuestion].category ===
-        "Extravert"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            extravertCount: state.extravertCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
-        }
-      } else if (
-        this.state.questions[this.state.currentQuestion].category ===
-        "Introvert"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            introvertCount: state.introvertCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
-        }
-      } else if (
-        this.state.questions[this.state.currentQuestion].category === "Sensing"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            sensingCount: state.sensingCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
-        }
-      } else if (
-        this.state.questions[this.state.currentQuestion].category ===
-        "Intuitive"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            intuitiveCount: state.intuitiveCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
-        }
-      } else if (
-        this.state.questions[this.state.currentQuestion].category === "Rational"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            rationalCount: state.rationalCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
-        }
-      } else if (
-        this.state.questions[this.state.currentQuestion].category === "Feeling"
-      ) {
-        if (value === "да") {
-          this.setState((state) => ({
-            feelingCount: state.feelingCount + 1,
-          }));
-          console.log("user clicked yes");
-        } else {
-          console.log("user clicked no");
+      if (this.props.language === "English") {
+        console.log("hello");
+      } else {
+        if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Extravert"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              extravertCount: state.extravertCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Introvert"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              introvertCount: state.introvertCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Sensing"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              sensingCount: state.sensingCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Intuitive"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              intuitiveCount: state.intuitiveCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Rational"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              rationalCount: state.rationalCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Feeling"
+        ) {
+          if (value === "да") {
+            this.setState((state) => ({
+              feelingCount: state.feelingCount + 1,
+            }));
+            console.log("user clicked yes");
+          } else {
+            console.log("user clicked no");
+          }
         }
       }
     }
@@ -134,6 +141,7 @@ class Hero extends React.Component {
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
     */
+
     let state = false;
     if (this.state.lastResult.length > 0) {
       this.state.lastResult.map((item, i) => {
