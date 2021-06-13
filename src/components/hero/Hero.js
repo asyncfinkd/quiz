@@ -15,7 +15,6 @@ import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
 import SkeletonQuiz from "../skeletons/SkeletonQuiz";
 import HeroMain from "./main/HeroMain";
-import HeroTable from "./table/HeroTable";
 
 class Hero extends React.Component {
   /*
@@ -42,6 +41,17 @@ class Hero extends React.Component {
   */
 
   nextQuestion = (value) => {
+    if (!this.state.questions[this.state.currentQuestion].category) {
+      console.log(0);
+    } else {
+      console.log(this.state.questions[this.state.currentQuestion].category);
+      if (value == "да") {
+        console.log("user clicked yes");
+      } else {
+        console.log("user clicked no");
+      }
+    }
+
     let nextQuestion;
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another

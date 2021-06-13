@@ -2028,6 +2028,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "71",
@@ -2041,6 +2042,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "72",
@@ -2053,6 +2055,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "73",
@@ -2066,6 +2069,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "74",
@@ -2079,6 +2083,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "75",
@@ -2092,6 +2097,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "76",
@@ -2105,6 +2111,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "77",
@@ -2117,6 +2124,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "78",
@@ -2130,6 +2138,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "79",
@@ -2142,6 +2151,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "80",
@@ -2155,6 +2165,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "81",
@@ -2168,6 +2179,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "82",
@@ -2180,6 +2192,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Extravert"
     },
     {
       id: "83",
