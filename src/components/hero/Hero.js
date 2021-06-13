@@ -35,6 +35,8 @@ class Hero extends React.Component {
     showHero: false,
     lastResult: [],
     extravertCount: 0,
+    introvertCount: 0,
+    sensingCount: 0,
   };
 
   /*
@@ -56,7 +58,29 @@ class Hero extends React.Component {
               extravertCount: state.extravertCount + 1,
             }));
           } else {
-            console.log("not clicked button");
+            console.log("extravert - not clicked button");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Introvert"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              introvertCount: state.introvertCount + 1,
+            }));
+          } else {
+            console.log("introvert - not clicked button");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Sensing"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              sensingCount: state.sensingCount + 1,
+            }));
+          } else {
+            console.log("sensing - not clicked button");
           }
         }
       } else {
@@ -77,9 +101,9 @@ class Hero extends React.Component {
         //   "Introvert"
         // ) {
         //   if (value === "да") {
-        //     this.setState((state) => ({
-        //       introvertCount: state.introvertCount + 1,
-        //     }));
+        // this.setState((state) => ({
+        //   introvertCount: state.introvertCount + 1,
+        // }));
         //     console.log("user clicked yes");
         //   } else {
         //     console.log("user clicked no");
@@ -89,9 +113,9 @@ class Hero extends React.Component {
         //   "Sensing"
         // ) {
         //   if (value === "да") {
-        //     this.setState((state) => ({
-        //       sensingCount: state.sensingCount + 1,
-        //     }));
+        // this.setState((state) => ({
+        //   sensingCount: state.sensingCount + 1,
+        // }));
         //     console.log("user clicked yes");
         //   } else {
         //     console.log("user clicked no");
@@ -137,8 +161,8 @@ class Hero extends React.Component {
     }
 
     console.log("extravert counter: " + this.state.extravertCount);
-    // console.log("introvert counter: " + this.state.introvertCount);
-    // console.log("sensing counter: " + this.state.sensingCount);
+    console.log("introvert counter: " + this.state.introvertCount);
+    console.log("sensing counter: " + this.state.sensingCount);
     // console.log("intuitive counter: " + this.state.intuitiveCount);
     // console.log("rational counter: " + this.state.rationalCount);
     // console.log("feeling counter: " + this.state.feelingCount);
