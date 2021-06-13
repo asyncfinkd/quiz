@@ -144,6 +144,7 @@ class Hero extends React.Component {
           console.log("spontaneous - not clicked button");
         }
       } else {
+        // q
         // if (
         //   this.state.questions[this.state.currentQuestion].category ===
         //   "Extravert"
