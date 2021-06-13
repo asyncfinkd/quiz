@@ -42,6 +42,7 @@ class Hero extends React.Component {
     feelingCount: 0,
     reasonableCount: 0,
     spontaneousCount: 0,
+    points: [],
   };
 
   /*
@@ -236,15 +237,6 @@ class Hero extends React.Component {
       }
     }
 
-    console.log("extravert counter: " + this.state.extravertCount);
-    console.log("introvert counter: " + this.state.introvertCount);
-    console.log("sensing counter: " + this.state.sensingCount);
-    console.log("intuitive counter: " + this.state.intuitiveCount);
-    console.log("rational counter: " + this.state.rationalCount);
-    console.log("feeling counter: " + this.state.feelingCount);
-    console.log("reasonable counter: " + this.state.reasonableCount);
-    console.log("spontaneous counter: " + this.state.spontaneousCount);
-
     let nextQuestion;
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
@@ -432,6 +424,17 @@ class Hero extends React.Component {
             this.setState((state) => {
               return { buttonList: (state.buttonList = false) };
             });
+            this.state.points.push({
+              extravert: this.state.extravertCount,
+              introvert: this.state.introvertCount,
+              sensing: this.state.sensingCount,
+              intuitive: this.state.intuitiveCount,
+              rational: this.state.rationalCount,
+              feeling: this.state.feelingCount,
+              reasonable: this.state.reasonableCount,
+              spontaneous: this.state.spontaneousCount,
+            });
+            console.log(this.state.points);
           }}
         >
           {this.props.language === "English" ? "Submit" : "Отправить"}
