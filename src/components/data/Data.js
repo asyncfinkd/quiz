@@ -2028,7 +2028,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "71",
@@ -2042,7 +2042,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "72",
@@ -2055,7 +2055,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "73",
@@ -2069,7 +2069,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "74",
@@ -2083,7 +2083,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "75",
@@ -2097,7 +2097,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "76",
@@ -2111,7 +2111,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "77",
@@ -2124,7 +2124,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "78",
@@ -2138,7 +2138,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "79",
@@ -2151,7 +2151,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "80",
@@ -2165,7 +2165,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "81",
@@ -2179,7 +2179,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "82",
@@ -2192,7 +2192,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Extravert"
+      category: "Extravert",
     },
     {
       id: "83",
@@ -2206,6 +2206,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "84",
@@ -2219,6 +2220,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "85",
@@ -2232,6 +2234,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "86",
@@ -2244,6 +2247,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "87",
@@ -2257,6 +2261,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "88",
@@ -2270,6 +2275,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "89",
@@ -2283,6 +2289,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "90",
@@ -2295,6 +2302,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "91",
@@ -2308,6 +2316,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "92",
@@ -2320,6 +2329,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "93",
@@ -2333,6 +2343,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "94",
@@ -2346,6 +2357,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "95",
@@ -2358,6 +2370,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Introvert",
     },
     {
       id: "96",
@@ -2371,6 +2384,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "97",
@@ -2384,6 +2398,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "98",
@@ -2397,6 +2412,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "99",
@@ -2410,6 +2426,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "100",
@@ -2423,6 +2440,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "101",
@@ -2436,6 +2454,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "102",
@@ -2449,6 +2468,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "103",
@@ -2462,6 +2482,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "104",
@@ -2475,6 +2496,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "105",
@@ -2488,6 +2510,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "106",
@@ -2501,6 +2524,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "107",
@@ -2514,6 +2538,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Sensing",
     },
     {
       id: "108",
@@ -2526,6 +2551,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "109",
@@ -2539,6 +2565,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "110",
@@ -2552,6 +2579,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "111",
@@ -2565,6 +2593,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "112",
@@ -2578,6 +2607,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "113",
@@ -2591,6 +2621,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "114",
@@ -2604,6 +2635,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "115",
@@ -2617,6 +2649,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "116",
@@ -2629,6 +2662,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "117",
@@ -2642,6 +2676,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "118",
@@ -2655,6 +2690,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "119",
@@ -2668,6 +2704,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Intuitive",
     },
     {
       id: "120",
@@ -2681,6 +2718,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "121",
@@ -2694,6 +2732,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "122",
@@ -2707,6 +2746,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "123",
@@ -2720,6 +2760,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "124",
@@ -2732,6 +2773,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "125",
@@ -2745,6 +2787,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "126",
@@ -2758,6 +2801,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "127",
@@ -2771,6 +2815,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "128",
@@ -2784,6 +2829,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "129",
@@ -2797,6 +2843,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Rational",
     },
     {
       id: "130",
@@ -2810,6 +2857,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "131",
@@ -2823,6 +2871,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "132",
@@ -2835,6 +2884,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "133",
@@ -2848,6 +2898,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "134",
@@ -2861,6 +2912,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "135",
@@ -2873,6 +2925,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "136",
@@ -2886,6 +2939,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "137",
@@ -2899,6 +2953,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "138",
@@ -2912,6 +2967,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "139",
@@ -2925,6 +2981,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "140",
@@ -2937,6 +2994,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "141",
@@ -2950,6 +3008,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "142",
@@ -2963,6 +3022,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "143",
@@ -2976,6 +3036,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "144",
@@ -2989,6 +3050,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "145",
@@ -3001,6 +3063,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "146",
@@ -3014,6 +3077,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "147",
@@ -3027,6 +3091,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "148",
@@ -3040,6 +3105,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "149",
@@ -3053,6 +3119,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "150",
@@ -3066,6 +3133,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "151",
@@ -3079,6 +3147,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "152",
@@ -3092,6 +3161,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "153",
@@ -3105,6 +3175,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "154",
@@ -3118,6 +3189,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
     {
       id: "155",
@@ -3131,6 +3203,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
+      category: "Feeling",
     },
   ],
 };
