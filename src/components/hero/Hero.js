@@ -351,7 +351,6 @@ class Hero extends React.Component {
                   language={this.props.language}
                 />
               </div>
-              <HeroTable lastResult={this.state.lastResult} />
             </>
           )}
         </>
