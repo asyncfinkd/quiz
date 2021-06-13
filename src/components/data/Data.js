@@ -1167,6 +1167,226 @@ export const Data = {
         },
       ],
     },
+    {
+      id: "95",
+      question:
+        "You are often get annoyed if people do not give you clear instructions and do not explain everything to you in detail",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "96",
+      question:
+        "You prefer concentrating on what you are doing at the moment, and not thinking about the future",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "97",
+      question:
+        "You  prefer doing something specific rather than just think about it",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "98",
+      question:
+        "You prefer work that results in something real and tangible, for example, goods or services",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "99",
+      question:
+        "You do not understand the desire of some people to improve themselves all the time and improve everything around them",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "100",
+      question:
+        "You do not like indulging in fantasies and do not understand those who spend their precious time dreaming.",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "101",
+      question:
+        "When you look at a forest, you see individual trees, not a whole forest",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "102",
+      question:
+        "At work, you care more about doing your own work and do not worry about how its results fit into the big picture and into the result of your organization as a whole",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "103",
+      question:
+        "You like working with facts and figures more than with ideas and abstract theories",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "104",
+      question:
+        "You like to get specific answers to specific questions. When you ask someone: “What time is it?”, You would like to hear the exact answer, for example, “3:52”, and you might be annoyed by such an answer as “almost four”",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "105",
+      question:
+        "You often express your thoughts, and also perceive what others have said quite literally, without trying to find a special meaning or hidden meaning in the words",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "106",
+      question:
+        "If you believe in God, then you want to exercise your faith in some way — for example, through good deeds, prayer, or regular church visits",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "107",
+      question: "You like giving general answers to questions",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "108",
+      question:
+        "You often do not understand why many people cannot easily follow your instructions, and get annoyed if they start to elicit details from you or start asking you too many details trying to make sure they understand",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "109",
+      question:
+        "The future and the opportunities that it conceals are much more intriguing to you rather  than they scare you",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "110",
+      question:
+        "Most often, it is much more interesting for you to think about where life will lead you in the future than about where you are in life at the moment",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
+    {
+      id: "111",
+      question:
+        "You like learning new things, even if the new knowledge has no practical application for you in the present, and perhaps even in the future",
+      answerOptions: [
+        {
+          answerText: "Yes",
+        },
+        {
+          answerText: "No",
+        },
+      ],
+    },
   ],
   RU: [
     {
