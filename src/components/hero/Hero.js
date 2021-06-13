@@ -35,11 +35,6 @@ class Hero extends React.Component {
     showHero: false,
     lastResult: [],
     extravertCount: 0,
-    introvertCount: 0,
-    sensingCount: 0,
-    intuitiveCount: 0,
-    rationalCount: 0,
-    feelingCount: 0,
   };
 
   /*
@@ -52,90 +47,101 @@ class Hero extends React.Component {
     } else {
       console.log(this.state.questions[this.state.currentQuestion].category);
       if (this.props.language === "English") {
-        console.log("hello");
-      } else {
         if (
           this.state.questions[this.state.currentQuestion].category ===
           "Extravert"
         ) {
-          if (value === "да") {
+          if (value === "Yes") {
             this.setState((state) => ({
               extravertCount: state.extravertCount + 1,
             }));
-            console.log("user clicked yes");
           } else {
-            console.log("user clicked no");
-          }
-        } else if (
-          this.state.questions[this.state.currentQuestion].category ===
-          "Introvert"
-        ) {
-          if (value === "да") {
-            this.setState((state) => ({
-              introvertCount: state.introvertCount + 1,
-            }));
-            console.log("user clicked yes");
-          } else {
-            console.log("user clicked no");
-          }
-        } else if (
-          this.state.questions[this.state.currentQuestion].category ===
-          "Sensing"
-        ) {
-          if (value === "да") {
-            this.setState((state) => ({
-              sensingCount: state.sensingCount + 1,
-            }));
-            console.log("user clicked yes");
-          } else {
-            console.log("user clicked no");
-          }
-        } else if (
-          this.state.questions[this.state.currentQuestion].category ===
-          "Intuitive"
-        ) {
-          if (value === "да") {
-            this.setState((state) => ({
-              intuitiveCount: state.intuitiveCount + 1,
-            }));
-            console.log("user clicked yes");
-          } else {
-            console.log("user clicked no");
-          }
-        } else if (
-          this.state.questions[this.state.currentQuestion].category ===
-          "Rational"
-        ) {
-          if (value === "да") {
-            this.setState((state) => ({
-              rationalCount: state.rationalCount + 1,
-            }));
-            console.log("user clicked yes");
-          } else {
-            console.log("user clicked no");
-          }
-        } else if (
-          this.state.questions[this.state.currentQuestion].category ===
-          "Feeling"
-        ) {
-          if (value === "да") {
-            this.setState((state) => ({
-              feelingCount: state.feelingCount + 1,
-            }));
-            console.log("user clicked yes");
-          } else {
-            console.log("user clicked no");
+            console.log("not clicked button");
           }
         }
+      } else {
+        // if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Extravert"
+        // ) {
+        //   if (value === "да") {
+        // this.setState((state) => ({
+        //   extravertCount: state.extravertCount + 1,
+        // }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // } else if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Introvert"
+        // ) {
+        //   if (value === "да") {
+        //     this.setState((state) => ({
+        //       introvertCount: state.introvertCount + 1,
+        //     }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // } else if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Sensing"
+        // ) {
+        //   if (value === "да") {
+        //     this.setState((state) => ({
+        //       sensingCount: state.sensingCount + 1,
+        //     }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // } else if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Intuitive"
+        // ) {
+        //   if (value === "да") {
+        //     this.setState((state) => ({
+        //       intuitiveCount: state.intuitiveCount + 1,
+        //     }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // } else if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Rational"
+        // ) {
+        //   if (value === "да") {
+        //     this.setState((state) => ({
+        //       rationalCount: state.rationalCount + 1,
+        //     }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // } else if (
+        //   this.state.questions[this.state.currentQuestion].category ===
+        //   "Feeling"
+        // ) {
+        //   if (value === "да") {
+        //     this.setState((state) => ({
+        //       feelingCount: state.feelingCount + 1,
+        //     }));
+        //     console.log("user clicked yes");
+        //   } else {
+        //     console.log("user clicked no");
+        //   }
+        // }
       }
     }
 
     console.log("extravert counter: " + this.state.extravertCount);
-    console.log("introvert counter: " + this.state.introvertCount);
-    console.log("sensing counter: " + this.state.sensingCount);
-    console.log("intuitive counter: " + this.state.intuitiveCount);
-    console.log("rational counter: " + this.state.rationalCount);
-    console.log("feeling counter: " + this.state.feelingCount);
+    // console.log("introvert counter: " + this.state.introvertCount);
+    // console.log("sensing counter: " + this.state.sensingCount);
+    // console.log("intuitive counter: " + this.state.intuitiveCount);
+    // console.log("rational counter: " + this.state.rationalCount);
+    // console.log("feeling counter: " + this.state.feelingCount);
 
     let nextQuestion;
     /*
