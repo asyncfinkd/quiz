@@ -3850,7 +3850,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "141",
@@ -3864,7 +3864,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "142",
@@ -3878,7 +3878,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "143",
@@ -3892,7 +3892,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "144",
@@ -3906,7 +3906,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "145",
@@ -3919,7 +3919,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "146",
@@ -3933,7 +3933,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "147",
@@ -3947,7 +3947,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Reasonable",
     },
     {
       id: "148",
@@ -3961,7 +3961,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "149",
@@ -3975,7 +3975,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "150",
@@ -3989,7 +3989,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "151",
@@ -4003,7 +4003,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "152",
@@ -4017,7 +4017,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "153",
@@ -4031,7 +4031,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
     {
       id: "154",
@@ -4045,7 +4045,7 @@ export const Data = {
           answerText: "Нет",
         },
       ],
-      category: "Feeling",
+      category: "Spontaneous"
     },
   ],
 };
