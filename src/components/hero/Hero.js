@@ -41,6 +41,7 @@ class Hero extends React.Component {
     rationalCount: 0,
     feelingCount: 0,
     reasonableCount: 0,
+    spontaneousCount: 0,
   };
 
   /*
@@ -128,8 +129,19 @@ class Hero extends React.Component {
               reasonableCount: state.reasonableCount + 1,
             }));
           } else {
-            console.log("resonable - not clicked");
+            console.log("resonable - not clicked button");
           }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Spontaneous"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              spontaneousCount: state.spontaneousCount + 1,
+            }));
+          }
+        } else {
+          console.log("spontaneous - not clicked button");
         }
       } else {
         // if (
