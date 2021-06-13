@@ -37,6 +37,10 @@ class Hero extends React.Component {
     extravertCount: 0,
     introvertCount: 0,
     sensingCount: 0,
+    intuitiveCount: 0,
+    rationalCount: 0,
+    feelingCount: 0,
+    reasonableCount: 0,
   };
 
   /*
@@ -82,6 +86,50 @@ class Hero extends React.Component {
           } else {
             console.log("sensing - not clicked button");
           }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Intuitive"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              intuitiveCount: state.intuitiveCount + 1,
+            }));
+          } else {
+            console.log("intuitive - not clicked button");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Rational"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              rationalCount: state.rationalCount + 1,
+            }));
+          } else {
+            console.log("rational - not clicked button");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Feeling"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              feelingCount: state.feelingCount + 1,
+            }));
+          } else {
+            console.log("feeling - not clicked button");
+          }
+        } else if (
+          this.state.questions[this.state.currentQuestion].category ===
+          "Reasonable"
+        ) {
+          if (value === "Yes") {
+            this.setState((state) => ({
+              reasonableCount: state.reasonableCount + 1,
+            }));
+          } else {
+            console.log("resonable - not clicked");
+          }
         }
       } else {
         // if (
@@ -125,9 +173,9 @@ class Hero extends React.Component {
         //   "Intuitive"
         // ) {
         //   if (value === "да") {
-        //     this.setState((state) => ({
-        //       intuitiveCount: state.intuitiveCount + 1,
-        //     }));
+        // this.setState((state) => ({
+        //   intuitiveCount: state.intuitiveCount + 1,
+        // }));
         //     console.log("user clicked yes");
         //   } else {
         //     console.log("user clicked no");
@@ -137,9 +185,9 @@ class Hero extends React.Component {
         //   "Rational"
         // ) {
         //   if (value === "да") {
-        //     this.setState((state) => ({
-        //       rationalCount: state.rationalCount + 1,
-        //     }));
+        // this.setState((state) => ({
+        //   rationalCount: state.rationalCount + 1,
+        // }));
         //     console.log("user clicked yes");
         //   } else {
         //     console.log("user clicked no");
@@ -149,9 +197,9 @@ class Hero extends React.Component {
         //   "Feeling"
         // ) {
         //   if (value === "да") {
-        //     this.setState((state) => ({
-        //       feelingCount: state.feelingCount + 1,
-        //     }));
+        // this.setState((state) => ({
+        //   feelingCount: state.feelingCount + 1,
+        // }));
         //     console.log("user clicked yes");
         //   } else {
         //     console.log("user clicked no");
@@ -163,9 +211,9 @@ class Hero extends React.Component {
     console.log("extravert counter: " + this.state.extravertCount);
     console.log("introvert counter: " + this.state.introvertCount);
     console.log("sensing counter: " + this.state.sensingCount);
-    // console.log("intuitive counter: " + this.state.intuitiveCount);
-    // console.log("rational counter: " + this.state.rationalCount);
-    // console.log("feeling counter: " + this.state.feelingCount);
+    console.log("intuitive counter: " + this.state.intuitiveCount);
+    console.log("rational counter: " + this.state.rationalCount);
+    console.log("feeling counter: " + this.state.feelingCount);
 
     let nextQuestion;
     /*
