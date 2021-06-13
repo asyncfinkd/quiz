@@ -15,6 +15,7 @@ import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
 import SkeletonQuiz from "../skeletons/SkeletonQuiz";
 import HeroMain from "./main/HeroMain";
+import HeroTable from "./table/HeroTable";
 
 class Hero extends React.Component {
   /*
@@ -61,6 +62,7 @@ class Hero extends React.Component {
           if (index > -1) {
             this.state.lastResult.splice(index, 1);
             this.state.lastResult.push({
+              id: this.state.currentQuestion,
               question: this.state.questions[this.state.currentQuestion]
                 .question,
               value: value,
@@ -73,6 +75,7 @@ class Hero extends React.Component {
       });
     } else {
       this.state.lastResult.push({
+        id: this.state.currentQuestion,
         question: this.state.questions[this.state.currentQuestion].question,
         value: value,
       });
@@ -81,6 +84,7 @@ class Hero extends React.Component {
     }
     if (!state) {
       this.state.lastResult.push({
+        id: this.state.currentQuestion,
         question: this.state.questions[this.state.currentQuestion].question,
         value: value,
       });
@@ -347,6 +351,7 @@ class Hero extends React.Component {
                   language={this.props.language}
                 />
               </div>
+              <HeroTable lastResult={this.state.lastResult} />
             </>
           )}
         </>
