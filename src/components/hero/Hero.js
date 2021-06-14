@@ -556,6 +556,7 @@ class Hero extends React.Component {
                     });
                   }}
                   language={this.props.language}
+                  points={this.state.points}
                 />
               </div>
             </>

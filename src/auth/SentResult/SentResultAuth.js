@@ -2,11 +2,12 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import env from "../../constants/Application/env.json";
 
-export function SentResult(language, email, result) {
+export function SentResult(language, email, result, points) {
     axios
     .post(`${env.host}/auth/insertUser`, {
       email: email,
       result: result,
+      points: points,
     })
     .then(() => {
       if (language === "English") {

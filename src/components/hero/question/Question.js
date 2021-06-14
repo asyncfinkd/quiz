@@ -30,7 +30,7 @@ class Question extends React.Component {
   };
 
   renderSignupComponent = () => {
-    SentEmail(this.props.language, this.state.email, this.props.result)
+    SentEmail(this.props.language, this.state.email, this.props.result, this.props.points);
   };
 
   render() {
