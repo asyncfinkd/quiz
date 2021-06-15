@@ -357,6 +357,15 @@ class Hero extends React.Component {
         {this.state.questions.map((item) => {
           return (
             <>
+              {item.id === "70" && (
+                <hr
+                  style={{
+                    marginTop: "5px",
+                    height: "25px",
+                    backgroundColor: "gray",
+                  }}
+                />
+              )}
               <li
                 onClick={() => {
                   this.setState((state) => ({
