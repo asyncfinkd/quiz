@@ -40,6 +40,7 @@ class HeroMain extends React.Component {
           returnQuestions={this.props.returnQuestions}
           result={this.props.result}
           language={this.props.language}
+          points={this.props.points}
         />
       </>
     );
