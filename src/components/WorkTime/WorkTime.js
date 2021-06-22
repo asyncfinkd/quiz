@@ -19,8 +19,8 @@ export default function WorkTime() {
           </div>
 
           <div className="mt-8 px-1 sm:px-14 text-gray-700 max-w-md text-sm">
-            Sign up to see if you have friends on Clubhouse who can let you in.
-            We can't wait for you to join!
+            Sign up to see if you have friends on Quiz who can let you in. We
+            can't wait for you to join!
           </div>
 
           <div className="mt-5 mb-8 max-w-sm flex justify-center">
