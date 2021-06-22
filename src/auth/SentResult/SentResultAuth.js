@@ -11,7 +11,7 @@ export function SentResult(language, email, result, points) {
     })
     .then(() => {
       if (language === "English") {
-        Swal.fire("Success!", "You Result Sented Gmail!", "success").then(
+        Swal.fire("Success!", `Your test results are sent to ${email}.`, "success").then(
           function () {
             window.location.reload();
           }
@@ -19,7 +19,7 @@ export function SentResult(language, email, result, points) {
       } else {
         Swal.fire(
           "Успех!",
-          "Вы отправили Gmail в результате!",
+          `Результаты вашего тестирования отправлены на ${email} адрес.`,
           "success"
         ).then(function () {
           window.location.reload();
