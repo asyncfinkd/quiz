@@ -15,8 +15,9 @@
 
 import React, { Component } from "react";
 import Alert from "./components/alert/Alert";
-import Hero from "./components/hero/Hero";
+// import Hero from "./components/hero/Hero";
 import { BrowserRouter, Route } from "react-router-dom";
+import WorkTime from "./components/WorkTime/WorkTime";
 
 class App extends Component {
   state = {
@@ -46,12 +47,13 @@ class App extends Component {
           the name you will not be allowed in the game
          */}
           <Route path="/" exact>
-            <Hero
+            {/* <Hero
               language={this.state.language}
               onChangeLanguage={(event) =>
                 this.setState({ language: event.target.value })
               }
-            />
+            /> */}
+            <WorkTime />
           </Route>
           {/* 
           The quiz component where everything happens. Which may be interesting to you.
