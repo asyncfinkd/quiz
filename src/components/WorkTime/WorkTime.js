@@ -11,7 +11,7 @@ export default function WorkTime() {
               alt="wave"
               src="https://www.joinclubhouse.com/static/img/icon_wave.2872aeea710c.png"
             />
-            Clubhouse
+            Quiz
           </div>
           <div className="mt-8 text-gray-700 max-w-md">
             Hey, we're still opening up but anyone can join with an invite from
