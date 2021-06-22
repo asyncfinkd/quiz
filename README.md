@@ -11,7 +11,6 @@ The project had many bugs but could be fixed. It was not difficult to work on th
 <br/><img src="./content/123.png">
 
 <br/><img src="./content/1233.png">
-
 <br/>
 
 ## Responsive
