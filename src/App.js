@@ -15,9 +15,9 @@
 
 import React, { Component } from "react";
 import Alert from "./components/alert/Alert";
-// import Hero from "./components/hero/Hero";
+import Hero from "./components/hero/Hero";
 import { BrowserRouter, Route } from "react-router-dom";
-import WorkTime from "./components/WorkTime/WorkTime";
+// import WorkTime from "./components/WorkTime/WorkTime";
 
 class App extends Component {
   state = {
