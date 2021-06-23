@@ -116,19 +116,63 @@ class Question extends React.Component {
                   </form> */}
                   <table>
                     <tr>
-                      <th>1 column</th>
-                      <th>2 column</th>
-                      <th>3 column</th>
-                      <th>4 column</th>
-                      <th>5 column</th>
-                      <th>6 column</th>
-                      <th>7 column</th>
-                      <th>8 column</th>
-                      <th>9 column</th>
+                      <th className="table__column">1 column</th>
+                      <th className="table__column">2 column</th>
+                      <th className="table__column">3 column</th>
+                      <th className="table__column">4 column</th>
+                      <th className="table__column">5 column</th>
+                      <th className="table__column">6 column</th>
+                      <th className="table__column">7 column</th>
+                      <th className="table__column">8 column</th>
+                      <th className="table__column">9 column</th>
                     </tr>
                     <tr>
                       <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
                         <td className="table__choose">a</td>
                         <td className="table__choose">b</td>
                       </th>
@@ -138,37 +182,9 @@ class Question extends React.Component {
                         <td className="table__choose">b</td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
                         <td className="table__choose">a</td>
                         <td className="table__choose">b</td>
                       </th>

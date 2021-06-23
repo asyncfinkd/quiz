@@ -212,6 +212,21 @@ table {
   width: 100%;
 }
 
+table .table__choose {
+  width: 30px;
+  text-align: center;
+  border-left: 1px solid gray;
+}
+
+table .table__choose.without__border {
+  border: none;
+}
+
+table .table__column {
+  border: 1px solid gray;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .list-container {
     opacity: 0;
