@@ -30,7 +30,12 @@ class Question extends React.Component {
   };
 
   renderSignupComponent = () => {
-    SentEmail(this.props.language, this.state.email, this.props.result, this.props.points);
+    SentEmail(
+      this.props.language,
+      this.state.email,
+      this.props.result,
+      this.props.points
+    );
   };
 
   render() {
@@ -50,7 +55,7 @@ class Question extends React.Component {
               {this.props.showResult ? (
                 /* What if there are no more questions */
                 <>
-                  <h1>
+                  {/* <h1>
                     {this.props.language === "English"
                       ? "Input your email"
                       : "Введите вашу эл.почту"}
@@ -108,7 +113,12 @@ class Question extends React.Component {
                         </li>
                       </ul>
                     </footer>
-                  </form>
+                  </form> */}
+                  {console.log(
+                    this.props.result.slice(
+                      this.props.language === "English" ? 69 : 66
+                    )
+                  )}
                 </>
               ) : (
                 <>
