@@ -15,6 +15,7 @@ import { SentEmail } from "../../../hooks/Listener";
 class Question extends React.Component {
   state = {
     email: "",
+    sentEmail: false,
   };
 
   /*
@@ -52,10 +53,9 @@ class Question extends React.Component {
               className="relative box max-w-full"
               style={{ width: "700px", height: "362px" }}
             >
-              {this.props.showResult ? (
-                /* What if there are no more questions */
+              {this.state.sentEmail ? (
                 <>
-                  {/* <h1>
+                  <h1>
                     {this.props.language === "English"
                       ? "Input your email"
                       : "Введите вашу эл.почту"}
@@ -64,6 +64,7 @@ class Question extends React.Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                     }}
+                    style={{ width: "60%" }}
                   >
                     <div className="text-center form-ai mt-3">
                       <input
@@ -113,274 +114,382 @@ class Question extends React.Component {
                         </li>
                       </ul>
                     </footer>
-                  </form> */}
-                  <table style={{border: '1px solid red'}}>
-                    <tr>
-                      <th>1 column</th>
-                      <th>2 column</th>
-                      <th>3 column</th>
-                      <th>4 column</th>
-                      <th>5 column</th>
-                      <th>6 column</th>
-                      <th>7 column</th>
-                      <th>8 column</th>
-                      <th>9 column</th>
-                    </tr>
-                    <tr>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
-                      </th>
-                    </tr>
-                    
-                    {this.props.result.slice( this.props.language === "English" ? 69 : 66 ).map((item, i) => {
-                      return(
-                        <>
-                          {i + 1 == 1 ? (
-                            <>
-                            <tr>
-                              {
-                                this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(i, i+9).map((item, ii) => {
-                                  return(
-                                    <>
-                                    <th>
-                                      <td>{ii + 1}</td>
-                                      {item.value == "Yes" ? (
-                                        <>
-                                          <td>true</td>
-                                          <td>false</td>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <td>false</td>
-                                          <td>true</td>
-                                        </>
-                                      )}
-                                    </th>
-                                    </>
-                                  )
-                                })
-                              }
-                            </tr>
-                            </>
-                           ): (
-                            <>
-                            {(i + 1) % 9 == 0 && (
-                              <>
-                              <tr>
-                                
-                              </tr>
-                              <tr>
-                              {
-                                this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(i, i+9).map((item, ii) => {
-                                  return(
-                                    <>
-                                    <th>
-                                      <td>{ii+1*i}</td>
-                                      {item.value == "Yes" ? (
-                                        <>
-                                          <td>true</td>
-                                          <td>false</td>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <td>false</td>
-                                          <td>true</td>
-                                        </>
-                                      )}
-                                    </th>
-                                    </>
-                                  )
-                                })
-                              }
-                            </tr>
-                              </>
-                            )}
-                            </> 
-                            
-                           )}
-                          
-                        </>
-                      )
-                    })}
-                    {/* <tr>
-                      <th>Name</th>
-                      <th>Telephone</th>
-                      <th>Telephone</th>
-                    </tr>
-                    <tr>
-                      <td>Bill Gates</td>
-                      <td>555 77 854</td>
-                      <td>555 77 855</td>
-                    </tr> */}
-                  </table>
-                    { console.log(this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(1, 9))}
+                  </form>
                 </>
               ) : (
                 <>
-                  {this.props.currentQuestion > 0 && (
-                    /* This component will appear if we select a single question. Or move on to any question from the first question */
-                    <div className="back-component">
-                      <span onClick={this.props.backHandle}>
-                        ← {this.props.language === "English" ? "Back" : "назад"}
-                      </span>
-                    </div>
-                  )}
-                  <div className="box-content max-w-full">
-                    <div style={{ marginBottom: "1rem" }}></div>
-                    {/* We use the package as a percentage component. Which is automatically created for progress */}
-                    <Progress percent={renderPercent} status="active" />
-                    <div aria-label="Question Length" className="mt-3">
-                      <span className="questionLength-span">
-                        {`${
-                          this.props.language === "English"
-                            ? "Question"
-                            : "Вопрос"
-                        } ${this.props.currentQuestion + 1}/${
-                          this.props.questions.length
-                        }`}
-                      </span>
-                    </div>
-                    <div aria-label="Question" className="mt-3">
-                      <span className="question-span">
-                        {/* A question that is rendered with the program */}
-                        {
-                          this.props.questions[this.props.currentQuestion]
-                            .question
-                        }
-                      </span>
-                    </div>
-                    <div
-                      role="button"
-                      className="mt-6 questionContainer-button"
-                      style={{ maxWidth: "100%" }}
-                    >
-                      {/* answers. In its quantity */}
-                      {this.props.showButtons && (
-                        <>
-                          {this.props.questions[
-                            this.props.currentQuestion
-                          ].answerOptions.map((item, i) => {
+                  {this.props.showResult ? (
+                    /* What if there are no more questions */
+                    <>
+                      <table>
+                        <tr>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "1 column"
+                              : "1 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "2 column"
+                              : "2 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "3 column"
+                              : "3 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "4 column"
+                              : "4 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "5 column"
+                              : "5 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "6 column"
+                              : "6 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "7 column"
+                              : "7 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "8 column"
+                              : "8 столбик"}
+                          </th>
+                          <th className="table__column">
+                            {this.props.language === "English"
+                              ? "9 column"
+                              : "9 столбик"}
+                          </th>
+                        </tr>
+                        <tr>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                          <th style={{ border: "1px solid gray" }}>
+                            <td className="table__choose without__border">
+                              &nbsp;&nbsp;
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "a" : "а"}
+                            </td>
+                            <td className="table__choose">
+                              {this.props.language === "English" ? "b" : "б"}
+                            </td>
+                          </th>
+                        </tr>
+
+                        {this.props.result
+                          .slice(this.props.language === "English" ? 69 : 66)
+                          .map((item, i) => {
                             return (
                               <>
-                                <button
-                                  type="submit"
-                                  className="question-button button-primary"
-                                  id={i}
-                                  style={{ minHeight: "70px" }}
-                                  onClick={() =>
-                                    this.props.nextQuestion(item.answerText)
-                                  }
-                                >
-                                  {item.answerText}
-                                </button>
-                                <span id={`${i}__span`}>
-                                  {this.props.language === "English"
-                                    ? "Or"
-                                    : "или"}
-                                </span>
+                                {i + 1 === 1 ? (
+                                  <>
+                                    <tr>
+                                      {this.props.result
+                                        .slice(
+                                          this.props.language === "English"
+                                            ? 69
+                                            : 66
+                                        )
+                                        .slice(i, i + 9)
+                                        .map((item, ii) => {
+                                          return (
+                                            <>
+                                              <th
+                                                style={{
+                                                  border: "1px solid gray",
+                                                }}
+                                              >
+                                                <td className="table__row without__border__row">
+                                                  {ii + 1}
+                                                </td>
+                                                {item.value === "Yes" ||
+                                                item.value === "да" ? (
+                                                  <>
+                                                    <td className="table__row">
+                                                      &#x2713;
+                                                    </td>
+                                                    <td className="table__row">
+                                                      &nbsp;&nbsp;
+                                                    </td>
+                                                  </>
+                                                ) : (
+                                                  <>
+                                                    <td className="table__row">
+                                                      &nbsp;&nbsp;
+                                                    </td>
+                                                    <td className="table__row">
+                                                      &#x2713;
+                                                    </td>
+                                                  </>
+                                                )}
+                                              </th>
+                                            </>
+                                          );
+                                        })}
+                                    </tr>
+                                  </>
+                                ) : (
+                                  <>
+                                    {(i + 1) % 9 === 0 && (
+                                      <>
+                                        <tr></tr>
+                                        <tr>
+                                          {this.props.result
+                                            .slice(
+                                              this.props.language === "English"
+                                                ? 69
+                                                : 66
+                                            )
+                                            .slice(i, i + 9)
+                                            .map((item, ii) => {
+                                              return (
+                                                <>
+                                                  <th
+                                                    style={{
+                                                      border: "1px solid gray",
+                                                    }}
+                                                  >
+                                                    {ii + 1 * i === 8 ||
+                                                    ii + 1 * i === 9 ? (
+                                                      <td className="table__row without__border__row">
+                                                        {ii + 1 * i}
+                                                      </td>
+                                                    ) : (
+                                                      <td
+                                                        className="table__row without__border__row font__small"
+                                                        style={{
+                                                          width: "22px",
+                                                        }}
+                                                      >
+                                                        {ii + 1 * i}
+                                                      </td>
+                                                    )}
+                                                    {item.value === "Yes" ||
+                                                    item.value === "да" ? (
+                                                      <>
+                                                        <td className="table__row">
+                                                          &#x2713;
+                                                        </td>
+                                                        <td className="table__row">
+                                                          &nbsp;&nbsp;
+                                                        </td>
+                                                      </>
+                                                    ) : (
+                                                      <>
+                                                        <td className="table__row">
+                                                          &nbsp;&nbsp;
+                                                        </td>
+                                                        <td className="table__row">
+                                                          &#x2713;
+                                                        </td>
+                                                      </>
+                                                    )}
+                                                  </th>
+                                                </>
+                                              );
+                                            })}
+                                        </tr>
+                                      </>
+                                    )}
+                                  </>
+                                )}
                               </>
                             );
                           })}
-                        </>
+                      </table>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-end",
+                          marginLeft: "auto",
+                        }}
+                        className="responsive__button__table"
+                      >
+                        <button
+                          className="question-button button-primary responsive__button__table"
+                          style={{ marginTop: "-5px" }}
+                          onClick={() =>
+                            this.setState((state) => ({
+                              sentEmail: (state.sentEmail = true),
+                            }))
+                          }
+                        >
+                          {this.props.language === "English"
+                            ? "Sent Gmail"
+                            : "Отправлено Gmail"}
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {this.props.currentQuestion > 0 && (
+                        /* This component will appear if we select a single question. Or move on to any question from the first question */
+                        <div className="back-component">
+                          <span onClick={this.props.backHandle}>
+                            ←{" "}
+                            {this.props.language === "English"
+                              ? "Back"
+                              : "назад"}
+                          </span>
+                        </div>
                       )}
-                    </div>
-                  </div>
+                      <div className="box-content max-w-full">
+                        <div style={{ marginBottom: "1rem" }}></div>
+                        {/* We use the package as a percentage component. Which is automatically created for progress */}
+                        <Progress percent={renderPercent} status="active" />
+                        <div aria-label="Question Length" className="mt-3">
+                          <span className="questionLength-span">
+                            {`${
+                              this.props.language === "English"
+                                ? "Question"
+                                : "Вопрос"
+                            } ${this.props.currentQuestion + 1}/${
+                              this.props.questions.length
+                            }`}
+                          </span>
+                        </div>
+                        <div aria-label="Question" className="mt-3">
+                          <span className="question-span">
+                            {/* A question that is rendered with the program */}
+                            {
+                              this.props.questions[this.props.currentQuestion]
+                                .question
+                            }
+                          </span>
+                        </div>
+                        <div
+                          role="button"
+                          className="mt-6 questionContainer-button"
+                          style={{ maxWidth: "100%" }}
+                        >
+                          {/* answers. In its quantity */}
+                          {this.props.showButtons && (
+                            <>
+                              {this.props.questions[
+                                this.props.currentQuestion
+                              ].answerOptions.map((item, i) => {
+                                return (
+                                  <>
+                                    <button
+                                      type="submit"
+                                      className="question-button button-primary"
+                                      id={i}
+                                      style={{ minHeight: "70px" }}
+                                      onClick={() =>
+                                        this.props.nextQuestion(item.answerText)
+                                      }
+                                    >
+                                      {item.answerText}
+                                    </button>
+                                    <span id={`${i}__span`}>
+                                      {this.props.language === "English"
+                                        ? "Or"
+                                        : "или"}
+                                    </span>
+                                  </>
+                                );
+                              })}
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </div>
