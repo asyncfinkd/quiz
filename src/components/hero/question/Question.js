@@ -114,7 +114,7 @@ class Question extends React.Component {
                       </ul>
                     </footer>
                   </form> */}
-                  <table style={{border: '1px solid red'}}>
+                  <table style={{ border: "1px solid red" }}>
                     <tr>
                       <th>1 column</th>
                       <th>2 column</th>
@@ -127,177 +127,149 @@ class Question extends React.Component {
                       <th>9 column</th>
                     </tr>
                     <tr>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
-                      <th style={{border: '1px solid green'}}>
-                        <td style={{border: '1px solid yellow'}}>
+                      <th style={{ border: "1px solid green" }}>
+                        <td style={{ border: "1px solid yellow" }}>
                           &nbsp;&nbsp;
                         </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          a
-                        </td>
-                        <td style={{border: '1px solid yellow'}}>
-                          b
-                        </td>
+                        <td style={{ border: "1px solid yellow" }}>a</td>
+                        <td style={{ border: "1px solid yellow" }}>b</td>
                       </th>
                     </tr>
-                    
-                    {this.props.result.slice( this.props.language === "English" ? 69 : 66 ).map((item, i) => {
-                      return(
-                        <>
-                          {i + 1 == 1 ? (
-                            <>
-                            <tr>
-                              {
-                                this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(i, i+9).map((item, ii) => {
-                                  return(
-                                    <>
-                                    <th>
-                                      <td>{ii + 1}</td>
-                                      {item.value == "Yes" ? (
-                                        <>
-                                          <td>true</td>
-                                          <td>false</td>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <td>false</td>
-                                          <td>true</td>
-                                        </>
-                                      )}
-                                    </th>
-                                    </>
-                                  )
-                                })
-                              }
-                            </tr>
-                            </>
-                           ): (
-                            <>
-                            {(i + 1) % 9 == 0 && (
+
+                    {this.props.result
+                      .slice(this.props.language === "English" ? 69 : 66)
+                      .map((item, i) => {
+                        return (
+                          <>
+                            {i + 1 === 1 ? (
                               <>
-                              <tr>
-                                
-                              </tr>
-                              <tr>
-                              {
-                                this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(i, i+9).map((item, ii) => {
-                                  return(
-                                    <>
-                                    <th>
-                                      <td>{ii+1*i}</td>
-                                      {item.value == "Yes" ? (
+                                <tr>
+                                  {this.props.result
+                                    .slice(
+                                      this.props.language === "English"
+                                        ? 69
+                                        : 66
+                                    )
+                                    .slice(i, i + 9)
+                                    .map((item, ii) => {
+                                      return (
                                         <>
-                                          <td>true</td>
-                                          <td>false</td>
+                                          <th>
+                                            <td>{ii + 1}</td>
+                                            {item.value === "Yes" ? (
+                                              <>
+                                                <td>true</td>
+                                                <td>false</td>
+                                              </>
+                                            ) : (
+                                              <>
+                                                <td>false</td>
+                                                <td>true</td>
+                                              </>
+                                            )}
+                                          </th>
                                         </>
-                                      ) : (
-                                        <>
-                                          <td>false</td>
-                                          <td>true</td>
-                                        </>
-                                      )}
-                                    </th>
-                                    </>
-                                  )
-                                })
-                              }
-                            </tr>
+                                      );
+                                    })}
+                                </tr>
+                              </>
+                            ) : (
+                              <>
+                                {(i + 1) % 9 === 0 && (
+                                  <>
+                                    <tr></tr>
+                                    <tr>
+                                      {this.props.result
+                                        .slice(
+                                          this.props.language === "English"
+                                            ? 69
+                                            : 66
+                                        )
+                                        .slice(i, i + 9)
+                                        .map((item, ii) => {
+                                          return (
+                                            <>
+                                              <th>
+                                                <td>{ii + 1 * i}</td>
+                                                {item.value === "Yes" ? (
+                                                  <>
+                                                    <td>true</td>
+                                                    <td>false</td>
+                                                  </>
+                                                ) : (
+                                                  <>
+                                                    <td>false</td>
+                                                    <td>true</td>
+                                                  </>
+                                                )}
+                                              </th>
+                                            </>
+                                          );
+                                        })}
+                                    </tr>
+                                  </>
+                                )}
                               </>
                             )}
-                            </> 
-                            
-                           )}
-                          
-                        </>
-                      )
-                    })}
+                          </>
+                        );
+                      })}
                     {/* <tr>
                       <th>Name</th>
                       <th>Telephone</th>
@@ -309,7 +281,11 @@ class Question extends React.Component {
                       <td>555 77 855</td>
                     </tr> */}
                   </table>
-                    { console.log(this.props.result.slice( this.props.language === "English" ? 69 : 66 ).slice(1, 9))}
+                  {console.log(
+                    this.props.result
+                      .slice(this.props.language === "English" ? 69 : 66)
+                      .slice(1, 9)
+                  )}
                 </>
               ) : (
                 <>
