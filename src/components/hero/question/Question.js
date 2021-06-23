@@ -64,6 +64,7 @@ class Question extends React.Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                     }}
+                    style={{ width: "60%" }}
                   >
                     <div className="text-center form-ai mt-3">
                       <input
@@ -408,7 +409,9 @@ class Question extends React.Component {
                             }))
                           }
                         >
-                          Sent Gmail
+                          {this.props.language === "English"
+                            ? "Sent Gmail"
+                            : "Отправлено Gmail"}
                         </button>
                       </div>
                     </>
