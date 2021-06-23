@@ -167,7 +167,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -176,7 +178,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -185,7 +189,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -194,7 +200,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -203,7 +211,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -212,7 +222,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -221,14 +233,9 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
                         <td className="table__choose">
-                          {this.props.language === "English" ? "b" : "б"}
+                          {this.props.language === "English" ? "a" : "а"}
                         </td>
-                      </th>
-                      <th style={{ border: "1px solid gray" }}>
-                        <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -237,7 +244,20 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
+                      </th>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose without__border">
+                          &nbsp;&nbsp;
+                        </td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "a" : "а"}
+                        </td>
                         <td className="table__choose">
                           {this.props.language === "English" ? "b" : "б"}
                         </td>
@@ -262,17 +282,30 @@ class Question extends React.Component {
                                     .map((item, ii) => {
                                       return (
                                         <>
-                                          <th>
-                                            <td>{ii + 1}</td>
-                                            {item.value === "Yes" ? (
+                                          <th
+                                            style={{ border: "1px solid gray" }}
+                                          >
+                                            <td className="table__row without__border__row">
+                                              {ii + 1}
+                                            </td>
+                                            {item.value === "Yes" ||
+                                            item.value === "да" ? (
                                               <>
-                                                <td>true</td>
-                                                <td>false</td>
+                                                <td className="table__row">
+                                                  &#x2713;
+                                                </td>
+                                                <td className="table__row">
+                                                  &nbsp;&nbsp;
+                                                </td>
                                               </>
                                             ) : (
                                               <>
-                                                <td>false</td>
-                                                <td>true</td>
+                                                <td className="table__row">
+                                                  &nbsp;&nbsp;
+                                                </td>
+                                                <td className="table__row">
+                                                  &#x2713;
+                                                </td>
                                               </>
                                             )}
                                           </th>
@@ -297,17 +330,42 @@ class Question extends React.Component {
                                         .map((item, ii) => {
                                           return (
                                             <>
-                                              <th>
-                                                <td>{ii + 1 * i}</td>
-                                                {item.value === "Yes" ? (
+                                              <th
+                                                style={{
+                                                  border: "1px solid gray",
+                                                }}
+                                              >
+                                                {ii + 1 * i == 8 ||
+                                                ii + 1 * i == 9 ? (
+                                                  <td className="table__row without__border__row">
+                                                    {ii + 1 * i}
+                                                  </td>
+                                                ) : (
+                                                  <td
+                                                    className="table__row without__border__row font__small"
+                                                    style={{ width: "22px" }}
+                                                  >
+                                                    {ii + 1 * i}
+                                                  </td>
+                                                )}
+                                                {item.value === "Yes" ||
+                                                item.value === "да" ? (
                                                   <>
-                                                    <td>true</td>
-                                                    <td>false</td>
+                                                    <td className="table__row">
+                                                      &#x2713;
+                                                    </td>
+                                                    <td className="table__row">
+                                                      &nbsp;&nbsp;
+                                                    </td>
                                                   </>
                                                 ) : (
                                                   <>
-                                                    <td>false</td>
-                                                    <td>true</td>
+                                                    <td className="table__row">
+                                                      &nbsp;&nbsp;
+                                                    </td>
+                                                    <td className="table__row">
+                                                      &#x2713;
+                                                    </td>
                                                   </>
                                                 )}
                                               </th>
@@ -322,22 +380,7 @@ class Question extends React.Component {
                           </>
                         );
                       })}
-                    {/* <tr>
-                      <th>Name</th>
-                      <th>Telephone</th>
-                      <th>Telephone</th>
-                    </tr>
-                    <tr>
-                      <td>Bill Gates</td>
-                      <td>555 77 854</td>
-                      <td>555 77 855</td>
-                    </tr> */}
                   </table>
-                  {console.log(
-                    this.props.result
-                      .slice(this.props.language === "English" ? 69 : 66)
-                      .slice(1, 9)
-                  )}
                 </>
               ) : (
                 <>

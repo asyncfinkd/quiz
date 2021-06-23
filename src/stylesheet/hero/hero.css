@@ -225,6 +225,21 @@ table .table__choose.without__border {
 table .table__column {
   border: 1px solid gray;
   text-align: center;
+  font-size: 13px;
+}
+
+table .table__row {
+  width: 24px;
+  text-align: center;
+  border-left: 1px solid gray;
+}
+
+table .without__border__row {
+  border: none;
+}
+
+table .font__small {
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) {
@@ -258,6 +273,9 @@ table .table__column {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  table {
+    display: none;
   }
 }
 
