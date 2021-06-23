@@ -381,6 +381,17 @@ class Question extends React.Component {
                         );
                       })}
                   </table>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      marginLeft: "auto",
+                    }}
+                  >
+                    <button className="question-button button-primary">
+                      Sent Gmail
+                    </button>
+                  </div>
                 </>
               ) : (
                 <>
