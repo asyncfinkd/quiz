@@ -387,8 +387,12 @@ class Question extends React.Component {
                       justifyContent: "flex-end",
                       marginLeft: "auto",
                     }}
+                    className="responsive__button__table"
                   >
-                    <button className="question-button button-primary">
+                    <button
+                      className="question-button button-primary responsive__button__table"
+                      style={{ marginTop: "-5px" }}
+                    >
                       Sent Gmail
                     </button>
                   </div>

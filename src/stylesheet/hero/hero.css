@@ -277,6 +277,10 @@ table .font__small {
   table {
     display: none;
   }
+  .responsive__button__table {
+    width: 100%;
+    height: 60px;
+  }
 }
 
 @media (max-width: 450px) {
