@@ -114,7 +114,7 @@ class Question extends React.Component {
                       </ul>
                     </footer>
                   </form> */}
-                  <table style={{ border: "1px solid red" }}>
+                  <table>
                     <tr>
                       <th>1 column</th>
                       <th>2 column</th>
@@ -127,68 +127,50 @@ class Question extends React.Component {
                       <th>9 column</th>
                     </tr>
                     <tr>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
-                      <th style={{ border: "1px solid green" }}>
-                        <td style={{ border: "1px solid yellow" }}>
-                          &nbsp;&nbsp;
-                        </td>
-                        <td style={{ border: "1px solid yellow" }}>a</td>
-                        <td style={{ border: "1px solid yellow" }}>b</td>
+                      <th style={{ border: "1px solid gray" }}>
+                        <td className="table__choose">&nbsp;&nbsp;</td>
+                        <td className="table__choose">a</td>
+                        <td className="table__choose">b</td>
                       </th>
                     </tr>
 

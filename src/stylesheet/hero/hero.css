@@ -208,6 +208,10 @@
   margin-left: 0px !important;
 }
 
+table {
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   .list-container {
     opacity: 0;
