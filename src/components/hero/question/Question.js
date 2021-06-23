@@ -344,8 +344,8 @@ class Question extends React.Component {
                                                       border: "1px solid gray",
                                                     }}
                                                   >
-                                                    {ii + 1 * i == 8 ||
-                                                    ii + 1 * i == 9 ? (
+                                                    {ii + 1 * i === 8 ||
+                                                    ii + 1 * i === 9 ? (
                                                       <td className="table__row without__border__row">
                                                         {ii + 1 * i}
                                                       </td>
