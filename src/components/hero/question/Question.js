@@ -167,62 +167,80 @@ class Question extends React.Component {
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose">&nbsp;&nbsp;</td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                       <th style={{ border: "1px solid gray" }}>
                         <td className="table__choose without__border">
                           &nbsp;&nbsp;
                         </td>
-                        <td className="table__choose">a</td>
-                        <td className="table__choose">b</td>
+                        <td className="table__choose">{this.props.language === "English" ? "a" : "а"}</td>
+                        <td className="table__choose">
+                          {this.props.language === "English" ? "b" : "б"}
+                        </td>
                       </th>
                     </tr>
 
