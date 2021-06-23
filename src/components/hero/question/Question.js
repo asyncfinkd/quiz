@@ -116,15 +116,51 @@ class Question extends React.Component {
                   </form> */}
                   <table>
                     <tr>
-                      <th className="table__column">1 column</th>
-                      <th className="table__column">2 column</th>
-                      <th className="table__column">3 column</th>
-                      <th className="table__column">4 column</th>
-                      <th className="table__column">5 column</th>
-                      <th className="table__column">6 column</th>
-                      <th className="table__column">7 column</th>
-                      <th className="table__column">8 column</th>
-                      <th className="table__column">9 column</th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "1 column"
+                          : "1 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "2 column"
+                          : "2 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "3 column"
+                          : "3 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "4 column"
+                          : "4 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "5 column"
+                          : "5 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "6 column"
+                          : "6 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "7 column"
+                          : "7 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "8 column"
+                          : "8 столбик"}
+                      </th>
+                      <th className="table__column">
+                        {this.props.language === "English"
+                          ? "9 column"
+                          : "9 столбик"}
+                      </th>
                     </tr>
                     <tr>
                       <th style={{ border: "1px solid gray" }}>
