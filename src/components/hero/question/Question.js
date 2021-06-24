@@ -9,7 +9,7 @@
 import React from "react";
 import { Progress } from "antd";
 // import axios from "axios";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import { SentEmail } from "../../../hooks/Listener";
 
 class Question extends React.Component {
@@ -404,13 +404,23 @@ class Question extends React.Component {
                           <button
                             className="question-button button-primary responsive__button__table"
                             style={{ marginTop: "20px" }}
-                            onClick={() =>
-                              Swal.fire(
-                                "Good job!",
-                                "You Finished Quiz!",
-                                "success"
-                              )
-                            }
+                            onClick={() => {
+                              this.props.language === "English"
+                                ? Swal.fire(
+                                    "Good job!",
+                                    "You Finished Quiz",
+                                    "success"
+                                  ).then(() => {
+                                    window.location.reload();
+                                  })
+                                : Swal.fire(
+                                    "Отличная работа!",
+                                    "Ты закончили викторину",
+                                    "success"
+                                  ).then(() => {
+                                    window.location.reload();
+                                  });
+                            }}
                           >
                             {this.props.language === "English"
                               ? "Finish"
