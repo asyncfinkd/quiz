@@ -51,7 +51,7 @@ class Question extends React.Component {
           <div className="h-full full-display-flex">
             <div
               className="relative box max-w-full"
-              style={{ width: "700px", height: "362px" }}
+              style={{ width: "700px", height: "402px" }}
             >
               {this.state.sentEmail ? (
                 <>
@@ -395,24 +395,43 @@ class Question extends React.Component {
                       <div
                         style={{
                           display: "flex",
-                          justifyContent: "flex-end",
-                          marginLeft: "auto",
+                          justifyContent: "space-between",
+                          flexWrap: "wrap",
                         }}
                         className="responsive__button__table"
                       >
-                        <button
-                          className="question-button button-primary responsive__button__table"
-                          style={{ marginTop: "-5px" }}
-                          onClick={() =>
-                            this.setState((state) => ({
-                              sentEmail: (state.sentEmail = true),
-                            }))
-                          }
-                        >
-                          {this.props.language === "English"
-                            ? "Sent Gmail"
-                            : "Отправлено Gmail"}
-                        </button>
+                        <div>
+                          <button
+                            className="question-button button-primary responsive__button__table"
+                            style={{ marginTop: "20px" }}
+                            onClick={() =>
+                              Swal.fire(
+                                "Good job!",
+                                "You Finished Quiz!",
+                                "success"
+                              )
+                            }
+                          >
+                            {this.props.language === "English"
+                              ? "Finish"
+                              : "Заканчивать"}
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            className="question-button button-primary responsive__button__table"
+                            style={{ marginTop: "20px" }}
+                            onClick={() =>
+                              this.setState((state) => ({
+                                sentEmail: (state.sentEmail = true),
+                              }))
+                            }
+                          >
+                            {this.props.language === "English"
+                              ? "Sent Gmail"
+                              : "Отправлено Gmail"}
+                          </button>
+                        </div>
                       </div>
                     </>
                   ) : (
