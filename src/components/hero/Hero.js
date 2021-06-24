@@ -410,10 +410,13 @@ class Hero extends React.Component {
               spontaneous: this.state.spontaneousCount,
             });
             axios
-              .post("http://localhost:3001/auth/insertSubmitUser", {
-                result: this.state.lastResult,
-                points: this.state.points,
-              })
+              .post(
+                "https://quiz-app-second.herokuapp.com/auth/insertSubmitUser",
+                {
+                  result: this.state.lastResult,
+                  points: this.state.points,
+                }
+              )
               .then((res) => {});
           }}
         >
