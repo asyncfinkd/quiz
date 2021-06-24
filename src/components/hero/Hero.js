@@ -447,7 +447,7 @@ class Hero extends React.Component {
             console.log(this.state.points);
             axios
               .post("http://localhost:3001/auth/insertSubmitUser", {
-                result: this.state.result,
+                result: this.state.lastResult,
                 points: this.state.points,
               })
               .then((res) => {
