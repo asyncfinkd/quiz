@@ -52,9 +52,8 @@ class Hero extends React.Component {
 
   nextQuestion = (value) => {
     if (!this.state.questions[this.state.currentQuestion].category) {
-      console.log(0);
+      // nothing.
     } else {
-      console.log(this.state.questions[this.state.currentQuestion].category);
       if (this.props.language === "English") {
         if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -64,8 +63,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               extravertCount: state.extravertCount + 1,
             }));
-          } else {
-            console.log("extravert - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -75,8 +72,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               introvertCount: state.introvertCount + 1,
             }));
-          } else {
-            console.log("introvert - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -86,8 +81,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               sensingCount: state.sensingCount + 1,
             }));
-          } else {
-            console.log("sensing - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -97,8 +90,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               intuitiveCount: state.intuitiveCount + 1,
             }));
-          } else {
-            console.log("intuitive - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -108,8 +99,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               rationalCount: state.rationalCount + 1,
             }));
-          } else {
-            console.log("rational - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -119,8 +108,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               feelingCount: state.feelingCount + 1,
             }));
-          } else {
-            console.log("feeling - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -130,8 +117,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               reasonableCount: state.reasonableCount + 1,
             }));
-          } else {
-            console.log("resonable - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -142,8 +127,6 @@ class Hero extends React.Component {
               spontaneousCount: state.spontaneousCount + 1,
             }));
           }
-        } else {
-          console.log("spontaneous - not clicked button");
         }
       } else {
         if (
@@ -154,8 +137,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               extravertCount: state.extravertCount + 1,
             }));
-          } else {
-            console.log("extravert - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -165,8 +146,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               introvertCount: state.introvertCount + 1,
             }));
-          } else {
-            console.log("introvert - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -176,8 +155,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               sensingCount: state.sensingCount + 1,
             }));
-          } else {
-            console.log("sensing - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -187,8 +164,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               intuitiveCount: state.intuitiveCount + 1,
             }));
-          } else {
-            console.log("intuitive - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -198,8 +173,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               rationalCount: state.rationalCount + 1,
             }));
-          } else {
-            console.log("rational - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -209,8 +182,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               feelingCount: state.feelingCount + 1,
             }));
-          } else {
-            console.log("feeling - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -220,8 +191,6 @@ class Hero extends React.Component {
             this.setState((state) => ({
               reasonableCount: state.reasonableCount + 1,
             }));
-          } else {
-            console.log("resonable - not clicked button");
           }
         } else if (
           this.state.questions[this.state.currentQuestion].category ===
@@ -232,8 +201,6 @@ class Hero extends React.Component {
               spontaneousCount: state.spontaneousCount + 1,
             }));
           }
-        } else {
-          console.log("spontaneous - not clicked button");
         }
       }
     }
@@ -255,7 +222,6 @@ class Hero extends React.Component {
               item.question ===
               this.state.questions[this.state.currentQuestion].question
           );
-          console.log(index);
           if (index > -1) {
             this.state.lastResult.splice(index, 1);
             this.state.lastResult.push({
@@ -287,7 +253,6 @@ class Hero extends React.Component {
       });
       nextQuestion = this.state.currentQuestion + 1;
     }
-    console.log(this.state.lastResult);
 
     if (nextQuestion < this.state.questions.length) {
       /* Assignment Operator When I want to change something I write an essay with a particular variable. This is where the next question for the user as I said above happens */
@@ -444,15 +409,12 @@ class Hero extends React.Component {
               reasonable: this.state.reasonableCount,
               spontaneous: this.state.spontaneousCount,
             });
-            console.log(this.state.points);
             axios
               .post("http://localhost:3001/auth/insertSubmitUser", {
                 result: this.state.lastResult,
                 points: this.state.points,
               })
-              .then((res) => {
-                console.log(res);
-              });
+              .then((res) => {});
           }}
         >
           {this.props.language === "English" ? "Submit" : "Отправить"}
