@@ -9,6 +9,7 @@
   React, React-router-dom
 */
 
+import axios from "axios";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "../../stylesheet/hero/hero.css";
@@ -444,6 +445,14 @@ class Hero extends React.Component {
               spontaneous: this.state.spontaneousCount,
             });
             console.log(this.state.points);
+            axios
+              .post("http://localhost:3001/auth/insertSubmitUser", {
+                result: this.state.result,
+                points: this.state.points,
+              })
+              .then((res) => {
+                console.log(res);
+              });
           }}
         >
           {this.props.language === "English" ? "Submit" : "Отправить"}
