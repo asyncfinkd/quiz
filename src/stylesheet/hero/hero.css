@@ -279,7 +279,8 @@ table .font__small {
   }
   .responsive__button__table {
     width: 100%;
-    height: 60px;
+    flex-direction: column;
+    text-align: center;
   }
 }
 

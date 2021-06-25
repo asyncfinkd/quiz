@@ -51,7 +51,7 @@ class Question extends React.Component {
           <div className="h-full full-display-flex">
             <div
               className="relative box max-w-full"
-              style={{ width: "700px", height: "402px" }}
+              style={{ width: "700px", }}
             >
               {this.state.sentEmail ? (
                 <>
