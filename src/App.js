@@ -22,7 +22,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
   state = {
     showPopup: false,
-    language: "English",
+    language: "Choose Language",
   };
   /* 
      Here I create a function that will render at boot time.

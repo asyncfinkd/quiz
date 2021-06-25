@@ -49,10 +49,7 @@ class Question extends React.Component {
       <>
         <div style={{ maxWidth: "100%" }}>
           <div className="h-full full-display-flex">
-            <div
-              className="relative box max-w-full"
-              style={{ width: "700px", }}
-            >
+            <div className="relative box max-w-full" style={{ width: "700px" }}>
               {this.state.sentEmail ? (
                 <>
                   <h1>
@@ -446,17 +443,6 @@ class Question extends React.Component {
                     </>
                   ) : (
                     <>
-                      {this.props.currentQuestion > 0 && (
-                        /* This component will appear if we select a single question. Or move on to any question from the first question */
-                        <div className="back-component">
-                          <span onClick={this.props.backHandle}>
-                            ←{" "}
-                            {this.props.language === "English"
-                              ? "Back"
-                              : "назад"}
-                          </span>
-                        </div>
-                      )}
                       <div className="box-content max-w-full">
                         <div style={{ marginBottom: "1rem" }}></div>
                         {/* We use the package as a percentage component. Which is automatically created for progress */}
