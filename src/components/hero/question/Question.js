@@ -507,6 +507,66 @@ class Question extends React.Component {
                   )}
                 </>
               )}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "40px",
+                  marginTop: "50px",
+                }}
+              >
+                <button
+                  onClick={
+                    this.props.currentQuestion > 0 && this.props.backHandle
+                  }
+                  style={{
+                    backgroundColor: "#be4b49",
+                    color: "white",
+                    border: "none",
+                    outline: "none",
+                    height: "50px",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    width: "170px",
+                    fontSize: "18px",
+                  }}
+                >
+                  {"<"}
+                </button>
+                <button
+                  onClick={this.props.clickSubmit}
+                  style={{
+                    backgroundColor: "#0d6efd",
+                    color: "white",
+                    border: "none",
+                    outline: "none",
+                    height: "50px",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    width: "170px",
+                    fontSize: "18px",
+                  }}
+                >
+                  Submit
+                </button>
+                <button
+                  onClick={this.props.nextHandleQuestion}
+                  style={{
+                    backgroundColor: "#42b72a",
+                    color: "white",
+                    border: "none",
+                    outline: "none",
+                    height: "50px",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    width: "170px",
+                    fontSize: "18px",
+                  }}
+                >
+                  {">"}
+                </button>
+              </div>
             </div>
           </div>
         </div>

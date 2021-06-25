@@ -35,11 +35,13 @@ class HeroMain extends React.Component {
           currentQuestion={this.props.currentQuestion}
           questions={this.props.questions}
           showButtons={this.props.showButtons}
+          clickSubmit={this.props.clickSubmit}
           nextQuestion={this.props.nextQuestion}
           backHandle={this.props.backHandle}
           returnQuestions={this.props.returnQuestions}
           result={this.props.result}
           language={this.props.language}
+          nextHandleQuestion={this.props.nextHandleQuestion}
           points={this.props.points}
         />
       </>

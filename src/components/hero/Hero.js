@@ -376,51 +376,6 @@ class Hero extends React.Component {
             </>
           );
         })}
-        <button
-          className="question-button button-primary"
-          style={{
-            width: "100%",
-            marginLeft: "0px",
-            marginTop: "1rem",
-            height: "44px",
-            maxWidth: "100%",
-          }}
-          disabled={renderBlocked}
-          /* onClick function for show result */
-          onClick={() => {
-            // this.setState({ showResult: (this.state.showResult = true) });
-            this.setState((state) => {
-              return { showResult: (state.showResult = true) };
-            });
-            // this.setState({
-            //   buttonList: (this.state.buttonList = false),
-            // });
-            this.setState((state) => {
-              return { buttonList: (state.buttonList = false) };
-            });
-            this.state.points.push({
-              extravert: this.state.extravertCount,
-              introvert: this.state.introvertCount,
-              sensing: this.state.sensingCount,
-              intuitive: this.state.intuitiveCount,
-              rational: this.state.rationalCount,
-              feeling: this.state.feelingCount,
-              reasonable: this.state.reasonableCount,
-              spontaneous: this.state.spontaneousCount,
-            });
-            axios
-              .post(
-                "https://quiz-app-second.herokuapp.com/auth/insertSubmitUser",
-                {
-                  result: this.state.lastResult,
-                  points: this.state.points,
-                }
-              )
-              .then((res) => {});
-          }}
-        >
-          {this.props.language === "English" ? "Submit" : "Отправить"}
-        </button>
       </>
     );
   };
@@ -514,6 +469,13 @@ class Hero extends React.Component {
                 }}
                 result={this.state.lastResult}
                 buttonList={this.state.buttonList}
+                nextHandleQuestion={() => {
+                  const nextQuestion = this.state.currentQuestion + 1;
+
+                  this.setState((state) => ({
+                    currentQuestion: (state.currentQuestion = nextQuestion),
+                  }));
+                }}
                 closeModal={() => {
                   this.setState((state) => {
                     return {
@@ -523,6 +485,34 @@ class Hero extends React.Component {
                 }}
                 language={this.props.language}
                 points={this.state.points}
+                clickSubmit={() => {
+                  if (
+                    this.state.history.length >=
+                    this.state.questions.length - 1
+                  ) {
+                    this.state.points.push({
+                      extravert: this.state.extravertCount,
+                      introvert: this.state.introvertCount,
+                      sensing: this.state.sensingCount,
+                      intuitive: this.state.intuitiveCount,
+                      rational: this.state.rationalCount,
+                      feeling: this.state.feelingCount,
+                      reasonable: this.state.reasonableCount,
+                      spontaneous: this.state.spontaneousCount,
+                    });
+                    Swal.fire("Good job!", "You Finished Quiz", "success").then(
+                      () => {
+                        window.location.reload();
+                      }
+                    );
+                  } else {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Oops...",
+                      text: "Please answer every question",
+                    });
+                  }
+                }}
               />
             </div>
           </>
