@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import env from "../../constants/Application/env.json";
 
 export function SentResult(language, email, result, points) {
-    axios
+  axios
     .post(`${env.host}/auth/insertUser`, {
       email: email,
       result: result,
@@ -11,15 +11,13 @@ export function SentResult(language, email, result, points) {
     })
     .then(() => {
       if (language === "English") {
-        Swal.fire("Success!", `Your test results are sent to ${email}.`, "success").then(
-          function () {
-            window.location.reload();
-          }
-        );
+        Swal.fire("Good job!", "You Finished Quiz", "success").then(() => {
+          window.location.reload();
+        });
       } else {
         Swal.fire(
-          "Успех!",
-          `Результаты вашего тестирования отправлены на ${email} адрес.`,
+          "Отличная работа!",
+          `Ты Законченный Викторина`,
           "success"
         ).then(function () {
           window.location.reload();

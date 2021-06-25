@@ -16,6 +16,7 @@ import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
 import HeroMain from "./main/HeroMain";
 import Swal from "sweetalert2";
+import { SentEmail } from "../../hooks/Listener";
 
 class Hero extends React.Component {
   /*
@@ -500,10 +501,11 @@ class Hero extends React.Component {
                       reasonable: this.state.reasonableCount,
                       spontaneous: this.state.spontaneousCount,
                     });
-                    Swal.fire("Good job!", "You Finished Quiz", "success").then(
-                      () => {
-                        window.location.reload();
-                      }
+                    SentEmail(
+                      this.props.language,
+                      this.state.email,
+                      this.state.lastResult,
+                      this.state.points
                     );
                   } else {
                     Swal.fire({
@@ -591,27 +593,62 @@ class Hero extends React.Component {
                     }}
                     onClick={() => {
                       if (!this.state.email) {
-                        Swal.fire({
-                          icon: "error",
-                          title: "Oops...",
-                          text: "Please enter a your email",
-                        });
+                        if (
+                          this.props.language === "English" ||
+                          this.props.language === "Choose Language"
+                        ) {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please enter a your email",
+                          });
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text:
+                              "Пожалуйста, введите ваш адрес электронной почты",
+                          });
+                        }
                       } else if (
                         !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
                           this.state.email
                         )
                       ) {
-                        Swal.fire({
-                          icon: "error",
-                          title: "Oops...",
-                          text: "Please enter a good email format",
-                        });
+                        if (
+                          this.props.language === "English" ||
+                          this.props.language === "Choose Language"
+                        ) {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please enter a good email format",
+                          });
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text:
+                              "Пожалуйста, введите правильный формат электронной почты",
+                          });
+                        }
                       } else if (this.props.language === "Choose Language") {
-                        Swal.fire({
-                          icon: "error",
-                          title: "Oops...",
-                          text: "Please choose language",
-                        });
+                        if (
+                          this.props.language === "English" ||
+                          this.props.language === "Choose Language"
+                        ) {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please choose language",
+                          });
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Пожалуйста, выберите язык",
+                          });
+                        }
                       } else if (this.props.language === "English") {
                         this.setState((state) => {
                           return { questions: (state.questions = Data.EN) };

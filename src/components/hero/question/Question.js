@@ -8,7 +8,6 @@
 
 import React from "react";
 import { Progress } from "antd";
-// import axios from "axios";
 import Swal from "sweetalert2";
 import { SentEmail } from "../../../hooks/Listener";
 
@@ -528,7 +527,7 @@ class Question extends React.Component {
                     height: "50px",
                     borderRadius: "8px",
                     cursor: "pointer",
-                    width: "170px",
+                    width: "120px",
                     fontSize: "18px",
                   }}
                 >
@@ -544,11 +543,11 @@ class Question extends React.Component {
                     height: "50px",
                     borderRadius: "8px",
                     cursor: "pointer",
-                    width: "170px",
+                    width: "120px",
                     fontSize: "18px",
                   }}
                 >
-                  Submit
+                  {this.props.language === "English" ? "Submit" : "Отправлено"}
                 </button>
                 <button
                   onClick={this.props.nextHandleQuestion}
@@ -560,7 +559,7 @@ class Question extends React.Component {
                     height: "50px",
                     borderRadius: "8px",
                     cursor: "pointer",
-                    width: "170px",
+                    width: "120px",
                     fontSize: "18px",
                   }}
                 >
