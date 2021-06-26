@@ -39,9 +39,17 @@ class Alert extends Component {
                   </g>
                 </svg>
                 {/* Text Message */}
-                <div className="alert-title">{this.props.language === "English" ? "The web uses a hook" : "Интернет использует крючок"}</div>
+                <div className="alert-title">
+                  {this.props.language === "English" ||
+                  this.props.language === "Choose Language"
+                    ? "The web uses a hook"
+                    : "Интернет использует крючок"}
+                </div>
                 <div className="alert-text">
-                  {this.props.language === "English" ? 'Click the "Agree" button to agree. If you refuse consent will be sent automatically. Because it is needed' : "Нажмите кнопку «Согласен», чтобы согласиться. Если вы откажетесь, согласие будет отправлено автоматически. Потому что это нужно"}
+                  {this.props.language === "English" ||
+                  this.props.language === "Choose Language"
+                    ? 'Click the "Agree" button to agree. If you refuse consent will be sent automatically. Because it is needed'
+                    : "Нажмите кнопку «Согласен», чтобы согласиться. Если вы откажетесь, согласие будет отправлено автоматически. Потому что это нужно"}
                 </div>
                 <div className="alert-button-container">
                   {/* Local transfer */}
@@ -50,11 +58,14 @@ class Alert extends Component {
                     onClick={() => {
                       localStorage.setItem("sb_wiz.zpc.__ag", "cl__ag");
                       this.setState((state) => {
-                        return {showModal: state.showModal = true};
-                      })
+                        return { showModal: (state.showModal = true) };
+                      });
                     }}
                   >
-                    {this.props.language === "English" ? "Don't Agree" : "Не согласен"}
+                    {this.props.language === "English" ||
+                    this.props.language === "Choose Language"
+                      ? "Don't Agree"
+                      : "Не согласен"}
                   </div>
                   {/* Local transfer */}
                   <div
@@ -62,11 +73,14 @@ class Alert extends Component {
                     onClick={() => {
                       localStorage.setItem("sb_wiz.zpc.__ag", "cl__ag");
                       this.setState((state) => {
-                        return {showModal: state.showModal = true};
-                      })
+                        return { showModal: (state.showModal = true) };
+                      });
                     }}
                   >
-                    {this.props.language === "English" ? "Agree" : "согласен"}
+                    {this.props.language === "English" ||
+                    this.props.language === "Choose Language"
+                      ? "Agree"
+                      : "согласен"}
                   </div>
                 </div>
               </div>
