@@ -15,6 +15,17 @@ class Question extends React.Component {
   state = {
     email: "",
     sentEmail: false,
+    time: 0 * 60,
+  };
+
+  formatTime = (time) => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    return (
+      (minutes < 10 ? "0" + minutes : minutes) +
+      ":" +
+      (seconds < 10 ? "0" + seconds : seconds)
+    );
   };
 
   /*
@@ -444,6 +455,16 @@ class Question extends React.Component {
                     <>
                       <div className="box-content max-w-full">
                         <div style={{ marginBottom: "1rem" }}></div>
+
+                        <div
+                          style={{
+                            position: "absolute",
+                            right: "40px",
+                            top: "20px",
+                          }}
+                        >
+                          <p>{this.formatTime(this.state.time)}</p>
+                        </div>
                         {/* We use the package as a percentage component. Which is automatically created for progress */}
                         <Progress percent={renderPercent} status="active" />
                         <div aria-label="Question Length" className="mt-3">
