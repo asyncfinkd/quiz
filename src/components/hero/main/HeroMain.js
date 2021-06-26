@@ -43,6 +43,7 @@ class HeroMain extends React.Component {
           language={this.props.language}
           nextHandleQuestion={this.props.nextHandleQuestion}
           points={this.props.points}
+          history={this.props.history}
         />
       </>
     );

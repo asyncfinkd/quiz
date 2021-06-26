@@ -15,6 +15,10 @@ h1 {
   font-size: 24px;
 }
 
+button[disabled] {
+  opacity: 0.5;
+}
+
 .container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);

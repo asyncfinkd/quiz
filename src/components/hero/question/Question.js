@@ -520,7 +520,7 @@ class Question extends React.Component {
                     this.props.currentQuestion > 0 && this.props.backHandle
                   }
                   style={{
-                    backgroundColor: "#be4b49",
+                    backgroundColor: "#42b72a",
                     color: "white",
                     border: "none",
                     outline: "none",
@@ -544,8 +544,10 @@ class Question extends React.Component {
                     borderRadius: "8px",
                     cursor: "pointer",
                     width: "120px",
-                    fontSize: "18px",
                   }}
+                  disabled={
+                    this.props.history.length <= this.props.questions.length - 1
+                  }
                 >
                   {this.props.language === "English" ? "Submit" : "Отправлено"}
                 </button>

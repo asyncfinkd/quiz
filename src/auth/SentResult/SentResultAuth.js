@@ -8,6 +8,7 @@ export function SentResult(language, email, result, points) {
       email: email,
       result: result,
       points: points,
+      language: language,
     })
     .then(() => {
       if (language === "English") {
