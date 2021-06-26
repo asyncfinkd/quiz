@@ -540,6 +540,7 @@ class Question extends React.Component {
                   onClick={
                     this.props.currentQuestion > 0 && this.props.backHandle
                   }
+                  disabled={this.props.currentQuestion > 0}
                   style={{
                     backgroundColor: "#42b72a",
                     color: "white",
