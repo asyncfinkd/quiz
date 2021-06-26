@@ -568,7 +568,7 @@ class Question extends React.Component {
                     width: "120px",
                   }}
                   disabled={
-                    this.props.history.length <= this.props.questions.length - 1
+                    this.props.history.length <= this.props.questions.length - 2
                   }
                 >
                   {this.props.language === "English" ? "Submit" : "Отправлено"}
