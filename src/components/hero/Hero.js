@@ -9,7 +9,6 @@
   React, React-router-dom
 */
 
-import axios from "axios";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "../../stylesheet/hero/hero.css";
@@ -316,8 +315,6 @@ class Hero extends React.Component {
   /* Here is a description of the list. Functional action when pressed. Planting, browning, disassembling array assignment operators are all here. */
   renderListItem = () => {
     /* Disabled Button Logic */
-    const renderBlocked =
-      this.state.history.length <= this.state.questions.length - 1;
     return (
       <>
         {this.state.questions.map((item) => {
@@ -610,11 +607,7 @@ class Hero extends React.Component {
                               "Пожалуйста, введите ваш адрес электронной почты",
                           });
                         }
-                      } else if (
-                        !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
-                          this.state.email
-                        )
-                      ) {
+                      } else if (this.state.email.length < 0) {
                         if (
                           this.props.language === "English" ||
                           this.props.language === "Choose Language"
