@@ -521,7 +521,7 @@ class Hero extends React.Component {
                             "You Finished Quiz",
                             "success"
                           ).then(() => {
-                            window.location.reload();
+                            alert("done");
                           });
                         } else {
                           this.setState((state) => ({
@@ -531,9 +531,10 @@ class Hero extends React.Component {
                             "Отличная работа!",
                             `Ты Законченный Викторина`,
                             "success"
-                          ).then(function () {
-                            window.location.reload();
-                          });
+                          );
+                          this.setState((state) => ({
+                            showResult: (state.showResult = true),
+                          }));
                         }
                       });
                   } else {
