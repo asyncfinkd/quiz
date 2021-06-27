@@ -433,62 +433,88 @@ class Question extends React.Component {
                   marginTop: "50px",
                 }}
               >
-                <button
-                  onClick={
-                    this.props.currentQuestion > 0 && this.props.backHandle
-                  }
-                  disabled={this.props.currentQuestion <= 0}
-                  style={{
-                    backgroundColor: "#42b72a",
-                    color: "white",
-                    border: "none",
-                    outline: "none",
-                    height: "50px",
-                    borderRadius: "8px",
-                    cursor: "pointer",
-                    width: "120px",
-                    fontSize: "18px",
-                  }}
-                >
-                  {"<"}
-                </button>
-                <button
-                  onClick={this.props.clickSubmit}
-                  style={{
-                    backgroundColor: "#0d6efd",
-                    color: "white",
-                    border: "none",
-                    outline: "none",
-                    height: "50px",
-                    borderRadius: "8px",
-                    cursor: "pointer",
-                    width: "120px",
-                  }}
-                  disabled={
-                    this.props.history.length <= this.props.questions.length - 2
-                  }
-                >
-                  {this.props.language === "English" ? "Submit" : "Отправлено"}
-                </button>
-                <button
-                  onClick={this.props.nextHandleQuestion}
-                  disabled={
-                    this.props.history.length >= this.props.questions.length - 1
-                  }
-                  style={{
-                    backgroundColor: "#42b72a",
-                    color: "white",
-                    border: "none",
-                    outline: "none",
-                    height: "50px",
-                    borderRadius: "8px",
-                    cursor: "pointer",
-                    width: "120px",
-                    fontSize: "18px",
-                  }}
-                >
-                  {">"}
-                </button>
+                {this.props.showResult != true ? (
+                  <>
+                    <button
+                      onClick={
+                        this.props.currentQuestion > 0 && this.props.backHandle
+                      }
+                      disabled={this.props.currentQuestion <= 0}
+                      style={{
+                        backgroundColor: "#42b72a",
+                        color: "white",
+                        border: "none",
+                        outline: "none",
+                        height: "50px",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                        width: "120px",
+                        fontSize: "18px",
+                      }}
+                    >
+                      {"<"}
+                    </button>
+                    <button
+                      onClick={this.props.clickSubmit}
+                      style={{
+                        backgroundColor: "#0d6efd",
+                        color: "white",
+                        border: "none",
+                        outline: "none",
+                        height: "50px",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                        width: "120px",
+                      }}
+                      disabled={
+                        this.props.history.length <=
+                        this.props.questions.length - 2
+                      }
+                    >
+                      {this.props.language === "English"
+                        ? "Submit"
+                        : "Отправлено"}
+                    </button>
+                    <button
+                      onClick={this.props.nextHandleQuestion}
+                      disabled={
+                        this.props.history.length >=
+                        this.props.questions.length - 1
+                      }
+                      style={{
+                        backgroundColor: "#42b72a",
+                        color: "white",
+                        border: "none",
+                        outline: "none",
+                        height: "50px",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                        width: "120px",
+                        fontSize: "18px",
+                      }}
+                    >
+                      {">"}
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    onClick={() => {
+                      window.location.reload();
+                    }}
+                    style={{
+                      backgroundColor: "#0d6efd",
+                      color: "white",
+                      border: "none",
+                      outline: "none",
+                      height: "50px",
+                      borderRadius: "8px",
+                      cursor: "pointer",
+                      width: "120px",
+                    }}
+                  >
+                    {this.props.language === "English" ? "Close" : "Закрыть"}
+                  </button>
+                )}
               </div>
             </div>
           </div>
