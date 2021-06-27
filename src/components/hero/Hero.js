@@ -520,9 +520,10 @@ class Hero extends React.Component {
                             "Good job!",
                             "You Finished Quiz",
                             "success"
-                          ).then(() => {
-                            alert("done");
-                          });
+                          );
+                          this.setState((state) => ({
+                            showResult: (state.showResult = true),
+                          }));
                         } else {
                           this.setState((state) => ({
                             spinner: (state.spinner = false),
@@ -603,9 +604,8 @@ class Hero extends React.Component {
                     value={this.props.language}
                     onChange={this.props.onChangeLanguage}
                   >
-                    <option>Choose Language</option>
-                    <option>English</option>
                     <option>Россия</option>
+                    <option>English</option>
                   </select>
                   <button
                     type="submit"
