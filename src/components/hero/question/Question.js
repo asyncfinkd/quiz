@@ -433,7 +433,7 @@ class Question extends React.Component {
                   marginTop: "50px",
                 }}
               >
-                {this.props.showResult != true ? (
+                {this.props.showResult !== true ? (
                   <>
                     <button
                       onClick={
