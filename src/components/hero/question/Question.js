@@ -58,6 +58,11 @@ class Question extends React.Component {
 
     return (
       <>
+        {this.props.spinner && (
+          <div className="wrapper">
+            <div className="loading-spinner"></div>
+          </div>
+        )}
         <div style={{ maxWidth: "100%" }}>
           <div className="h-full full-display-flex">
             <div className="relative box max-w-full" style={{ width: "700px" }}>
@@ -456,7 +461,6 @@ class Question extends React.Component {
                     <>
                       <div className="box-content max-w-full">
                         <div style={{ marginBottom: "1rem" }}></div>
-                        <p>{this.props.spinner && "loading..."}</p>
                         <div
                           style={{
                             position: "absolute",
