@@ -44,6 +44,7 @@ class HeroMain extends React.Component {
           nextHandleQuestion={this.props.nextHandleQuestion}
           points={this.props.points}
           history={this.props.history}
+          spinner={this.props.spinner}
         />
       </>
     );

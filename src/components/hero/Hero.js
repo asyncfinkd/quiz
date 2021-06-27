@@ -15,7 +15,8 @@ import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
 import HeroMain from "./main/HeroMain";
 import Swal from "sweetalert2";
-import { SentEmail } from "../../hooks/Listener";
+import axios from "axios";
+import env from "../../constants/Application/env.json";
 
 class Hero extends React.Component {
   /*
@@ -43,6 +44,7 @@ class Hero extends React.Component {
     reasonableCount: 0,
     spontaneousCount: 0,
     points: [],
+    spinner: false,
   };
 
   /*
@@ -457,6 +459,7 @@ class Hero extends React.Component {
                 questions={this.state.questions}
                 showButtons={this.state.showButtons}
                 nextQuestion={this.nextQuestion}
+                spinner={this.state.spinner}
                 history={this.state.history}
                 listItem={this.renderListItem()}
                 backHandle={() => this.prevQuestion()}
@@ -498,12 +501,41 @@ class Hero extends React.Component {
                       reasonable: this.state.reasonableCount,
                       spontaneous: this.state.spontaneousCount,
                     });
-                    SentEmail(
-                      this.props.language,
-                      this.state.email,
-                      this.state.lastResult,
-                      this.state.points
-                    );
+                    this.setState((state) => ({
+                      spinner: (state.spinner = true),
+                    }));
+                    axios
+                      .post(`${env.host}/auth/insertUser`, {
+                        email: this.state.email,
+                        result: this.state.lastResult,
+                        points: this.state.points,
+                        language: this.props.language,
+                      })
+                      .then(() => {
+                        if (this.props.language === "English") {
+                          this.setState((state) => ({
+                            spinner: (state.spinner = false),
+                          }));
+                          Swal.fire(
+                            "Good job!",
+                            "You Finished Quiz",
+                            "success"
+                          ).then(() => {
+                            window.location.reload();
+                          });
+                        } else {
+                          this.setState((state) => ({
+                            spinner: (state.spinner = false),
+                          }));
+                          Swal.fire(
+                            "Отличная работа!",
+                            `Ты Законченный Викторина`,
+                            "success"
+                          ).then(function () {
+                            window.location.reload();
+                          });
+                        }
+                      });
                   } else {
                     Swal.fire({
                       icon: "error",

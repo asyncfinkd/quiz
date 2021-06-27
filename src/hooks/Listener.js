@@ -1,7 +1,12 @@
 import Swal from "sweetalert2";
 import { SentResult } from "../auth/SentResult/SentResultAuth";
 
-export function SentEmail(language, email, result, points) {
+export function SentEmail(
+  language,
+  email,
+  result,
+  points,
+) {
   if (!email) {
     if (language === "English") {
       Swal.fire({
@@ -17,6 +22,12 @@ export function SentEmail(language, email, result, points) {
       });
     }
   } else {
-    SentResult(language, email, result, points, language);
+    SentResult(
+      language,
+      email,
+      result,
+      points,
+      language,
+    );
   }
 }

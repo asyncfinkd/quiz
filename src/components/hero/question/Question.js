@@ -16,6 +16,7 @@ class Question extends React.Component {
     email: "",
     sentEmail: false,
     time: 0 * 60,
+    spinner: false,
   };
 
   formatTime = (time) => {
@@ -455,7 +456,7 @@ class Question extends React.Component {
                     <>
                       <div className="box-content max-w-full">
                         <div style={{ marginBottom: "1rem" }}></div>
-
+                        <p>{this.props.spinner && "loading..."}</p>
                         <div
                           style={{
                             position: "absolute",
