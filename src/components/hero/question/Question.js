@@ -8,7 +8,6 @@
 
 import React from "react";
 import { Progress } from "antd";
-import Swal from "sweetalert2";
 import { SentEmail } from "../../../hooks/Listener";
 
 class Question extends React.Component {
@@ -33,13 +32,22 @@ class Question extends React.Component {
     In this file we use the class component. To better do object-oriented programming.
   */
 
-  componentDidMount = () => {
-    document.getElementById("1__span").style.display = "none";
-  };
-
   handleChange = (event) => {
     this.setState({ email: event.target.value });
   };
+
+  componentDidMount = () => {
+    this.myInterval = setInterval(() => {
+      this.setState((state) => ({
+        time: state.time + 1,
+      }));
+    }, 1000);
+    document.getElementById("1__span").style.display = "none";
+  };
+
+  componentWillUnmount() {
+    clearInterval(this.myInterval);
+  }
 
   renderSignupComponent = () => {
     SentEmail(
