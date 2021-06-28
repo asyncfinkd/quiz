@@ -503,7 +503,6 @@ class Hero extends React.Component {
                           language: this.props.language,
                         })
                         .then((res) => {
-                          console.log(res);
                           this.setState((state) => ({
                             spinner: (state.spinner = false),
                           }));
