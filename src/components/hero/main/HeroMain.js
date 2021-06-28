@@ -45,6 +45,7 @@ class HeroMain extends React.Component {
           points={this.props.points}
           history={this.props.history}
           email={this.props.email}
+          sentGmailFunction={this.props.sentGmailFunction}
           spinner={this.props.spinner}
         />
       </>

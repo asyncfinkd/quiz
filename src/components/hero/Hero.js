@@ -15,6 +15,7 @@ import "../../stylesheet/hero/hero.css";
 import { Data } from "../data/Data";
 import HeroMain from "./main/HeroMain";
 import Swal from "sweetalert2";
+import html2canvas from "html2canvas";
 import axios from "axios";
 import env from "../../constants/Application/env.json";
 
@@ -485,6 +486,24 @@ class Hero extends React.Component {
                     };
                   });
                 }}
+                sentGmailFunction={() => {
+                  html2canvas(document.getElementById("myTable")).then(
+                    (canvas) => {
+                      var img = canvas.toDataURL("image/png");
+                      axios
+                        .post(`${env.host}/auth/insertUsers`, {
+                          img: img,
+                          points: this.state.points,
+                          email: this.state.email,
+                          result: this.state.lastResult,
+                          language: this.props.language,
+                        })
+                        .then((res) => {
+                          console.log(res);
+                        });
+                    }
+                  );
+                }}
                 language={this.props.language}
                 points={this.state.points}
                 clickSubmit={() => {
@@ -503,42 +522,8 @@ class Hero extends React.Component {
                       spontaneous: this.state.spontaneousCount,
                     });
                     this.setState((state) => ({
-                      spinner: (state.spinner = true),
+                      showResult: (state.showResult = true),
                     }));
-                    axios
-                      .post(`${env.host}/auth/insertUser`, {
-                        email: this.state.email,
-                        result: this.state.lastResult,
-                        points: this.state.points,
-                        language: this.props.language,
-                      })
-                      .then(() => {
-                        if (this.props.language === "English") {
-                          this.setState((state) => ({
-                            spinner: (state.spinner = false),
-                          }));
-                          Swal.fire(
-                            "Good job!",
-                            "You Finished Quiz",
-                            "success"
-                          );
-                          this.setState((state) => ({
-                            showResult: (state.showResult = true),
-                          }));
-                        } else {
-                          this.setState((state) => ({
-                            spinner: (state.spinner = false),
-                          }));
-                          Swal.fire(
-                            "Отличная работа!",
-                            `Ты Законченный Викторина`,
-                            "success"
-                          );
-                          this.setState((state) => ({
-                            showResult: (state.showResult = true),
-                          }));
-                        }
-                      });
                   } else {
                     Swal.fire({
                       icon: "error",

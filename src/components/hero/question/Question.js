@@ -7,14 +7,7 @@
 */
 
 import React from "react";
-import { Input, Progress } from "antd";
-import { SentEmail } from "../../../hooks/Listener";
-import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import { IntlProvider } from "@progress/kendo-react-intl";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
-import axios from "axios";
-import env from "../../../constants/Application/env.json";
+import { Progress } from "antd";
 
 class Question extends React.Component {
   constructor(props) {
@@ -66,23 +59,11 @@ class Question extends React.Component {
     clearInterval(this.myInterval);
   }
 
-  renderSignupComponent = () => {
-    SentEmail(
-      this.props.language,
-      this.state.email,
-      this.props.result,
-      this.props.points
-    );
-  };
-
   render() {
     /* I calculate the percentage using the formula x = (a / b) * 100 */
     const renderPercent = Math.round(
       ((this.props.currentQuestion + 1) / this.props.questions.length) * 100
     );
-    const config = {
-      headers: { "content-type": "multipart/form-data" },
-    };
     return (
       <>
         {this.props.spinner && (
@@ -97,165 +78,213 @@ class Question extends React.Component {
                 {this.props.showResult ? (
                   /* What if there are no more questions */
                   <>
-                    <IntlProvider locale="bg-BG">
-                      <PDFExport ref={this.pdfExportComponent} paperSize="A4">
-                        <table id="myTable">
-                          <tr>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "1 column"
-                                : "1 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "2 column"
-                                : "2 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "3 column"
-                                : "3 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "4 column"
-                                : "4 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "5 column"
-                                : "5 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "6 column"
-                                : "6 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "7 column"
-                                : "7 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "8 column"
-                                : "8 столбик"}
-                            </th>
-                            <th className="table__column">
-                              {this.props.language === "English"
-                                ? "9 column"
-                                : "9 столбик"}
-                            </th>
-                          </tr>
-                          <tr>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                            <th style={{ border: "1px solid gray" }}>
-                              <td className="table__choose without__border">
-                                &nbsp;&nbsp;
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "a" : "а"}
-                              </td>
-                              <td className="table__choose">
-                                {this.props.language === "English" ? "b" : "б"}
-                              </td>
-                            </th>
-                          </tr>
+                    <table id="myTable">
+                      <tr>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "1 column"
+                            : "1 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "2 column"
+                            : "2 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "3 column"
+                            : "3 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "4 column"
+                            : "4 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "5 column"
+                            : "5 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "6 column"
+                            : "6 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "7 column"
+                            : "7 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "8 column"
+                            : "8 столбик"}
+                        </th>
+                        <th className="table__column">
+                          {this.props.language === "English"
+                            ? "9 column"
+                            : "9 столбик"}
+                        </th>
+                      </tr>
+                      <tr>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                        <th style={{ border: "1px solid gray" }}>
+                          <td className="table__choose without__border">
+                            &nbsp;&nbsp;
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "a" : "а"}
+                          </td>
+                          <td className="table__choose">
+                            {this.props.language === "English" ? "b" : "б"}
+                          </td>
+                        </th>
+                      </tr>
 
-                          {this.props.result
-                            .slice(this.props.language === "English" ? 69 : 66)
-                            .map((item, i) => {
-                              return (
+                      {this.props.result
+                        .slice(this.props.language === "English" ? 69 : 66)
+                        .map((item, i) => {
+                          return (
+                            <>
+                              {i + 1 === 1 ? (
                                 <>
-                                  {i + 1 === 1 ? (
+                                  <tr>
+                                    {this.props.result
+                                      .slice(
+                                        this.props.language === "English"
+                                          ? 69
+                                          : 66
+                                      )
+                                      .slice(i, i + 9)
+                                      .map((item, ii) => {
+                                        return (
+                                          <>
+                                            <th
+                                              style={{
+                                                border: "1px solid gray",
+                                              }}
+                                            >
+                                              <td className="table__row without__border__row">
+                                                {ii + 1}
+                                              </td>
+                                              {item.value === "Yes" ||
+                                              item.value === "да" ? (
+                                                <>
+                                                  <td className="table__row">
+                                                    &#x2713;
+                                                  </td>
+                                                  <td className="table__row">
+                                                    &nbsp;&nbsp;
+                                                  </td>
+                                                </>
+                                              ) : (
+                                                <>
+                                                  <td className="table__row">
+                                                    &nbsp;&nbsp;
+                                                  </td>
+                                                  <td className="table__row">
+                                                    &#x2713;
+                                                  </td>
+                                                </>
+                                              )}
+                                            </th>
+                                          </>
+                                        );
+                                      })}
+                                  </tr>
+                                </>
+                              ) : (
+                                <>
+                                  {(i + 1) % 9 === 0 && (
                                     <>
+                                      <tr></tr>
                                       <tr>
                                         {this.props.result
                                           .slice(
@@ -272,9 +301,21 @@ class Question extends React.Component {
                                                     border: "1px solid gray",
                                                   }}
                                                 >
-                                                  <td className="table__row without__border__row">
-                                                    {ii + 1}
-                                                  </td>
+                                                  {ii + 1 * i === 8 ||
+                                                  ii + 1 * i === 9 ? (
+                                                    <td className="table__row without__border__row">
+                                                      {ii + 1 * i}
+                                                    </td>
+                                                  ) : (
+                                                    <td
+                                                      className="table__row without__border__row font__small"
+                                                      style={{
+                                                        width: "22px",
+                                                      }}
+                                                    >
+                                                      {ii + 1 * i}
+                                                    </td>
+                                                  )}
                                                   {item.value === "Yes" ||
                                                   item.value === "да" ? (
                                                     <>
@@ -301,79 +342,13 @@ class Question extends React.Component {
                                           })}
                                       </tr>
                                     </>
-                                  ) : (
-                                    <>
-                                      {(i + 1) % 9 === 0 && (
-                                        <>
-                                          <tr></tr>
-                                          <tr>
-                                            {this.props.result
-                                              .slice(
-                                                this.props.language ===
-                                                  "English"
-                                                  ? 69
-                                                  : 66
-                                              )
-                                              .slice(i, i + 9)
-                                              .map((item, ii) => {
-                                                return (
-                                                  <>
-                                                    <th
-                                                      style={{
-                                                        border:
-                                                          "1px solid gray",
-                                                      }}
-                                                    >
-                                                      {ii + 1 * i === 8 ||
-                                                      ii + 1 * i === 9 ? (
-                                                        <td className="table__row without__border__row">
-                                                          {ii + 1 * i}
-                                                        </td>
-                                                      ) : (
-                                                        <td
-                                                          className="table__row without__border__row font__small"
-                                                          style={{
-                                                            width: "22px",
-                                                          }}
-                                                        >
-                                                          {ii + 1 * i}
-                                                        </td>
-                                                      )}
-                                                      {item.value === "Yes" ||
-                                                      item.value === "да" ? (
-                                                        <>
-                                                          <td className="table__row">
-                                                            &#x2713;
-                                                          </td>
-                                                          <td className="table__row">
-                                                            &nbsp;&nbsp;
-                                                          </td>
-                                                        </>
-                                                      ) : (
-                                                        <>
-                                                          <td className="table__row">
-                                                            &nbsp;&nbsp;
-                                                          </td>
-                                                          <td className="table__row">
-                                                            &#x2713;
-                                                          </td>
-                                                        </>
-                                                      )}
-                                                    </th>
-                                                  </>
-                                                );
-                                              })}
-                                          </tr>
-                                        </>
-                                      )}
-                                    </>
                                   )}
                                 </>
-                              );
-                            })}
-                        </table>
-                      </PDFExport>
-                    </IntlProvider>
+                              )}
+                            </>
+                          );
+                        })}
+                    </table>
                   </>
                 ) : (
                   <>
@@ -401,7 +376,11 @@ class Question extends React.Component {
                           }`}
                         </span>
                       </div>
-                      <div aria-label="Question" className="mt-3">
+                      <div
+                        aria-label="Question"
+                        className="mt-3"
+                        style={{ height: "65px" }}
+                      >
                         <span className="question-span">
                           {/* A question that is rendered with the program */}
                           {
@@ -497,8 +476,8 @@ class Question extends React.Component {
                       }
                     >
                       {this.props.language === "English"
-                        ? "Submit"
-                        : "Отправлено"}
+                        ? "Show Result"
+                        : "Показать результат"}
                     </button>
                     <button
                       onClick={this.props.nextHandleQuestion}
@@ -524,32 +503,7 @@ class Question extends React.Component {
                 ) : (
                   <>
                     <button
-                      onClick={() => {
-                        console.log(1);
-                        var result = document.getElementById("result");
-                        html2canvas(document.getElementById("myTable")).then(
-                          (canvas) => {
-                            var img = canvas.toDataURL("image/png");
-                            // const pdf = new jsPDF('l', 'pt', 'a4', true);
-                            // var width = (pdf.internal.pageSize.getWidth() * 0.90);
-                            // var height = (pdf.internal.pageSize.getHeight() * 0.90);
-                            // pdf.addImage(img, 'PNG', 0, 0, width, height, '', 'FAST');
-                            // pdf.save("download.pdf")
-                            // console.log(pdf);
-                            axios
-                              .post(`${env.host}/auth/insertUsers`, {
-                                img: img,
-                                points: this.props.points,
-                                email: this.props.email,
-                                result: this.props.result,
-                                language: this.props.language,
-                              })
-                              .then((res) => {
-                                console.log(res);
-                              });
-                          }
-                        );
-                      }}
+                      onClick={this.props.sentGmailFunction}
                       style={{
                         backgroundColor: "#0d6efd",
                         color: "white",
@@ -561,7 +515,9 @@ class Question extends React.Component {
                         width: "120px",
                       }}
                     >
-                      {this.props.language === "English" ? "Close" : "Закрыть"}
+                      {this.props.language === "English"
+                        ? "Submit"
+                        : "Отправлено"}
                     </button>
                   </>
                 )}
