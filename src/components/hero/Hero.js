@@ -487,6 +487,9 @@ class Hero extends React.Component {
                   });
                 }}
                 sentGmailFunction={() => {
+                  this.setState((state) => ({
+                    spinner: (state.spinner = true),
+                  }));
                   html2canvas(document.getElementById("myTable")).then(
                     (canvas) => {
                       var img = canvas.toDataURL("image/png");
@@ -499,7 +502,16 @@ class Hero extends React.Component {
                           language: this.props.language,
                         })
                         .then((res) => {
-                          console.log(res);
+                          this.setState((state) => ({
+                            spinner: (state.spinner = false),
+                          }));
+                          Swal.fire(
+                            "Good job!",
+                            "You Finished Quiz",
+                            "success"
+                          ).then(() => {
+                            window.location.reload();
+                          });
                         });
                     }
                   );
