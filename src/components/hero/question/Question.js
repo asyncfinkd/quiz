@@ -12,14 +12,14 @@ import { SentEmail } from "../../../hooks/Listener";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import { IntlProvider } from "@progress/kendo-react-intl";
 import html2canvas from "html2canvas";
-import jsPDF from "jspdf"
-import axios from 'axios';
+import jsPDF from "jspdf";
+import axios from "axios";
 import env from "../../../constants/Application/env.json";
 
 class Question extends React.Component {
   constructor(props) {
     super(props);
-    this.pdfExportComponent = React.createRef()
+    this.pdfExportComponent = React.createRef();
   }
 
   state = {
@@ -81,8 +81,8 @@ class Question extends React.Component {
       ((this.props.currentQuestion + 1) / this.props.questions.length) * 100
     );
     const config = {
-      headers: { 'content-type': 'multipart/form-data' }
-    }
+      headers: { "content-type": "multipart/form-data" },
+    };
     return (
       <>
         {this.props.spinner && (
@@ -276,10 +276,10 @@ class Question extends React.Component {
                                                     {ii + 1}
                                                   </td>
                                                   {item.value === "Yes" ||
-                                                    item.value === "да" ? (
+                                                  item.value === "да" ? (
                                                     <>
                                                       <td className="table__row">
-                                                        +
+                                                        &#x2713;
                                                       </td>
                                                       <td className="table__row">
                                                         &nbsp;&nbsp;
@@ -291,7 +291,7 @@ class Question extends React.Component {
                                                         &nbsp;&nbsp;
                                                       </td>
                                                       <td className="table__row">
-                                                        +
+                                                        &#x2713;
                                                       </td>
                                                     </>
                                                   )}
@@ -309,7 +309,8 @@ class Question extends React.Component {
                                           <tr>
                                             {this.props.result
                                               .slice(
-                                                this.props.language === "English"
+                                                this.props.language ===
+                                                  "English"
                                                   ? 69
                                                   : 66
                                               )
@@ -319,11 +320,12 @@ class Question extends React.Component {
                                                   <>
                                                     <th
                                                       style={{
-                                                        border: "1px solid gray",
+                                                        border:
+                                                          "1px solid gray",
                                                       }}
                                                     >
                                                       {ii + 1 * i === 8 ||
-                                                        ii + 1 * i === 9 ? (
+                                                      ii + 1 * i === 9 ? (
                                                         <td className="table__row without__border__row">
                                                           {ii + 1 * i}
                                                         </td>
@@ -338,10 +340,10 @@ class Question extends React.Component {
                                                         </td>
                                                       )}
                                                       {item.value === "Yes" ||
-                                                        item.value === "да" ? (
+                                                      item.value === "да" ? (
                                                         <>
                                                           <td className="table__row">
-                                                            +
+                                                            &#x2713;
                                                           </td>
                                                           <td className="table__row">
                                                             &nbsp;&nbsp;
@@ -353,7 +355,7 @@ class Question extends React.Component {
                                                             &nbsp;&nbsp;
                                                           </td>
                                                           <td className="table__row">
-                                                            +
+                                                            &#x2713;
                                                           </td>
                                                         </>
                                                       )}
@@ -390,11 +392,13 @@ class Question extends React.Component {
                       <Progress percent={renderPercent} status="active" />
                       <div aria-label="Question Length" className="mt-3">
                         <span className="questionLength-span">
-                          {`${this.props.language === "English"
-                            ? "Question"
-                            : "Вопрос"
-                            } ${this.props.currentQuestion + 1}/${this.props.questions.length
-                            }`}
+                          {`${
+                            this.props.language === "English"
+                              ? "Question"
+                              : "Вопрос"
+                          } ${this.props.currentQuestion + 1}/${
+                            this.props.questions.length
+                          }`}
                         </span>
                       </div>
                       <div aria-label="Question" className="mt-3">
@@ -523,18 +527,27 @@ class Question extends React.Component {
                       onClick={() => {
                         console.log(1);
                         var result = document.getElementById("result");
-                        html2canvas(document.getElementById("myTable")).then((canvas) => {
-                          var img = canvas.toDataURL("image/png");
-                          // const pdf = new jsPDF('l', 'pt', 'a4', true);
-                          // var width = (pdf.internal.pageSize.getWidth() * 0.90);
-                          // var height = (pdf.internal.pageSize.getHeight() * 0.90);
-                          // pdf.addImage(img, 'PNG', 0, 0, width, height, '', 'FAST');
-                          // pdf.save("download.pdf")
-                          // console.log(pdf);
-                          axios.post(`${env.host}/auth/insertUsers`, { img: img }).then(res => {
-                            console.log(res);
-                          })
-                        })
+                        html2canvas(document.getElementById("myTable")).then(
+                          (canvas) => {
+                            var img = canvas.toDataURL("image/png");
+                            // const pdf = new jsPDF('l', 'pt', 'a4', true);
+                            // var width = (pdf.internal.pageSize.getWidth() * 0.90);
+                            // var height = (pdf.internal.pageSize.getHeight() * 0.90);
+                            // pdf.addImage(img, 'PNG', 0, 0, width, height, '', 'FAST');
+                            // pdf.save("download.pdf")
+                            // console.log(pdf);
+                            axios
+                              .post(`${env.host}/auth/insertUsers`, {
+                                img: img,
+                                points: this.props.points,
+                                email: this.props.email,
+                                result: this.props.result,
+                              })
+                              .then((res) => {
+                                console.log(res);
+                              });
+                          }
+                        );
                       }}
                       style={{
                         backgroundColor: "#0d6efd",

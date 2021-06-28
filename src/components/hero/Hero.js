@@ -460,6 +460,7 @@ class Hero extends React.Component {
                 showButtons={this.state.showButtons}
                 nextQuestion={this.nextQuestion}
                 spinner={this.state.spinner}
+                email={this.state.email}
                 history={this.state.history}
                 listItem={this.renderListItem()}
                 backHandle={() => this.prevQuestion()}
