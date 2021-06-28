@@ -9,8 +9,14 @@
 import React from "react";
 import { Progress } from "antd";
 import { SentEmail } from "../../../hooks/Listener";
+import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 
 class Question extends React.Component {
+  constructor(props) {
+    super(props);
+    this.pdfExportComponent = React.createRef()
+  }
+
   state = {
     email: "",
     sentEmail: false,
@@ -34,6 +40,19 @@ class Question extends React.Component {
 
   handleChange = (event) => {
     this.setState({ email: event.target.value });
+  };
+
+  exportPDFWithMethod = () => {
+    let element = document.querySelector(".k-grid") || document.body;
+    savePDF(element, {
+      paperSize: "A4",
+    });
+  };
+
+  exportPDFWithComponent = () => {
+    if (this.pdfExportComponent.current) {
+      this.pdfExportComponent.current.save();
+    }
   };
 
   componentDidMount = () => {
@@ -78,6 +97,7 @@ class Question extends React.Component {
                 {this.props.showResult ? (
                   /* What if there are no more questions */
                   <>
+              <PDFExport ref={this.pdfExportComponent} paperSize="A4">
                     <table>
                       <tr>
                         <th className="table__column">
@@ -258,7 +278,7 @@ class Question extends React.Component {
                                               item.value === "да" ? (
                                                 <>
                                                   <td className="table__row">
-                                                    &#x2713;
+                                                    +
                                                   </td>
                                                   <td className="table__row">
                                                     &nbsp;&nbsp;
@@ -270,7 +290,7 @@ class Question extends React.Component {
                                                     &nbsp;&nbsp;
                                                   </td>
                                                   <td className="table__row">
-                                                    &#x2713;
+                                                    +
                                                   </td>
                                                 </>
                                               )}
@@ -320,7 +340,7 @@ class Question extends React.Component {
                                                   item.value === "да" ? (
                                                     <>
                                                       <td className="table__row">
-                                                        &#x2713;
+                                                        +
                                                       </td>
                                                       <td className="table__row">
                                                         &nbsp;&nbsp;
@@ -332,7 +352,7 @@ class Question extends React.Component {
                                                         &nbsp;&nbsp;
                                                       </td>
                                                       <td className="table__row">
-                                                        &#x2713;
+                                                        +
                                                       </td>
                                                     </>
                                                   )}
@@ -349,6 +369,7 @@ class Question extends React.Component {
                           );
                         })}
                     </table>
+                    </PDFExport>
                   </>
                 ) : (
                   <>
@@ -499,7 +520,7 @@ class Question extends React.Component {
                 ) : (
                   <button
                     onClick={() => {
-                      window.location.reload();
+                      this.exportPDFWithComponent()
                     }}
                     style={{
                       backgroundColor: "#0d6efd",

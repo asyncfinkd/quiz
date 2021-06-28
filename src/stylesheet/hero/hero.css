@@ -296,6 +296,10 @@ table .font__small {
   }
 }
 
+.content {
+  content: "\2713";
+}
+
 @media (max-width: 900px) {
   .box {
     height: auto !important;
