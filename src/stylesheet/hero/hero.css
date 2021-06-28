@@ -239,6 +239,18 @@
   margin-left: 0px !important;
 }
 
+.question-container {
+  height: 65px;
+}
+
+.footer__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 50px;
+}
+
 table {
   width: 100%;
 }
@@ -296,7 +308,6 @@ table .font__small {
   }
 }
 
-
 @media (max-width: 900px) {
   .box {
     height: auto !important;
@@ -313,6 +324,9 @@ table .font__small {
     width: 100%;
     flex-direction: column;
     text-align: center;
+  }
+  .question-container {
+    height: auto;
   }
 }
 
@@ -331,5 +345,8 @@ table .font__small {
   }
   .mt-6.questionContainer-button span {
     margin-top: 10px;
+  }
+  .footer__buttons {
+    flex-direction: column;
   }
 }

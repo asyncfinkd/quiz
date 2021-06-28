@@ -378,8 +378,7 @@ class Question extends React.Component {
                       </div>
                       <div
                         aria-label="Question"
-                        className="mt-3"
-                        style={{ height: "65px" }}
+                        className="mt-3 question-container"
                       >
                         <span className="question-span">
                           {/* A question that is rendered with the program */}
@@ -428,15 +427,7 @@ class Question extends React.Component {
                   </>
                 )}
               </>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: "40px",
-                  marginTop: "50px",
-                }}
-              >
+              <div className="footer__buttons">
                 {this.props.showResult !== true ? (
                   <>
                     <button
