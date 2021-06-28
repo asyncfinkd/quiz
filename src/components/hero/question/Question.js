@@ -542,6 +542,7 @@ class Question extends React.Component {
                                 points: this.props.points,
                                 email: this.props.email,
                                 result: this.props.result,
+                                language: this.props.language,
                               })
                               .then((res) => {
                                 console.log(res);
