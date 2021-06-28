@@ -184,11 +184,6 @@
   background-color: rgba(17, 24, 39, 0.9);
 }
 
-.showResult__responsiveParagraph {
-  display: none;
-  text-align: center;
-}
-
 .list-container-resp {
   width: calc(100vw - 90px);
   opacity: 0;
@@ -322,10 +317,17 @@ table .font__small {
     justify-content: center;
     flex-direction: column;
   }
-  table {
+  .box-table {
+    border: none !important;
+    padding: 0px !important;
+    margin-top: 25rem !important;
   }
-  .showResult__responsiveParagraph {
-    display: block;
+  table {
+    margin-bottom: 5rem !important;
+    position: absolute !important;
+    top: -300px !important;
+    left: 0 !important;
+    width: 100%;
   }
   .responsive__button__table {
     width: 100%;

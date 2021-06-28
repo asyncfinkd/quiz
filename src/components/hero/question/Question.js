@@ -73,16 +73,18 @@ class Question extends React.Component {
         )}
         <div style={{ maxWidth: "100%" }}>
           <div className="h-full full-display-flex">
-            <div className="relative box max-w-full" style={{ width: "700px" }}>
+            <div
+              className={`${
+                this.props.showResult
+                  ? "relative box box-table max-w-full"
+                  : "relative box max-w-full"
+              }`}
+              style={{ width: "700px" }}
+            >
               <>
                 {this.props.showResult ? (
                   /* What if there are no more questions */
                   <>
-                    <h1 className="showResult__responsiveParagraph">
-                      {this.props.language === "English"
-                        ? "Result isn't friendly for mobile"
-                        : "Результат не подходит для мобильных устройств"}
-                    </h1>
                     <table id="myTable">
                       <tr>
                         <th className="table__column">
