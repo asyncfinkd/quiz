@@ -78,6 +78,11 @@ class Question extends React.Component {
                 {this.props.showResult ? (
                   /* What if there are no more questions */
                   <>
+                    <h1 className="showResult__responsiveParagraph">
+                      {this.props.language === "English"
+                        ? "Result isn't friendly for mobile"
+                        : "Результат не подходит для мобильных устройств"}
+                    </h1>
                     <table id="myTable">
                       <tr>
                         <th className="table__column">

@@ -493,6 +493,7 @@ class Hero extends React.Component {
                   html2canvas(document.getElementById("myTable")).then(
                     (canvas) => {
                       var img = canvas.toDataURL("image/png");
+
                       axios
                         .post(`${env.host}/auth/insertUsers`, {
                           img: img,
@@ -502,16 +503,27 @@ class Hero extends React.Component {
                           language: this.props.language,
                         })
                         .then((res) => {
+                          console.log(res);
                           this.setState((state) => ({
                             spinner: (state.spinner = false),
                           }));
-                          Swal.fire(
-                            "Good job!",
-                            "You Finished Quiz",
-                            "success"
-                          ).then(() => {
-                            window.location.reload();
-                          });
+                          if (this.props.language === "English") {
+                            Swal.fire(
+                              "Good job!",
+                              "You Finished Quiz",
+                              "success"
+                            ).then(() => {
+                              window.location.reload();
+                            });
+                          } else {
+                            Swal.fire(
+                              "Отличная работа!",
+                              `Ты Законченный Викторина`,
+                              "success"
+                            ).then(() => {
+                              window.location.reload();
+                            });
+                          }
                         });
                     }
                   );
@@ -563,7 +575,7 @@ class Hero extends React.Component {
                     justifyContent: "center",
                   }}
                 >
-                  <h1>
+                  <h1 style={{ textAlign: "center" }}>
                     {this.props.language === "English" ||
                     this.props.language === "Choose Language"
                       ? "Input your information"
