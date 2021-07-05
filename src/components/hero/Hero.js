@@ -551,7 +551,6 @@ class Hero extends React.Component {
                           img: img,
                           points: this.state.points,
                           email: this.state.email,
-                          result: this.state.lastResult,
                           language: this.props.language,
                         })
                         .then((res) => {
