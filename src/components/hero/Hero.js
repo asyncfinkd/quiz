@@ -599,12 +599,13 @@ class Hero extends React.Component {
                     this.setState((state) => ({
                       showResult: (state.showResult = true),
                     }));
-                  } else {
-                    Swal.fire({
-                      icon: "error",
-                      title: "Oops...",
-                      text: "Please answer every question",
-                    });
+                    axios.post(`${env.host}/auth/insertUser`, {
+                      img: "",
+                      points: this.state.points,
+                      email: this.state.email,
+                      result: this.state.lastResult,
+                      language: this.props.language
+                    })
                   }
                 }}
               />
