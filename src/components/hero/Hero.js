@@ -298,7 +298,7 @@ class Hero extends React.Component {
               "gray" && (
               <>
                 {item.id ===
-                  this.state.questions[this.state.currentQuestion + 1].id && (
+                  this.state.questions[this.state.currentQuestion].id && (
                   <>
                     {
                       // document.getElementById(`${item.id}`).style.backgroundColor =
@@ -474,10 +474,62 @@ class Hero extends React.Component {
                 buttonList={this.state.buttonList}
                 nextHandleQuestion={() => {
                   const nextQuestion = this.state.currentQuestion + 1;
-
-                  this.setState((state) => ({
-                    currentQuestion: (state.currentQuestion = nextQuestion),
-                  }));
+                  
+                  console.log(this.state.currentQuestion);
+                  console.log(this.state.questions.length);
+                  if(this.state.currentQuestion + 1 < this.state.questions.length) {
+                    this.setState((state) => ({
+                      currentQuestion: (state.currentQuestion = nextQuestion),
+                    }));
+                    let state = false;
+                    if (this.state.lastResult.length > 0) {
+                      this.state.lastResult.map((item, i) => {
+                        if (
+                          item.question ===
+                          this.state.questions[this.state.currentQuestion].question
+                        ) {
+                          let index = this.state.lastResult.findIndex(
+                            (item) =>
+                              item.question ===
+                              this.state.questions[this.state.currentQuestion].question
+                          );
+                          if (index > -1) {
+                            this.state.lastResult.splice(index, 1);
+                            this.state.lastResult.push({
+                              id: this.state.currentQuestion,
+                              question: this.state.questions[this.state.currentQuestion]
+                                .question,
+                              value: "",
+                            });
+                            this.setState((state) => ({
+                              currentQuestion: (state.currentQuestion = nextQuestion),
+                            }));          }
+                          state = true;
+                        }
+                        return null;
+                      });
+                    } else {
+                      this.state.lastResult.push({
+                        id: this.state.currentQuestion,
+                        question: this.state.questions[this.state.currentQuestion].question,
+                        value: "",
+                      });
+                      this.setState((state) => ({
+                        currentQuestion: (state.currentQuestion = nextQuestion),
+                      }));
+                      state = true;
+                    }
+                    if (!state) {
+                      this.state.lastResult.push({
+                        id: this.state.currentQuestion,
+                        question: this.state.questions[this.state.currentQuestion].question,
+                        value: "",
+                      });
+                      this.setState((state) => ({
+                        currentQuestion: (state.currentQuestion = nextQuestion),
+                      }));    }
+                
+                  }
                 }}
                 closeModal={() => {
                   this.setState((state) => {
