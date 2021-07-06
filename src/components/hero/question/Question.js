@@ -361,6 +361,7 @@ class Question extends React.Component {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        marginTop: "20px",
                       }}
                     >
                       <div
@@ -368,6 +369,7 @@ class Question extends React.Component {
                           display: "flex",
                           alignItems: "center",
                           gap: "30px",
+                          flexWrap: "wrap",
                         }}
                       >
                         <div
@@ -408,13 +410,150 @@ class Question extends React.Component {
                               justifyContent: "center",
                             }}
                           >
-                            <div
-                              style={{ padding: "10px" }}
-                              onClick={() => console.log(this.props.points)}
-                            >
-                              E
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "E" : "Э"}
                             </div>
-                            <div style={{ padding: "10px" }}>I</div>
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "I" : "И"}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div
+                              style={{
+                                borderRight: "1px solid black",
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].sensing}
+                            </div>
+                            <div
+                              style={{
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].intuitive}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "S" : "O"}
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "N" : "И"}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div
+                              style={{
+                                borderRight: "1px solid black",
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].rational}
+                            </div>
+                            <div
+                              style={{
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].feeling}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "T" : "P"}
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "F" : "Ч"}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div
+                              style={{
+                                borderRight: "1px solid black",
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].reasonable}
+                            </div>
+                            <div
+                              style={{
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].spontaneous}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "J" : "P"}
+                            </div>
+                            <div style={{ padding: "10px" }}>
+                              {this.props.language === "English" ? "P" : "C"}
+                            </div>
                           </div>
                         </div>
                       </div>
