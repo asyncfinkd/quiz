@@ -356,6 +356,69 @@ class Question extends React.Component {
                           );
                         })}
                     </table>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "30px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div
+                              style={{
+                                borderRight: "1px solid black",
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].extravert}
+                            </div>
+                            <div
+                              style={{
+                                borderBottom: "1px solid black",
+                                padding: "10px",
+                              }}
+                            >
+                              {this.props.points[0].introvert}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <div
+                              style={{ padding: "10px" }}
+                              onClick={() => console.log(this.props.points)}
+                            >
+                              E
+                            </div>
+                            <div style={{ padding: "10px" }}>I</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </>
                 ) : (
                   <>
