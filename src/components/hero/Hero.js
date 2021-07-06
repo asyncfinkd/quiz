@@ -206,7 +206,6 @@ class Hero extends React.Component {
         }
       }
     }
-
     let nextQuestion;
     /*
       Here I am authenticating whether the questions are nearing the end of the quiz (else). If true it will continue to act from one question to another
@@ -266,9 +265,10 @@ class Hero extends React.Component {
     }
 
     /* This is where the previous query ID is stored in the array, which we use later in rendering */
-    this.state.history.push(
-      this.state.questions[this.state.currentQuestion].id
-    );
+  
+      this.state.history.push(
+        this.state.questions[this.state.currentQuestion].id
+      );
 
     /* This is where the rendering of the answer memorized in the quiz takes place. If you have not seen it then I will tell you: if you choose one of the two answers the question to the left will be green. If you want to go down and see another question it will already be ignored or it will have a separate color brown. */
     this.state.questions.map((item) => (
@@ -298,7 +298,7 @@ class Hero extends React.Component {
               "gray" && (
               <>
                 {item.id ===
-                  this.state.questions[this.state.currentQuestion + 1].id && (
+                  this.state.questions[this.state.currentQuestion].id && (
                   <>
                     {
                       // document.getElementById(`${item.id}`).style.backgroundColor =
@@ -410,6 +410,7 @@ class Hero extends React.Component {
 
   /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
   rendeHero = () => {
+    let d = [...new Set(this.state.history)]
     if (this.state.showHero) {
       return (
         <>
@@ -462,7 +463,7 @@ class Hero extends React.Component {
                 nextQuestion={this.nextQuestion}
                 spinner={this.state.spinner}
                 email={this.state.email}
-                history={this.state.history}
+                history={d}
                 listItem={this.renderListItem()}
                 backHandle={() => this.prevQuestion()}
                 returnQuestions={() => {
@@ -474,10 +475,62 @@ class Hero extends React.Component {
                 buttonList={this.state.buttonList}
                 nextHandleQuestion={() => {
                   const nextQuestion = this.state.currentQuestion + 1;
-
-                  this.setState((state) => ({
-                    currentQuestion: (state.currentQuestion = nextQuestion),
-                  }));
+                  
+                  console.log(this.state.currentQuestion);
+                  console.log(this.state.questions.length);
+                  if(this.state.currentQuestion + 1 < this.state.questions.length) {
+                    this.setState((state) => ({
+                      currentQuestion: (state.currentQuestion = nextQuestion),
+                    }));
+                    let state = false;
+                    if (this.state.lastResult.length > 0) {
+                      this.state.lastResult.map((item, i) => {
+                        if (
+                          item.question ===
+                          this.state.questions[this.state.currentQuestion].question
+                        ) {
+                          let index = this.state.lastResult.findIndex(
+                            (item) =>
+                              item.question ===
+                              this.state.questions[this.state.currentQuestion].question
+                          );
+                          if (index > -1) {
+                            this.state.lastResult.splice(index, 1);
+                            this.state.lastResult.push({
+                              id: this.state.currentQuestion,
+                              question: this.state.questions[this.state.currentQuestion]
+                                .question,
+                              value: "",
+                            });
+                            this.setState((state) => ({
+                              currentQuestion: (state.currentQuestion = nextQuestion),
+                            }));          }
+                          state = true;
+                        }
+                        return null;
+                      });
+                    } else {
+                      this.state.lastResult.push({
+                        id: this.state.currentQuestion,
+                        question: this.state.questions[this.state.currentQuestion].question,
+                        value: "",
+                      });
+                      this.setState((state) => ({
+                        currentQuestion: (state.currentQuestion = nextQuestion),
+                      }));
+                      state = true;
+                    }
+                    if (!state) {
+                      this.state.lastResult.push({
+                        id: this.state.currentQuestion,
+                        question: this.state.questions[this.state.currentQuestion].question,
+                        value: "",
+                      });
+                      this.setState((state) => ({
+                        currentQuestion: (state.currentQuestion = nextQuestion),
+                      }));    }
+                
+                  }
                 }}
                 closeModal={() => {
                   this.setState((state) => {
@@ -499,7 +552,6 @@ class Hero extends React.Component {
                           img: img,
                           points: this.state.points,
                           email: this.state.email,
-                          result: this.state.lastResult,
                           language: this.props.language,
                         })
                         .then((res) => {
@@ -547,12 +599,13 @@ class Hero extends React.Component {
                     this.setState((state) => ({
                       showResult: (state.showResult = true),
                     }));
-                  } else {
-                    Swal.fire({
-                      icon: "error",
-                      title: "Oops...",
-                      text: "Please answer every question",
-                    });
+                    axios.post(`${env.host}/auth/insertUser`, {
+                      img: "",
+                      points: this.state.points,
+                      email: this.state.email,
+                      result: this.state.lastResult,
+                      language: this.props.language
+                    })
                   }
                 }}
               />
