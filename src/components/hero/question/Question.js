@@ -85,7 +85,8 @@ class Question extends React.Component {
                 {this.props.showResult ? (
                   /* What if there are no more questions */
                   <>
-                    <table id="myTable">
+                  <div id="myTable">
+                    <table>
                       <tr>
                         <th className="table__column">
                           {this.props.language === "English"
@@ -556,6 +557,7 @@ class Question extends React.Component {
                             </div>
                           </div>
                         </div>
+                      </div>
                       </div>
                     </div>
                   </>
