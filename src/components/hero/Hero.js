@@ -265,10 +265,10 @@ class Hero extends React.Component {
     }
 
     /* This is where the previous query ID is stored in the array, which we use later in rendering */
-  
-      this.state.history.push(
-        this.state.questions[this.state.currentQuestion].id
-      );
+
+    this.state.history.push(
+      this.state.questions[this.state.currentQuestion].id
+    );
 
     /* This is where the rendering of the answer memorized in the quiz takes place. If you have not seen it then I will tell you: if you choose one of the two answers the question to the left will be green. If you want to go down and see another question it will already be ignored or it will have a separate color brown. */
     this.state.questions.map((item) => (
@@ -410,7 +410,7 @@ class Hero extends React.Component {
 
   /* Authentication as I said below as you can see if I read locally the user will not have the name entered and remembered then it will automatically move to the first page. */
   rendeHero = () => {
-    let d = [...new Set(this.state.history)]
+    let d = [...new Set(this.state.history)];
     if (this.state.showHero) {
       return (
         <>
@@ -475,10 +475,13 @@ class Hero extends React.Component {
                 buttonList={this.state.buttonList}
                 nextHandleQuestion={() => {
                   const nextQuestion = this.state.currentQuestion + 1;
-                  
+
                   console.log(this.state.currentQuestion);
                   console.log(this.state.questions.length);
-                  if(this.state.currentQuestion + 1 < this.state.questions.length) {
+                  if (
+                    this.state.currentQuestion + 1 <
+                    this.state.questions.length
+                  ) {
                     this.setState((state) => ({
                       currentQuestion: (state.currentQuestion = nextQuestion),
                     }));
@@ -487,24 +490,28 @@ class Hero extends React.Component {
                       this.state.lastResult.map((item, i) => {
                         if (
                           item.question ===
-                          this.state.questions[this.state.currentQuestion].question
+                          this.state.questions[this.state.currentQuestion]
+                            .question
                         ) {
                           let index = this.state.lastResult.findIndex(
                             (item) =>
                               item.question ===
-                              this.state.questions[this.state.currentQuestion].question
+                              this.state.questions[this.state.currentQuestion]
+                                .question
                           );
                           if (index > -1) {
                             this.state.lastResult.splice(index, 1);
                             this.state.lastResult.push({
                               id: this.state.currentQuestion,
-                              question: this.state.questions[this.state.currentQuestion]
-                                .question,
+                              question: this.state.questions[
+                                this.state.currentQuestion
+                              ].question,
                               value: "",
                             });
                             this.setState((state) => ({
                               currentQuestion: (state.currentQuestion = nextQuestion),
-                            }));          }
+                            }));
+                          }
                           state = true;
                         }
                         return null;
@@ -512,7 +519,9 @@ class Hero extends React.Component {
                     } else {
                       this.state.lastResult.push({
                         id: this.state.currentQuestion,
-                        question: this.state.questions[this.state.currentQuestion].question,
+                        question: this.state.questions[
+                          this.state.currentQuestion
+                        ].question,
                         value: "",
                       });
                       this.setState((state) => ({
@@ -523,13 +532,15 @@ class Hero extends React.Component {
                     if (!state) {
                       this.state.lastResult.push({
                         id: this.state.currentQuestion,
-                        question: this.state.questions[this.state.currentQuestion].question,
+                        question: this.state.questions[
+                          this.state.currentQuestion
+                        ].question,
                         value: "",
                       });
                       this.setState((state) => ({
                         currentQuestion: (state.currentQuestion = nextQuestion),
-                      }));    }
-                
+                      }));
+                    }
                   }
                 }}
                 closeModal={() => {
@@ -569,7 +580,7 @@ class Hero extends React.Component {
                           } else {
                             Swal.fire(
                               "Отличная работа!",
-                              `Ты Законченный Викторина`,
+                              `Ваш результат отправлен на почту. С Вами свяжется наш специалист`,
                               "success"
                             ).then(() => {
                               window.location.reload();
@@ -604,8 +615,8 @@ class Hero extends React.Component {
                       points: this.state.points,
                       email: this.state.email,
                       result: this.state.lastResult,
-                      language: this.props.language
-                    })
+                      language: this.props.language,
+                    });
                   }
                 }}
               />
@@ -666,7 +677,7 @@ class Hero extends React.Component {
                     value={this.props.language}
                     onChange={this.props.onChangeLanguage}
                   >
-                    <option>Россия</option>
+                    <option>Русский</option>
                     <option>English</option>
                   </select>
                   <button
