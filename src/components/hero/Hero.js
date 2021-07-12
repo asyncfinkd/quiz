@@ -579,6 +579,9 @@ class Hero extends React.Component {
                           points: this.state.points,
                           email: this.state.email,
                           language: this.props.language,
+                          name: this.state.name,
+                          lastname: this.state.surname,
+                          age: this.state.age
                         })
                         .then((res) => {
                           this.setState((state) => ({
