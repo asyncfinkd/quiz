@@ -412,10 +412,10 @@ class Question extends React.Component {
                               }}
                             >
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "E" : "Э"}
+                                E
                               </div>
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "I" : "И"}
+                                I
                               </div>
                             </div>
                           </div>
@@ -458,10 +458,10 @@ class Question extends React.Component {
                               }}
                             >
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "S" : "O"}
+                                S
                               </div>
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "N" : "И"}
+                                N
                               </div>
                             </div>
                           </div>
@@ -504,10 +504,10 @@ class Question extends React.Component {
                               }}
                             >
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "T" : "P"}
+                                T
                               </div>
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "F" : "Ч"}
+                                F
                               </div>
                             </div>
                           </div>
@@ -550,10 +550,10 @@ class Question extends React.Component {
                               }}
                             >
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "J" : "P"}
+                                J
                               </div>
                               <div style={{ padding: "10px" }}>
-                                {this.props.language === "English" ? "P" : "C"}
+                                P
                               </div>
                             </div>
                           </div>
