@@ -29,11 +29,13 @@ class App extends Component {
      Using the package mentioned above.
    */
   componentWillMount = () => {
-    setTimeout(() => {
-      this.setState((state) => {
-        return { showPopup: (state.showPopup = true) };
-      });
-    }, 2000);
+    if (localStorage.getItem("sb_wiz.zpc.__ag") !== "cl__ag") {
+      setTimeout(() => {
+        this.setState((state) => {
+          return { showPopup: (state.showPopup = true) };
+        });
+      }, 2000);
+    }
   };
   render() {
     return (
