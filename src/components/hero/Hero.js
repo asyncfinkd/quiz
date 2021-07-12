@@ -733,7 +733,7 @@ class Hero extends React.Component {
                       {this.props.language === "English" ||
                       this.props.language === "Choose Language"
                         ? "Email"
-                        : "эл.почту"}
+                        : "эл.почта"}
                     </label>
                   </div>
                   <select
