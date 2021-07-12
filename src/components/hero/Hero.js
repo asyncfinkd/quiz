@@ -46,6 +46,9 @@ class Hero extends React.Component {
     spontaneousCount: 0,
     points: [],
     spinner: false,
+    name: "",
+    surname: "",
+    age: "",
   };
 
   /*
@@ -384,6 +387,18 @@ class Hero extends React.Component {
   handleChange = (event) => {
     this.setState({ email: event.target.value });
   };
+  
+  handleChangeName = (event) => {
+    this.setState({ name: event.target.value });
+  };
+
+  handleChangeSurname = (event) => {
+    this.setState({surname: event.target.value})
+  }
+
+  handleChangeAge = (event) => {
+    this.setState({age: event.target.value})
+  }
 
   /* As we had the next question variable above we also have the previous question variable which provides the return. */
   prevQuestion = () => {
@@ -634,7 +649,7 @@ class Hero extends React.Component {
                   className="relative box max-w-full"
                   style={{
                     width: "500px",
-                    height: "362px",
+                    height: "600px",
                     justifyContent: "center",
                   }}
                 >
@@ -653,6 +668,63 @@ class Hero extends React.Component {
                       placeholder=" "
                       className="input form-ai-control w-350 max-w-full"
                       autoFocus
+                      value={this.state.name}
+                      onChange={this.handleChangeName}
+                      style={{ width: "100%" }}
+                    />
+                    <label>
+                      {this.props.language === "English" ||
+                      this.props.language === "Choose Language"
+                        ? "First name"
+                        : "Имя"}
+                    </label>
+                  </div>
+                  <div
+                    className="text-center form-ai mt-3"
+                    style={{ width: "100%" }}
+                  >
+                    <input
+                      type="text"
+                      placeholder=" "
+                      className="input form-ai-control w-350 max-w-full"
+                      value={this.state.surname}
+                      onChange={this.handleChangeSurname}
+                      style={{ width: "100%" }}
+                    />
+                    <label>
+                      {this.props.language === "English" ||
+                      this.props.language === "Choose Language"
+                        ? "Last name"
+                        : "Фамилия"}
+                    </label>
+                  </div>
+                  <div
+                    className="text-center form-ai mt-3"
+                    style={{ width: "100%" }}
+                  >
+                    <input
+                      type="text"
+                      placeholder=" "
+                      className="input form-ai-control w-350 max-w-full"
+                      value={this.state.age}
+                      onChange={this.handleChangeAge}
+                      style={{ width: "100%" }}
+                    />
+                    <label>
+                      {this.props.language === "English" ||
+                      this.props.language === "Choose Language"
+                        ? "Age"
+                        : "Возраст"}
+                    </label>
+                  </div>
+                  <div
+                    className="text-center form-ai mt-3"
+                    style={{ width: "100%" }}
+                  >
+                    <input
+                      type="text"
+                      placeholder=" "
+                      className="input form-ai-control w-350 max-w-full"
                       value={this.state.email}
                       onChange={this.handleChange}
                       style={{ width: "100%" }}
@@ -695,10 +767,51 @@ class Hero extends React.Component {
                       cursor: "pointer",
                     }}
                     onClick={() => {
-                      if (!this.state.email) {
+                      if(!this.state.name) {
+                        if(this.props.language === "English") {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please enter a your first name"
+                          });
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Пожалуйста, введите ваше имя"
+                          })
+                        }
+                      } else if (!this.state.surname) {
+                        if(this.props.language === "English") {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please enter a your last name",
+                          })
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Пожалуйста, введите вашу фамилию",
+                          })
+                        }
+                      } else if(!this.state.age) {
+                        if(this.props.language === "English") {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Please enter a your age",
+                          })
+                        } else {
+                          Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Пожалуйста, введите ваш возраст"
+                          })
+                        }
+                      } else if (!this.state.email) {
                         if (
-                          this.props.language === "English" ||
-                          this.props.language === "Choose Language"
+                          this.props.language === "English"
                         ) {
                           Swal.fire({
                             icon: "error",
