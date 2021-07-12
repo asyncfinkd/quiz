@@ -631,6 +631,9 @@ class Hero extends React.Component {
                       email: this.state.email,
                       result: this.state.lastResult,
                       language: this.props.language,
+                      name: this.state.name,
+                      lastname: this.state.surname,
+                      age: this.state.age
                     });
                   }
                 }}
