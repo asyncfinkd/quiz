@@ -40,3 +40,4 @@ Read our contributing guide to learn about our development process, how to propo
 ## License
 
 Quiz is [MIT licensed](LICENSE)
+
