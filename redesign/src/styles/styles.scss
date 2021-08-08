@@ -1,0 +1,102 @@
+@import "./config";
+
+body {
+  color: #202124;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  @include flex-all;
+  flex-direction: column;
+  height: 100vh;
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 33%;
+
+    & div span {
+      font-size: 13px;
+    }
+
+    .footer-flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      & p {
+        font-size: 13px;
+        color: #757575;
+      }
+    }
+  }
+}
+
+.box {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  width: 450px;
+  position: relative;
+
+  .flex {
+    @include flex-all;
+    gap: 15px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .input {
+    width: 180px;
+    height: 44px;
+  }
+
+  .max-w {
+    width: 88%;
+  }
+
+  .select {
+    width: 92%;
+  }
+
+  .signup {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    color: #1c1e21;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .signup_subtitle {
+    color: #606770;
+    font-size: 15px;
+    line-height: 24px;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hr {
+    border: none;
+    height: 1px;
+    background-color: $border-color;
+  }
+
+  .button {
+    background-color: #00a400;
+    color: white;
+    border: none;
+    outline: none;
+    @include flex-all;
+    margin: auto;
+    width: 170px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+}

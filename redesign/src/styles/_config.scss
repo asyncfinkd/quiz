@@ -1,0 +1,7 @@
+$border-color: #dadce0;
+
+@mixin flex-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
