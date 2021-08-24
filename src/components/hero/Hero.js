@@ -387,18 +387,18 @@ class Hero extends React.Component {
   handleChange = (event) => {
     this.setState({ email: event.target.value });
   };
-  
+
   handleChangeName = (event) => {
     this.setState({ name: event.target.value });
   };
 
   handleChangeSurname = (event) => {
-    this.setState({surname: event.target.value})
-  }
+    this.setState({ surname: event.target.value });
+  };
 
   handleChangeAge = (event) => {
-    this.setState({age: event.target.value})
-  }
+    this.setState({ age: event.target.value });
+  };
 
   /* As we had the next question variable above we also have the previous question variable which provides the return. */
   prevQuestion = () => {
@@ -581,7 +581,7 @@ class Hero extends React.Component {
                           language: this.props.language,
                           name: this.state.name,
                           lastname: this.state.surname,
-                          age: this.state.age
+                          age: this.state.age,
                         })
                         .then((res) => {
                           this.setState((state) => ({
@@ -636,7 +636,7 @@ class Hero extends React.Component {
                       language: this.props.language,
                       name: this.state.name,
                       lastname: this.state.surname,
-                      age: this.state.age
+                      age: this.state.age,
                     });
                   }
                 }}
@@ -773,52 +773,50 @@ class Hero extends React.Component {
                       cursor: "pointer",
                     }}
                     onClick={() => {
-                      if(!this.state.name) {
-                        if(this.props.language === "English") {
+                      if (!this.state.name) {
+                        if (this.props.language === "English") {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
-                            text: "Please enter a your first name"
+                            text: "Please enter a your first name",
                           });
                         } else {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
-                            text: "Пожалуйста, введите ваше имя"
-                          })
+                            text: "Пожалуйста, введите ваше имя",
+                          });
                         }
                       } else if (!this.state.surname) {
-                        if(this.props.language === "English") {
+                        if (this.props.language === "English") {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
                             text: "Please enter a your last name",
-                          })
+                          });
                         } else {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
                             text: "Пожалуйста, введите вашу фамилию",
-                          })
+                          });
                         }
-                      } else if(!this.state.age) {
-                        if(this.props.language === "English") {
+                      } else if (!this.state.age) {
+                        if (this.props.language === "English") {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
                             text: "Please enter a your age",
-                          })
+                          });
                         } else {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",
-                            text: "Пожалуйста, введите ваш возраст"
-                          })
+                            text: "Пожалуйста, введите ваш возраст",
+                          });
                         }
                       } else if (!this.state.email) {
-                        if (
-                          this.props.language === "English"
-                        ) {
+                        if (this.props.language === "English") {
                           Swal.fire({
                             icon: "error",
                             title: "Oops...",

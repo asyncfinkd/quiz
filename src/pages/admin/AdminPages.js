@@ -1,8 +1,73 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 export default function AdminPages({ language }) {
+  const [email, setEmail] = useState("");
+  const emailRef = useRef();
+  const [password, setPassword] = useState("");
+  const passwordRef = useRef();
+  const submit = () => {
+    if (!email) {
+      emailRef.current.focus();
+      if (language === "English") {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please Enter a Email",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "ой...",
+          text: "введите адрес электронной почты",
+        });
+      }
+    } else if (
+      !/([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/g.test(
+        email
+      )
+    ) {
+      emailRef.current.focus();
+      if (language === "English") {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Incorrect Validation",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Неправильная проверка",
+        });
+      }
+    } else if (!password) {
+      passwordRef.current.focus();
+      if (language === "English") {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please Enter a Password",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "ой...",
+          text: "введите пароль",
+        });
+      }
+    }
+  };
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "English"
+            ? "Admin - Quiz Application"
+            : "Админ - Приложение для викторины"}
+        </title>
+      </Helmet>
       <form
         style={{
           display: "flex",
@@ -15,6 +80,7 @@ export default function AdminPages({ language }) {
           maxWidth: "100%",
           padding: "10px",
         }}
+        onSubmit={(e) => e.preventDefault()}
       >
         <h2>{language === "English" ? "Sign in" : "Войти"}</h2>
         <div className="text-center form-ai" style={{ width: "100%" }}>
@@ -23,6 +89,9 @@ export default function AdminPages({ language }) {
             placeholder=" "
             className="input form-ai-control w-350 max-w-full"
             autoFocus
+            ref={emailRef}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             style={{ width: "100%" }}
           />
           <label>
@@ -35,6 +104,9 @@ export default function AdminPages({ language }) {
           <input
             type="text"
             placeholder=" "
+            ref={passwordRef}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="input form-ai-control w-350 max-w-full"
             style={{ width: "100%" }}
           />
@@ -58,6 +130,7 @@ export default function AdminPages({ language }) {
             width: "100%",
             cursor: "pointer",
           }}
+          onClick={() => submit()}
         >
           {language === "English" || language === "Choose Language"
             ? "Continue"
