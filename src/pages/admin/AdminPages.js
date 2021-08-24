@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
+import axios from "axios";
+import env from "../../constants/Application/env.json";
 
 export default function AdminPages({ language }) {
   const [email, setEmail] = useState("");
@@ -57,6 +59,15 @@ export default function AdminPages({ language }) {
           text: "введите пароль",
         });
       }
+    } else {
+      axios
+        .post(`${env.host}/auth/signin`, {
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          console.log(res);
+        });
     }
   };
   return (

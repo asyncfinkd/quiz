@@ -22,6 +22,9 @@ mongoose.connect(
 const UserInsert = require("./router/User/Insert/UserInsert");
 app.use("/auth", UserInsert);
 
+const AdminSignin = require("./router/admin/signin/AdminSigninRouter");
+app.use("/auth", AdminSignin);
+
 const PORT = process.env.PORT || env.PORT;
 
 app.listen(PORT, () => {
