@@ -66,7 +66,47 @@ export default function AdminPages({ language }) {
           password: password,
         })
         .then((res) => {
-          console.log(res);
+          if (res.data.message == "user is not defined") {
+            if (language === "English") {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "User is not defined",
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "ой...",
+                text: "Пользователь не определен",
+              });
+            }
+          } else if (res.data.message == "password is invalid") {
+            if (language === "English") {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password is invalid",
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "ой...",
+                text: "неправильный пароль",
+              });
+            }
+          } else {
+            localStorage.setItem("logged", true);
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            if (language === "English") {
+              Swal.fire("Congratulation", "You logged", "success").then(() => {
+                window.location.reload();
+              });
+            } else {
+              Swal.fire("поздравление ", "вы вошли", "success").then(() => {
+                window.location.reload();
+              });
+            }
+          }
         });
     }
   };

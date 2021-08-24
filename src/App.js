@@ -59,7 +59,13 @@ class App extends Component {
             {/* <WorkTime /> */}
           </Route>
           <Route path="/admin" exact>
-            <AdminPages language={this.state.language} />
+            <>
+              {localStorage.getItem("logged") === "true" ? (
+                <p>hello</p>
+              ) : (
+                <AdminPages language={this.state.language} />
+              )}
+            </>
           </Route>
           {/* 
           The quiz component where everything happens. Which may be interesting to you.
