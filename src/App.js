@@ -17,6 +17,7 @@ import React, { Component } from "react";
 import Alert from "./components/alert/Alert";
 import Hero from "./components/hero/Hero";
 import { BrowserRouter, Route } from "react-router-dom";
+import AdminPages from "./pages/admin/AdminPages";
 // import WorkTime from "./components/WorkTime/WorkTime";
 
 class App extends Component {
@@ -56,6 +57,9 @@ class App extends Component {
               }
             />
             {/* <WorkTime /> */}
+          </Route>
+          <Route path="/admin" exact>
+            <AdminPages language={this.state.language} />
           </Route>
           {/* 
           The quiz component where everything happens. Which may be interesting to you.
