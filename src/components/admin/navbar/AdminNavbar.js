@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-// import { EventsContext } from "../../../context/events/EventsContext";
+import { ApplicationContext } from "../../../context/App/ApplicationContext";
 import "./AdminNavbar.css";
 
 export default function AdminNavbar({ language }) {
-  //   const { clicked, setClicked } = useContext(EventsContext);
+  const { clicked, setClicked } = useContext(ApplicationContext);
   const user = JSON.parse(localStorage.getItem("user"));
   const [showModal, setShowModal] = useState(false);
   return (
@@ -25,9 +25,9 @@ export default function AdminNavbar({ language }) {
                 id="Layer_1"
                 viewBox="0 0 42 42"
                 className="navbar__burger__icon"
-                // onClick={() => {
-                //   setClicked(!clicked);
-                // }}
+                onClick={() => {
+                  setClicked(!clicked);
+                }}
               >
                 <g id="menu" transform="translate(-232 -8)">
                   <rect

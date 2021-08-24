@@ -19,8 +19,7 @@ import Hero from "./components/hero/Hero";
 import { BrowserRouter, Route } from "react-router-dom";
 import AdminPages from "./pages/admin/AdminPages";
 // import WorkTime from "./components/WorkTime/WorkTime";
-import AdminNavbar from "./components/admin/navbar/AdminNavbar";
-import AdminSidebar from "./components/admin/sidebar/AdminSidebar";
+import AdminIndex from "./pages/admin/index/AdminIndex";
 
 class App extends Component {
   state = {
@@ -64,8 +63,7 @@ class App extends Component {
             <>
               {localStorage.getItem("logged") === "true" ? (
                 <>
-                  <AdminNavbar />
-                  <AdminSidebar />
+                  <AdminIndex />
                 </>
               ) : (
                 <AdminPages language={this.state.language} />

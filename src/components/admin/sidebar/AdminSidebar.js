@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import "./AdminSidebar.css";
 import { Link } from "react-router-dom";
-// import { EventsContext } from "../../../context/events/EventsContext";
+import { ApplicationContext } from "../../../context/App/ApplicationContext";
 
-export default function AdminSidebar() {
-  //   const { clicked, setClicked } = useContext(EventsContext);
+export default function AdminSidebar({ language }) {
+  const { clicked, setClicked } = useContext(ApplicationContext);
   return (
     <>
-      {/* <div className={clicked ? "sidebar__none" : "sidebar__container"}> */}
-      <div className="sidebar__container">
+      <div className={clicked ? "sidebar__none" : "sidebar__container"}>
         <ul className="sidebar__container-ul">
           <li className="sidebar__container-li__prev"></li>
           <Link to="/admin" className="sidebar__container-li">
@@ -25,7 +24,9 @@ export default function AdminSidebar() {
                   transform="translate(-3 -3)"
                 ></path>
               </svg>
-              <p className="sidebar__container-li__paragraph">მთავარი</p>
+              <p className="sidebar__container-li__paragraph">
+                {language === "English" ? "Home" : "Дом"}
+              </p>
             </div>
           </Link>
         </ul>
