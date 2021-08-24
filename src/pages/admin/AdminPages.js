@@ -113,7 +113,7 @@ export default function AdminPages({ language }) {
         </div>
         <div className="text-center form-ai mt-3" style={{ width: "100%" }}>
           <input
-            type="text"
+            type="password"
             placeholder=" "
             ref={passwordRef}
             value={password}

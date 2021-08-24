@@ -11,9 +11,9 @@ router.route("/signin").post(async (req, res) => {
     } else if (res2.password === password) {
       res.json({
         user: {
-          name: name,
-          surname: surname,
-          status: status,
+          name: res2.name,
+          surname: res2.surname,
+          status: res2.status,
           email: email,
         },
         success: true,
