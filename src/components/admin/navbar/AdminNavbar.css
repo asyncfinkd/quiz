@@ -1,0 +1,163 @@
+.navbar__content-header {
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  min-width: 300px;
+  font-size: 16px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.navbar__content__ng {
+  margin: 0 20px;
+  height: 100%;
+}
+
+.navbar__left__content {
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__brand__image {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-style: none;
+}
+
+.navbar__brand__label {
+  margin-right: 15px;
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 0px;
+}
+
+.navbar__burger__closer {
+  cursor: pointer;
+}
+
+.navbar__burger__icon {
+  height: 36px;
+  width: 36px;
+  overflow: hidden;
+}
+
+.navbar__right__content {
+  float: right;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__mail__notification {
+  cursor: default;
+}
+
+.navbar__mail__svg {
+  width: 25px;
+  height: 19px;
+  fill: #dadbdc;
+  overflow: hidden;
+}
+
+.navbar__userName {
+  margin: 0 20px 0 25px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  color: #878787;
+}
+
+.navbar__userRole {
+  font-size: 9px;
+  margin-bottom: 0px;
+}
+
+.navbar__profilePic {
+  position: relative;
+}
+
+.navbar__profile__logo {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__profile__logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar__ul-el {
+  position: absolute;
+  top: 50px;
+  width: 260px;
+  z-index: 10;
+  font-size: 11px;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  right: 0;
+}
+
+.navbar__li-el {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar__li-el:hover {
+  background-color: #f2f2f4;
+}
+
+.navbar__li__svg {
+  overflow: hidden;
+  width: 21px;
+  height: 21px;
+  fill: #dadbdc;
+}
+
+.navbar__li-el:hover .navbar__li__svg {
+  fill: #5e94fa;
+}
+
+.navbar__li__label {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 11px;
+  color: #70757a;
+  margin-bottom: 0px;
+}
+
+.navbar__li-el:hover .navbar__li__label {
+  color: #252526;
+}
+
+@media all and (max-width: 500px) {
+  .navbar__brand__image,
+  .navbar__brand__label {
+    display: none;
+  }
+}
+
+.admin__wrapper__txt__Message {
+  font-family: "BPG Mrgvlovani Caps", sans-serif;
+  font-size: 13px;
+  margin-left: 15px;
+  color: #777;
+}

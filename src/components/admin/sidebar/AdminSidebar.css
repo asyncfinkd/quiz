@@ -1,0 +1,156 @@
+.sidebar__container {
+  width: 90px;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  float: left;
+  position: fixed;
+  background-color: #2e3192;
+  z-index: 1;
+}
+
+.sidebar__container-ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  outline: 0;
+  list-style: none;
+}
+
+.sidebar__container-li__prev {
+  padding-left: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #2e3192;
+  border-bottom-right-radius: 5px;
+  height: 10px;
+  cursor: default;
+}
+
+.sidebar__container-li__prev::marker {
+  cursor: default;
+  text-align: center;
+}
+
+.sidebar__container-li {
+  position: relative;
+  padding-left: 10px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #2e3192;
+}
+
+.sidebar__container-li::marker {
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar__container-li::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 11px;
+  top: -9px;
+  right: -2px;
+  z-index: 999;
+  border-radius: 100%;
+  transform: rotate(248deg);
+  border-left: 4px solid #fff;
+}
+
+.sidebar__container-li::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 11px;
+  bottom: -9px;
+  right: -2px;
+  z-index: 999;
+  border-radius: 100%;
+  transform: rotate(-60deg);
+  border-right: 4px solid #fff;
+}
+
+.sidebar__container-li__content {
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar__container-li__contentSVG {
+  fill: #5e94fa;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.sidebar__container-li__paragraph {
+  color: #252526;
+  margin-top: 10px;
+  font-size: 10px;
+  font-family: "BPG Mrgvlovani Caps";
+}
+
+.sidebar__container__default__li {
+  padding-left: 10px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #2e3192;
+}
+
+.sidebar__container__default__li::marker {
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar__container__default__li-div {
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar__container__default__li-svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  overflow: hidden;
+}
+
+.sidebar__container__default__li-paragraph {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #fff;
+  font-family: "BPG Mrgvlovani Caps";
+}
+
+.admin__wrapper {
+  width: calc(100% - 90px);
+  height: calc(100% - 60px);
+  float: right;
+  margin-top: 60px;
+  transition: all 0.2s;
+}
+
+.sidebar__none {
+  display: none;
+}
+
+.admin__wrapper__full {
+  width: 100%;
+  height: 100%;
+}
+
+.svg__flag__adminSidebar {
+  fill: white !important;
+}
