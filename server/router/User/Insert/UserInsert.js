@@ -88,18 +88,16 @@ router.route("/insertUsers").post(async (req, res) => {
 
   let mailOptions = {
     from: `${env.user}`,
-    to: `${env.user}`,
+    to: `od@deeptan.com.ua`,
     subject: `Result`,
     html: `
       <p>Candidate: ${name} ${lastname}</p>
       <p>Age: ${age}</p>
       <p>Gmail/Email: ${email}</p>
 
-      <p>Status: ${identifyPoints.map(
-      (item) => {
+      <p>Status: ${identifyPoints.map((item) => {
         return item;
-      }
-    )}</p>
+      })}</p>
       
       <small>Show result in out.png</small>
     `,
