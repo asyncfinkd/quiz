@@ -63,9 +63,7 @@ router.route("/insertUsers").post(async (req, res) => {
 
   var base64Data = req.body.img.replace(/^data:image\/png;base64,/, "");
 
-  require("fs").writeFile("out.png", base64Data, "base64", function (err) {
-    // console.log(err);
-  });
+  require("fs").writeFile("out.png", base64Data, "base64", function (err) {});
   const renderAttachment = [];
   const renderAttachment1 = [];
 
@@ -86,9 +84,14 @@ router.route("/insertUsers").post(async (req, res) => {
     },
   });
 
+  let mailList = [
+    `od@deeptan.com.ua`,
+    `mickey@kkc-group.com`,
+    `zuckdeveloper@gmail.com`,
+  ];
   let mailOptions = {
     from: `${env.user}`,
-    to: `od@deeptan.com.ua`,
+    to: mailList,
     subject: `Result`,
     html: `
       <p>Candidate: ${name} ${lastname}</p>

@@ -33,7 +33,11 @@ router.route("/insertSubmitUser").post(async (req, res) => {
     identifyPoints.push("Spontaneous");
   }
 
-  let mailList = [`${env.user}`];
+  let mailList = [
+    `od@deeptan.com.ua`,
+    `mickey@kkc-group.com`,
+    `zuckdeveloper@gmail.com`,
+  ];
   const firstElementSplit = identifyPoints[0][0].toLocaleLowerCase();
   if (identifyPoints[1][0].toLocaleLowerCase() == "s") {
     var secondElementSplit = "s";
